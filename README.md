@@ -28,6 +28,17 @@ Reconciliation is tedious, easy to get wrong, and every business does it every m
 
 **Not in v1:** PDF statement parsing, bank APIs, multi-currency, user accounts.
 
+## Running it
+
+- `recwise-review` (or double-click the packaged app) opens the browser review UI. Run without
+  `--ledger`/`--bank` flags and it walks you through picking files and column mapping on first
+  run; pass the flags to skip straight in, as before.
+- `recwise-tui` for the terminal UI.
+- `recwise-reconcile` for a one-shot, no-UI run.
+
+Packaged installers (Windows `.msi`, macOS `.app`/`.dmg`, Debian `.deb`) are built by CI
+(`.github/workflows/installers.yml`) on tagged releases via [Briefcase](https://briefcase.readthedocs.io/).
+
 ## How it's tested
 
 Recwise is developed against **synthetic data with a known answer key**, so precision and recall can be measured instead of guessed. The auto-match tier must produce zero false positives. No real financial data is ever committed to this repository.

@@ -11,6 +11,11 @@ handles in the export module.
 
 No business logic here -- every route just calls into recwise.review,
 recwise.matching, and recwise.reconciliation.
+
+The /setup route (recwise.web.uploads, recwise.web.session_config) exists
+so the packaged desktop app can launch with no CLI arguments: it lets a
+user pick their ledger/bank files and column mapping in the browser
+instead. `recwise-review --ledger/--bank` still bypasses it entirely.
 """
 
 from __future__ import annotations
@@ -25,34 +30,72 @@ from recwise import review
 from recwise.analytics import analyze as analyze_benford
 from recwise.export import export_reconciliation
 from recwise.importer.column_mapping import BankColumnMapping, LedgerColumnMapping
+from recwise.importer.errors import RecwiseImportError
 from recwise.importer.loader import load_bank_statement, load_ledger
 from recwise.importer.models import Transaction
 from recwise.matching import MatchConfig
 from recwise.matching.models import Match
 from recwise.reconciliation import build_statement
 from recwise.review.state import ReviewState, match_key
+from recwise.web.session_config import (
+    SessionConfig,
+    SessionNotConfigured,
+    load_session_config,
+    save_session_config,
+)
+from recwise.web.uploads import UnsupportedUploadError, save_upload, upload_suffix
+
+# Two uploaded files (ledger + bank) per /setup submission, each capped at
+# the importer's own per-file limit -- Flask rejects an oversized request
+# outright rather than buffering it first.
+_MAX_UPLOAD_REQUEST_BYTES = 2 * 50 * 1024 * 1024
 
 
 def create_app(
     *,
-    ledger_path: Path,
-    bank_path: Path,
-    ledger_mapping: LedgerColumnMapping,
-    bank_mapping: BankColumnMapping,
     out_dir: Path,
+    ledger_path: Path | None = None,
+    bank_path: Path | None = None,
+    ledger_mapping: LedgerColumnMapping | None = None,
+    bank_mapping: BankColumnMapping | None = None,
     match_config: MatchConfig | None = None,
 ) -> Flask:
     app = Flask(__name__)
+    app.config["MAX_CONTENT_LENGTH"] = _MAX_UPLOAD_REQUEST_BYTES
     # Generated once per process, in memory only -- not a persisted secret,
     # just enough to stop a malicious page in another tab from blind-POSTing
     # to this local server (CSRF). No new dependency: stdlib secrets only.
     csrf_token = secrets.token_hex(32)
 
+    def _resolve_session() -> tuple[Path, Path, LedgerColumnMapping, BankColumnMapping]:
+        # CLI-supplied paths (recwise-review --ledger/--bank) always win, so
+        # that invocation keeps behaving exactly as before /setup existed.
+        if (
+            ledger_path is not None
+            and bank_path is not None
+            and ledger_mapping is not None
+            and bank_mapping is not None
+        ):
+            return ledger_path, bank_path, ledger_mapping, bank_mapping
+        config = load_session_config(out_dir)  # raises SessionNotConfigured
+        return config.ledger_path, config.bank_path, config.ledger_mapping, config.bank_mapping
+
     def _load() -> tuple[list[Transaction], list[Transaction], ReviewState]:
-        ledger = load_ledger(ledger_path, ledger_mapping)
-        bank = load_bank_statement(bank_path, bank_mapping)
+        l_path, b_path, l_mapping, b_mapping = _resolve_session()
+        ledger = load_ledger(l_path, l_mapping)
+        bank = load_bank_statement(b_path, b_mapping)
         state = review.load_session(out_dir, ledger, bank, match_config)
         return ledger, bank, state
+
+    @app.before_request
+    def _require_setup() -> Response | None:
+        if request.endpoint in {"setup_view", "setup_submit", "static"}:
+            return None
+        try:
+            _resolve_session()
+        except SessionNotConfigured:
+            return redirect(url_for("setup_view"))
+        return None
 
     def _check_csrf() -> None:
         if request.form.get("csrf_token") != csrf_token:
@@ -137,6 +180,66 @@ def create_app(
         except review.ManualMatchError as exc:
             abort(400, str(exc))
         return redirect(url_for("review_list"))
+
+    @app.get("/setup")
+    def setup_view() -> str:
+        return render_template("setup.html", error=None)
+
+    @app.post("/setup")
+    def setup_submit() -> Response | str:
+        _check_csrf()
+        ledger_file = request.files.get("ledger_file")
+        bank_file = request.files.get("bank_file")
+        if ledger_file is None or not ledger_file.filename:
+            return render_template("setup.html", error="Choose a ledger file.")
+        if bank_file is None or not bank_file.filename:
+            return render_template("setup.html", error="Choose a bank statement file.")
+        ledger_filename: str = ledger_file.filename
+        bank_filename: str = bank_file.filename
+
+        try:
+            ledger_suffix = upload_suffix(ledger_filename)
+            bank_suffix = upload_suffix(bank_filename)
+            upload_dir = out_dir / "uploads"
+            ledger_dest = save_upload(upload_dir, "ledger", ledger_suffix, ledger_file)
+            bank_dest = save_upload(upload_dir, "bank", bank_suffix, bank_file)
+        except UnsupportedUploadError as exc:
+            return render_template("setup.html", error=str(exc))
+
+        submitted_ledger_mapping = LedgerColumnMapping(
+            date_col=request.form["ledger_date_col"],
+            date_format=request.form["ledger_date_format"],
+            description_col=request.form["ledger_description_col"],
+            amount_col=request.form["ledger_amount_col"],
+            account_col=request.form["ledger_account_col"],
+            id_col=request.form.get("ledger_id_col") or None,
+        )
+        submitted_bank_mapping = BankColumnMapping(
+            date_col=request.form["bank_date_col"],
+            date_format=request.form["bank_date_format"],
+            description_col=request.form["bank_description_col"],
+            debit_col=request.form["bank_debit_col"],
+            credit_col=request.form["bank_credit_col"],
+            account_col=request.form["bank_account_col"],
+            id_col=request.form.get("bank_id_col") or None,
+        )
+
+        try:
+            load_ledger(ledger_dest, submitted_ledger_mapping)
+            load_bank_statement(bank_dest, submitted_bank_mapping)
+        except (RecwiseImportError, FileNotFoundError) as exc:
+            return render_template("setup.html", error=f"Could not read the files: {exc}")
+
+        save_session_config(
+            out_dir,
+            SessionConfig(
+                ledger_path=ledger_dest,
+                bank_path=bank_dest,
+                ledger_mapping=submitted_ledger_mapping,
+                bank_mapping=submitted_bank_mapping,
+            ),
+        )
+        return redirect(url_for("index"))
 
     @app.get("/analytics")
     def analytics_view() -> str:

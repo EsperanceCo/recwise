@@ -24,6 +24,15 @@ def client(tmp_path: Path) -> FlaskClient:
     return app.test_client()
 
 
+@pytest.fixture
+def unconfigured_client(tmp_path: Path) -> FlaskClient:
+    """No ledger/bank/mapping given at creation time -- the desktop-launcher
+    shape, which must fall back to the /setup flow instead of crashing."""
+    app = create_app(out_dir=tmp_path)
+    app.testing = True
+    return app.test_client()
+
+
 def _extract_csrf_token(html: str) -> str:
     match = re.search(r'name="csrf_token" value="([^"]+)"', html)
     assert match is not None
@@ -160,3 +169,103 @@ def test_analytics_page_shows_both_populations(client: FlaskClient) -> None:
     assert "Sample size: 1000" in body
     assert "Mean absolute deviation" in body
     assert "nonconformity" in body
+
+
+def test_unconfigured_app_redirects_every_route_to_setup(
+    unconfigured_client: FlaskClient,
+) -> None:
+    for path in ["/", "/review", "/statement", "/analytics"]:
+        resp = unconfigured_client.get(path)
+        assert resp.status_code == 302
+        assert resp.headers["Location"] == "/setup"
+
+
+def test_setup_page_loads_without_a_session(unconfigured_client: FlaskClient) -> None:
+    resp = unconfigured_client.get("/setup")
+    assert resp.status_code == 200
+    assert "ledger_file" in resp.get_data(as_text=True)
+
+
+def test_setup_without_csrf_token_is_rejected(unconfigured_client: FlaskClient) -> None:
+    resp = unconfigured_client.post("/setup", data={})
+    assert resp.status_code == 400
+
+
+def _setup_form_data(csrf: str) -> dict[str, object]:
+    from io import BytesIO
+
+    ledger_bytes = (SAMPLE_DIR / "ledger.csv").read_bytes()
+    bank_bytes = (SAMPLE_DIR / "bank_statement.csv").read_bytes()
+    return {
+        "csrf_token": csrf,
+        "ledger_file": (BytesIO(ledger_bytes), "my ledger export.csv"),
+        "ledger_date_col": "date",
+        "ledger_date_format": "%Y-%m-%d",
+        "ledger_description_col": "description",
+        "ledger_amount_col": "amount",
+        "ledger_account_col": "account_ref",
+        "ledger_id_col": "id",
+        "bank_file": (BytesIO(bank_bytes), "../../etc/passwd.csv"),
+        "bank_date_col": "date",
+        "bank_date_format": "%d/%m/%Y",
+        "bank_description_col": "description",
+        "bank_debit_col": "debit",
+        "bank_credit_col": "credit",
+        "bank_account_col": "account_ref",
+        "bank_id_col": "id",
+    }
+
+
+def test_setup_flow_end_to_end(unconfigured_client: FlaskClient, tmp_path: Path) -> None:
+    """Upload real sample files with deliberately hostile client-supplied
+    filenames (spaces, a path-traversal attempt) -- the saved path must
+    never be derived from those, only from the fixed 'ledger'/'bank' names
+    this module chooses itself."""
+    resp = unconfigured_client.get("/setup")
+    csrf = _extract_csrf_token(resp.get_data(as_text=True))
+
+    resp = unconfigured_client.post(
+        "/setup", data=_setup_form_data(csrf), content_type="multipart/form-data"
+    )
+    assert resp.status_code == 302
+    assert resp.headers["Location"] == "/"
+
+    assert (tmp_path / "uploads" / "ledger.csv").is_file()
+    assert (tmp_path / "uploads" / "bank.csv").is_file()
+    assert not (tmp_path / "etc").exists()
+    assert (tmp_path / "session_config.json").is_file()
+
+    resp = unconfigured_client.get("/")
+    assert resp.status_code == 200
+    assert "Balance per bank" in resp.get_data(as_text=True)
+
+
+def test_setup_rejects_unsupported_file_type(unconfigured_client: FlaskClient) -> None:
+    from io import BytesIO
+
+    resp = unconfigured_client.get("/setup")
+    csrf = _extract_csrf_token(resp.get_data(as_text=True))
+    data = _setup_form_data(csrf)
+    data["ledger_file"] = (BytesIO(b"not really a spreadsheet"), "ledger.exe")
+
+    resp = unconfigured_client.post("/setup", data=data, content_type="multipart/form-data")
+    assert resp.status_code == 200
+    assert "unsupported file type" in resp.get_data(as_text=True)
+
+
+def test_setup_rejects_bad_column_mapping(unconfigured_client: FlaskClient) -> None:
+    resp = unconfigured_client.get("/setup")
+    csrf = _extract_csrf_token(resp.get_data(as_text=True))
+    data = _setup_form_data(csrf)
+    data["ledger_amount_col"] = "not_a_real_column"
+
+    resp = unconfigured_client.post("/setup", data=data, content_type="multipart/form-data")
+    assert resp.status_code == 200
+    assert "Could not read the files" in resp.get_data(as_text=True)
+
+
+def test_cli_paths_bypass_session_config_entirely(client: FlaskClient) -> None:
+    """When create_app is given explicit ledger/bank paths (recwise-review
+    --ledger/--bank), /setup must never be reachable via redirect."""
+    resp = client.get("/")
+    assert resp.status_code == 200

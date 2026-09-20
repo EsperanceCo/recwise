@@ -4,77 +4,116 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='22' fill='%230c5a49'/%3E%3Cpath d='M24 30H72' stroke='%23fff' stroke-width='9' stroke-linecap='round' fill='none'/%3E%3Cpath d='M24 58H40L50 68L72 46' stroke='%23d6a13a' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
   <title>Recwise{% block title_suffix %}{% endblock %}</title>
   <style>
+    /* Recwise brand tokens. Source of truth: the Recwise design system (tokens.json).
+       Fonts are bundled in static/fonts so the app never touches the network. */
+    @font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("{{ url_for('static', filename='fonts/IBMPlexSans-Regular.woff2') }}") format("woff2"); }
+    @font-face { font-family: "IBM Plex Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("{{ url_for('static', filename='fonts/IBMPlexSans-Medium.woff2') }}") format("woff2"); }
+    @font-face { font-family: "IBM Plex Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("{{ url_for('static', filename='fonts/IBMPlexSans-SemiBold.woff2') }}") format("woff2"); }
+    @font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("{{ url_for('static', filename='fonts/IBMPlexMono-Regular.woff2') }}") format("woff2"); }
+    @font-face { font-family: "IBM Plex Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("{{ url_for('static', filename='fonts/IBMPlexMono-Medium.woff2') }}") format("woff2"); }
+
     :root {
-      --bg: #f5f6f8;
-      --surface: #ffffff;
-      --border: #e3e6eb;
-      --text: #1a1d23;
-      --text-muted: #6b7280;
-      --primary: #4f46e5;
-      --primary-hover: #4338ca;
-      --primary-bg: #eef2ff;
-      /* Fixed across themes: solid-fill buttons need reliable contrast
-         with white text (verified ~6.3:1, WCAG AA), unlike --primary
-         above which is allowed to shift for link/nav legibility. */
-      --primary-solid: #4f46e5;
-      --primary-solid-hover: #4338ca;
-      --success: #16a34a;
-      --success-bg: #dcfce7;
-      --success-text: #166534;
-      --warning-bg: #fef3c7;
-      --warning-text: #92400e;
-      --danger: #dc2626;
-      --danger-bg: #fee2e2;
-      --danger-text: #991b1b;
-      --info-bg: #dbeafe;
-      --info-text: #1e40af;
-      --radius: 10px;
-      --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 8px rgba(16, 24, 40, 0.05);
+      --bg: #f6f4ee;
+      --surface: #fffdf9;
+      --surface-sunken: #ece8dd;
+      --border: #dcd7c8;
+      --border-control: #7d7a6c;
+      --ink: #16201c;
+      --ink-muted: #4f5a54;
+      --brand: #0c5a49;
+      --brand-hover: #084538;
+      --on-brand: #ffffff;
+      --brand-tint: #dbebe4;
+      --brand-deep: #062f27;
+      --on-brand-deep: #e9efea;
+      --accent: #d6a13a;
+      --on-accent: #2a1d00;
+      --accent-text: #7a4f00;
+      --focus-ring: #1d5fb5;
+      --success-bg: #dcefe2;
+      --success-text: #14532d;
+      --warning-bg: #fbebc8;
+      --warning-text: #6a4300;
+      --danger: #a8281d;
+      --danger-bg: #f8dcd5;
+      --danger-text: #86201a;
+      --info-bg: #dce8f2;
+      --info-text: #1b4a72;
+      --shadow-raised: 0 1px 2px rgba(22,32,28,0.06), 0 1px 8px rgba(22,32,28,0.06);
+      --shadow-overlay: 0 8px 24px rgba(22,32,28,0.14), 0 2px 6px rgba(22,32,28,0.08);
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 24px;
+      --space-6: 32px;
+      --space-7: 48px;
+      --space-8: 64px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-pill: 999px;
+      --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #101215;
-        --surface: #1a1d22;
-        --border: #2c3038;
-        --text: #e7e9ec;
-        --text-muted: #9aa1ac;
-        --primary: #818cf8;
-        --primary-hover: #a5b0fb;
-        --primary-bg: rgba(129, 140, 248, 0.16);
-        --success: #4ade80;
-        --success-bg: rgba(74, 222, 128, 0.16);
-        --success-text: #86efac;
-        --warning-bg: rgba(245, 158, 11, 0.16);
-        --warning-text: #fbbf24;
-        --danger: #f87171;
-        --danger-bg: rgba(248, 113, 113, 0.16);
-        --danger-text: #fca5a5;
-        --info-bg: rgba(96, 165, 250, 0.16);
-        --info-text: #93c5fd;
-        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 8px rgba(0, 0, 0, 0.35);
+        --bg: #0f1512;
+        --surface: #161e1a;
+        --surface-sunken: #0b100e;
+        --border: #27332d;
+        --border-control: #75857c;
+        --ink: #e9efea;
+        --ink-muted: #a4b2aa;
+        --brand: #62c7a6;
+        --brand-hover: #83d6ba;
+        --on-brand: #052219;
+        --brand-tint: #17322a;
+        --brand-deep: #0a2a22;
+        --on-brand-deep: #e9efea;
+        --accent: #e0b04e;
+        --on-accent: #2a1d00;
+        --accent-text: #e0b04e;
+        --focus-ring: #7cb4f5;
+        --success-bg: #163524;
+        --success-text: #8fdcaa;
+        --warning-bg: #3a2c0c;
+        --warning-text: #f0c66a;
+        --danger: #f08a7e;
+        --danger-bg: #3d1b17;
+        --danger-text: #f4a398;
+        --info-bg: #172c40;
+        --info-text: #9cc7ee;
+        --shadow-raised: 0 1px 2px rgba(0,0,0,0.4), 0 1px 8px rgba(0,0,0,0.4);
+        --shadow-overlay: 0 8px 24px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
       }
     }
 
     * { box-sizing: border-box; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: var(--font-sans);
+      font-size: 15px;
       background: var(--bg);
-      color: var(--text);
+      color: var(--ink);
       margin: 0;
       min-height: 100vh;
-      line-height: 1.5;
+      line-height: 22px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { color: var(--brand-hover); text-decoration: underline; }
+    :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
 
     .app-header {
       background: var(--surface);
       border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-raised);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -82,91 +121,104 @@
     .app-header-inner {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 var(--space-5);
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: var(--space-6);
       height: 56px;
     }
     .brand {
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--ink);
       letter-spacing: -0.01em;
     }
-    .brand:hover { text-decoration: none; }
-    .app-nav { display: flex; gap: 0.25rem; }
+    .brand:hover { text-decoration: none; color: var(--ink); }
+    .brand svg { width: 28px; height: 28px; display: block; }
+    .mark-tile { fill: var(--brand); }
+    .mark-bar { stroke: var(--on-brand); }
+    .mark-tick { stroke: var(--accent); }
+    @media (prefers-color-scheme: dark) { .mark-tick { stroke: var(--on-brand); } }
+    .app-nav { display: flex; gap: var(--space-1); }
     .app-nav a {
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      color: var(--ink-muted);
+      font-size: 14px;
       font-weight: 500;
-      padding: 0.4rem 0.75rem;
-      border-radius: 7px;
+      line-height: 20px;
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
     }
-    .app-nav a:hover { background: var(--bg); text-decoration: none; color: var(--text); }
-    .app-nav a.active { background: var(--primary-bg); color: var(--primary); }
+    .app-nav a:hover { background: var(--surface-sunken); text-decoration: none; color: var(--ink); }
+    .app-nav a.active { background: var(--brand-tint); color: var(--brand); }
 
-    .container { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .container { max-width: 1080px; margin: 0 auto; padding: var(--space-6) var(--space-5) 64px; }
 
-    h1 { font-size: 1.4rem; font-weight: 700; margin: 0 0 1.25rem; letter-spacing: -0.01em; }
-    h2 { font-size: 1rem; font-weight: 600; margin: 1.75rem 0 0.75rem; color: var(--text); }
+    h1 { font-size: 24px; line-height: 30px; font-weight: 600; margin: 0 0 var(--space-5); letter-spacing: -0.01em; }
+    h2 { font-size: 18px; line-height: 24px; font-weight: 600; margin: var(--space-6) 0 var(--space-3); color: var(--ink); }
     h2:first-child { margin-top: 0; }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      box-shadow: var(--shadow);
-      margin-bottom: 1.25rem;
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      box-shadow: var(--shadow-raised);
+      margin-bottom: var(--space-5);
     }
     .card p { margin: 0.35rem 0; }
-    .card-muted { color: var(--text-muted); font-size: 0.9rem; }
+    .card-muted { color: var(--ink-muted); font-size: 13px; line-height: 18px; }
 
     .stat-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
+      gap: var(--space-4);
     }
-    .stat { padding: 0.25rem 0; }
+    .stat { padding: var(--space-1) 0; }
     .stat-label {
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      margin-bottom: var(--space-1);
     }
-    .stat-value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .stat-value { font-family: var(--font-mono); font-size: 28px; line-height: 34px; font-weight: 500; font-variant-numeric: tabular-nums; }
     .stat-value.neg { color: var(--danger); }
 
-    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; color: var(--ink); }
     th {
       text-align: left;
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
-      color: var(--text-muted);
-      padding: 0.6rem 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+      padding: var(--space-3);
       border-bottom: 2px solid var(--border);
       white-space: nowrap;
     }
-    td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-    tbody tr:hover td { background: var(--bg); }
+    td { padding: var(--space-3); border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:hover td { background: var(--surface-sunken); }
     tbody tr:last-child td { border-bottom: none; }
 
-    .amount { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .amount { text-align: right; font-family: var(--font-mono); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .amount.neg { color: var(--danger); }
 
     .pill {
       display: inline-block;
-      padding: 0.18rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.68rem;
-      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
       background: var(--info-bg);
       color: var(--info-text);
       white-space: nowrap;
@@ -175,18 +227,18 @@
     .pill-fuzzy_discrepancy { background: var(--danger-bg); color: var(--danger-text); }
     .pill-manual { background: var(--success-bg); color: var(--success-text); }
 
-    .badge-source { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+    .badge-source { font-size: 12px; font-weight: 500; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
     .digit-bar-track {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      background: var(--surface-sunken);
+      border: 1px solid var(--border-control);
+      border-radius: var(--radius-sm);
       height: 10px;
       overflow: visible;
       position: relative;
       width: 160px;
     }
-    .digit-bar-fill { background: var(--primary); height: 100%; border-radius: 4px 0 0 4px; }
+    .digit-bar-fill { background: var(--brand); height: 100%; border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
     .digit-bar-expected {
       position: absolute;
       top: -2px;
@@ -200,47 +252,47 @@
 
     button, .btn {
       font: inherit;
-      font-weight: 600;
-      font-size: 0.85rem;
-      padding: 0.5rem 1rem;
-      border-radius: 7px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
       border: 1px solid transparent;
       cursor: pointer;
       transition: background 0.12s, border-color 0.12s;
     }
-    .btn-primary { background: var(--primary-solid); color: #fff; }
-    .btn-primary:hover { background: var(--primary-solid-hover); }
-    .accept { background: var(--success-bg); color: var(--success-text); border-color: rgba(22, 163, 74, 0.25); }
-    .accept:hover { background: #bbf7d0; }
-    .reject { background: var(--danger-bg); color: var(--danger-text); border-color: rgba(220, 38, 38, 0.25); }
-    .reject:hover { background: #fecaca; }
+    .btn-primary { background: var(--brand); color: var(--on-brand); }
+    .btn-primary:hover { background: var(--brand-hover); }
+    .accept { background: var(--success-bg); color: var(--success-text); border-color: var(--success-text); }
+    .reject { background: var(--danger-bg); color: var(--danger-text); border-color: var(--danger-text); }
+    .accept:hover, .reject:hover { filter: brightness(0.96); }
 
-    .actions { display: flex; gap: 0.5rem; margin-top: 0.9rem; }
+    .actions { display: flex; gap: var(--space-2); margin-top: var(--space-4); }
 
-    .suggestion-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
-    .suggestion-reason { color: var(--text-muted); font-size: 0.88rem; margin: 0 0 0.9rem; }
-    .confidence { font-size: 0.78rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+    .suggestion-meta { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+    .suggestion-reason { color: var(--ink-muted); margin: 0 0 var(--space-4); }
+    .confidence { font-family: var(--font-mono); font-size: 13px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 
     .alert {
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      margin-top: 0.5rem;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-top: var(--space-2);
     }
     .alert-danger { background: var(--danger-bg); color: var(--danger-text); }
 
-    .empty-state { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
+    .empty-state { color: var(--ink-muted); padding: var(--space-4) 0; }
 
-    label { display: block; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.3rem; margin-top: 0.9rem; }
+    label { display: block; font-size: 13px; line-height: 18px; font-weight: 500; margin-bottom: var(--space-1); margin-top: var(--space-3); }
     select, input[type="text"] {
       font: inherit;
-      font-size: 0.85rem;
-      padding: 0.45rem 0.6rem;
-      border-radius: 7px;
-      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-control);
       background: var(--surface);
-      color: var(--text);
+      color: var(--ink);
       width: 100%;
       max-width: 480px;
     }
@@ -249,7 +301,7 @@
 <body>
   <header class="app-header">
     <div class="app-header-inner">
-      <a class="brand" href="{{ url_for('index') }}">Recwise</a>
+      <a class="brand" href="{{ url_for('index') }}"><svg viewBox="0 0 96 96" aria-hidden="true"><rect class="mark-tile" width="96" height="96" rx="22"/><path class="mark-bar" d="M24 30H72" stroke-width="9" stroke-linecap="round" fill="none"/><path class="mark-tick" d="M24 58H40L50 68L72 46" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>Recwise</a>
       <nav class="app-nav">
         <a href="{{ url_for('index') }}"{% if request.endpoint == 'index' %} class="active"{% endif %}>Dashboard</a>
         <a href="{{ url_for('review_list') }}"{% if request.endpoint == 'review_list' %} class="active"{% endif %}>Review</a>

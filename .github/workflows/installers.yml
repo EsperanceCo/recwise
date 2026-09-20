@@ -66,3 +66,29 @@ jobs:
         with:
           name: recwise-debian-deb
           path: dist/*.deb
+
+  release:
+    # Only for an actual tag push -- a manual workflow_dispatch run still
+    # builds and uploads the three workflow artifacts above, but shouldn't
+    # create a public release on its own.
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [windows-msi, macos-dmg, debian-deb]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          path: artifacts
+          pattern: recwise-*
+      - name: Create release and attach installers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --title "${{ github.ref_name }}" \
+            --generate-notes \
+            artifacts/recwise-windows-msi/*.msi \
+            artifacts/recwise-macos-dmg/*.dmg \
+            artifacts/recwise-debian-deb/*.deb

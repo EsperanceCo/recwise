@@ -17,7 +17,7 @@ Users are accountants. A wrong result is worse than a missing result. Optimize f
 ### Privacy and data
 - The tool must work fully offline. No network calls, no telemetry, no analytics, no update checks. If a dependency phones home, do not add it.
 - Never commit real financial data. Only synthetic data lives in `sample_data/`. Do not create, paste or invent realistic-looking real account numbers, IBANs or names.
-- Never log transaction descriptions, amounts, names or account numbers. Logs may contain counts, IDs, timings and error types only.
+- Never log transaction descriptions, amounts, names or account numbers. Logs may contain counts, IDs, timings and error types only. This applies to every output stream, not just the audit log — analytics reports, future exports, and anything else derived from transaction data must not surface raw descriptions or amounts outside the reconciliation/export outputs the user directly requested.
 - Treat all input files as untrusted: cap file size, validate columns and types, fail with a clear error instead of guessing.
 
 ### Security
@@ -26,6 +26,7 @@ Users are accountants. A wrong result is worse than a missing result. Optimize f
 - Never build file paths from user input without resolving and checking they stay inside the intended directory.
 - Read input files read-only. Never modify or overwrite the user's originals.
 - No secrets, tokens or credentials in code, tests or config. If the UI runs a local server, bind to `127.0.0.1` only.
+- Every state-changing web route (anything that writes review decisions, matches, or exports) must check a per-process CSRF token before acting. Never use Jinja's `|safe`, `Markup`, or `render_template_string` on anything that could contain untrusted content — rely on autoescaping.
 - Do not add a dependency without asking. When you propose one, say what it does, why stdlib is not enough, and whether it is maintained. Pin versions. Also state its license, and do not add GPL or AGPL dependencies without asking me, because they could conflict with this project's license terms.
 
 ### Matching integrity

@@ -1,10 +1,12 @@
 """Append-only audit log: every match, unmatch, and manual decision.
 
 Per CLAUDE.md's matching-integrity rules. Entries are appended as JSON
-Lines so the log is never rewritten, only ever grown. Note: log entries
-carry ids, tiers, and confidence -- never transaction descriptions,
-amounts, or account numbers (the "never log transaction details" rule
-applies here too).
+Lines so the log is never rewritten, only ever grown. Log entries carry
+only ids, tiers, confidence, and timing -- never transaction descriptions,
+amounts, or account numbers. Deliberately does NOT store Match.reason:
+those plain-English reasons interpolate amounts and account refs (by
+design, for the human-facing matches.csv export), so they must never
+flow into this log. The tier alone is the safe stand-in for "why."
 """
 
 from __future__ import annotations
@@ -34,7 +36,6 @@ class AuditLogEntry:
     ledger_ids: list[str]
     bank_ids: list[str]
     confidence: float | None
-    reason: str
     actor: str = "system"
 
 
@@ -45,7 +46,8 @@ def _now() -> str:
 def entries_from_match_run(run: MatchRun, *, timestamp: str | None = None) -> list[AuditLogEntry]:
     """Build one audit entry per match produced by an engine run.
 
-    Note: only the *ids* are logged, not descriptions or amounts.
+    Note: only ids, tier, and confidence are logged -- never descriptions,
+    amounts, or account numbers, and never Match.reason (see module docstring).
     """
     ts = timestamp if timestamp is not None else _now()
     entries: list[AuditLogEntry] = []
@@ -63,7 +65,6 @@ def entries_from_match_run(run: MatchRun, *, timestamp: str | None = None) -> li
                 ledger_ids=match.ledger_ids,
                 bank_ids=match.bank_ids,
                 confidence=match.confidence,
-                reason=match.reason,
                 actor="system",
             )
         )

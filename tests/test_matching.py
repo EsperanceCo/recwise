@@ -175,7 +175,13 @@ def test_audit_log_round_trips(tmp_path: Path) -> None:
     assert len(read_back) == len(entries)
     assert read_back[0]["timestamp"] == "2024-01-01T00:00:00+00:00"
 
-    # Log entries must never leak descriptions -- only ids, tiers, and scores.
+    # Log entries must never leak descriptions, amounts, or account numbers --
+    # only ids, tiers, and scores. A match `reason` string interpolates the
+    # amount and account_ref (by design, for the human-facing export), so
+    # this also guards against reason ever being logged verbatim.
     raw_text = log_path.read_text(encoding="utf-8")
-    for txn in ledger[:5]:
+    for txn in ledger[:20] + bank[:20]:
         assert txn.description not in raw_text
+        assert str(txn.amount) not in raw_text
+        assert txn.account_ref not in raw_text
+    assert "reason" not in raw_text

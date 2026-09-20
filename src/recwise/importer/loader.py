@@ -39,7 +39,7 @@ def load_ledger(path: Path, mapping: LedgerColumnMapping) -> list[Transaction]:
             Transaction(
                 source=Source.LEDGER,
                 row_number=i,
-                external_id=row[mapping.id_col] if mapping.id_col else "",
+                external_id=row[mapping.id_col] if mapping.id_col else f"row-{i}",
                 txn_date=txn_date,
                 description=clean_description(row[mapping.description_col]),
                 amount=amount,
@@ -74,7 +74,7 @@ def load_bank_statement(path: Path, mapping: BankColumnMapping) -> list[Transact
             Transaction(
                 source=Source.BANK,
                 row_number=i,
-                external_id=row[mapping.id_col] if mapping.id_col else "",
+                external_id=row[mapping.id_col] if mapping.id_col else f"row-{i}",
                 txn_date=txn_date,
                 description=clean_description(row[mapping.description_col]),
                 amount=amount,

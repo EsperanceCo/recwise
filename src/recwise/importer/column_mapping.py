@@ -20,6 +20,9 @@ class LedgerColumnMapping:
     description_col: str
     amount_col: str
     account_col: str
+    # If the source file has no id/reference column, leave this None: the
+    # loader synthesizes a per-row id ("row-<n>") instead of leaving every
+    # Transaction.external_id equal -- see loader.py. Never "" for every row.
     id_col: str | None = None
 
     def required_columns(self) -> list[str]:
@@ -39,6 +42,8 @@ class BankColumnMapping:
     debit_col: str
     credit_col: str
     account_col: str
+    # See LedgerColumnMapping.id_col: None synthesizes a per-row id, never
+    # leaves every Transaction.external_id equal.
     id_col: str | None = None
 
     def required_columns(self) -> list[str]:

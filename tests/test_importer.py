@@ -86,6 +86,33 @@ def test_normal_exact_case_matches_in_amount_and_id() -> None:
     assert ledger_txn.amount == bank_txn.amount
 
 
+def test_no_id_column_synthesizes_distinct_ids_not_empty_string(tmp_path: Path) -> None:
+    """A file with no id/reference column must never leave every
+    Transaction.external_id equal -- that would collapse every row onto
+    one key in any {external_id: txn} dict downstream (matching,
+    reconciliation, both UIs), corrupting data silently."""
+    csv_path = tmp_path / "ledger.csv"
+    csv_path.write_text(
+        "date,description,amount,account_ref\n"
+        "2024-01-01,first,10.00,TEST1\n"
+        "2024-01-02,second,20.00,TEST1\n"
+        "2024-01-03,third,30.00,TEST1\n",
+        encoding="utf-8",
+    )
+    mapping = LedgerColumnMapping(
+        date_col="date",
+        date_format="%Y-%m-%d",
+        description_col="description",
+        amount_col="amount",
+        account_col="account_ref",
+        # id_col deliberately omitted (defaults to None)
+    )
+    transactions = load_ledger(csv_path, mapping)
+    ids = [t.external_id for t in transactions]
+    assert len(set(ids)) == len(ids) == 3
+    assert "" not in ids
+
+
 def test_missing_column_raises_clear_error(tmp_path: Path) -> None:
     bad_csv = tmp_path / "ledger.csv"
     bad_csv.write_text("date,description,amount\n2024-01-01,test,10.00\n", encoding="utf-8")

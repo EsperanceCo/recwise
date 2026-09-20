@@ -39,6 +39,11 @@ Reconciliation is tedious, easy to get wrong, and every business does it every m
 Packaged installers (Windows `.msi`, macOS `.app`/`.dmg`, Debian `.deb`) are built by CI
 (`.github/workflows/installers.yml`) on tagged releases via [Briefcase](https://briefcase.readthedocs.io/).
 
+On Nix/NixOS, `nix run github:EsperanceCo/recwise` (or `nix run .` from a checkout) runs
+`recwise-app`; `nix run .#recwise-tui`, `.#recwise-reconcile`, etc. run the other entry points, and
+`nix develop` gives a shell with the dev tooling (pytest/ruff/mypy/bandit). The license isn't OSI
+open source, so building it sets `NIXPKGS_ALLOW_UNFREE=1` the way any unfree nixpkgs package does.
+
 ## How it's tested
 
 Recwise is developed against **synthetic data with a known answer key**, so precision and recall can be measured instead of guessed. The auto-match tier must produce zero false positives. No real financial data is ever committed to this repository.

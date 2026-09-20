@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>Recwise{% block title_suffix %}{% endblock %}</title>
   <style>
     :root {
@@ -14,6 +15,11 @@
       --primary: #4f46e5;
       --primary-hover: #4338ca;
       --primary-bg: #eef2ff;
+      /* Fixed across themes: solid-fill buttons need reliable contrast
+         with white text (verified ~6.3:1, WCAG AA), unlike --primary
+         above which is allowed to shift for link/nav legibility. */
+      --primary-solid: #4f46e5;
+      --primary-solid-hover: #4338ca;
       --success: #16a34a;
       --success-bg: #dcfce7;
       --success-text: #166534;
@@ -26,6 +32,30 @@
       --info-text: #1e40af;
       --radius: 10px;
       --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 8px rgba(16, 24, 40, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101215;
+        --surface: #1a1d22;
+        --border: #2c3038;
+        --text: #e7e9ec;
+        --text-muted: #9aa1ac;
+        --primary: #818cf8;
+        --primary-hover: #a5b0fb;
+        --primary-bg: rgba(129, 140, 248, 0.16);
+        --success: #4ade80;
+        --success-bg: rgba(74, 222, 128, 0.16);
+        --success-text: #86efac;
+        --warning-bg: rgba(245, 158, 11, 0.16);
+        --warning-text: #fbbf24;
+        --danger: #f87171;
+        --danger-bg: rgba(248, 113, 113, 0.16);
+        --danger-text: #fca5a5;
+        --info-bg: rgba(96, 165, 250, 0.16);
+        --info-text: #93c5fd;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 8px rgba(0, 0, 0, 0.35);
+      }
     }
 
     * { box-sizing: border-box; }
@@ -157,8 +187,8 @@
       cursor: pointer;
       transition: background 0.12s, border-color 0.12s;
     }
-    .btn-primary { background: var(--primary); color: #fff; }
-    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-primary { background: var(--primary-solid); color: #fff; }
+    .btn-primary:hover { background: var(--primary-solid-hover); }
     .accept { background: var(--success-bg); color: var(--success-text); border-color: rgba(22, 163, 74, 0.25); }
     .accept:hover { background: #bbf7d0; }
     .reject { background: var(--danger-bg); color: var(--danger-text); border-color: rgba(220, 38, 38, 0.25); }

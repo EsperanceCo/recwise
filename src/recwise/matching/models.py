@@ -15,6 +15,7 @@ class MatchTier(StrEnum):
     DATE_WINDOW = "date_window"
     ONE_TO_MANY = "one_to_many"
     FUZZY_DISCREPANCY = "fuzzy_discrepancy"
+    MANUAL = "manual"
 
 
 class MatchStatus(StrEnum):

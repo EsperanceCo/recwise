@@ -58,14 +58,27 @@ def test_pending_review_notes_are_net_zero() -> None:
 
 
 def test_discrepancy_items_carry_the_real_residual() -> None:
+    """Only fuzzy-discrepancy matches with an actual amount mismatch become
+    a DiscrepancyItem. A "wrong date" fuzzy match (same amount, different
+    date) has zero residual and belongs with the other net-zero pending
+    items instead -- it doesn't affect the balance identity."""
     ledger, bank = _load_sample()
     run = match(ledger, bank)
     statement = build_statement(ledger, bank, run)
 
+    ledger_by_id = {t.external_id: t for t in ledger}
+    bank_by_id = {t.external_id: t for t in bank}
     fuzzy_matches = [m for m in run.review_matches() if m.tier == MatchTier.FUZZY_DISCREPANCY]
-    assert len(statement.discrepancy_items) == len(fuzzy_matches)
+    expected_discrepancies = [
+        m
+        for m in fuzzy_matches
+        if ledger_by_id[m.ledger_ids[0]].amount != bank_by_id[m.bank_ids[0]].amount
+    ]
+    assert len(statement.discrepancy_items) == len(expected_discrepancies)
+    assert statement.discrepancy_items  # sanity: sample data actually has some
     for item in statement.discrepancy_items:
         assert item.residual == item.ledger_amount - item.bank_amount
+        assert item.residual != 0
 
 
 def test_handcrafted_timing_and_bank_only_items() -> None:

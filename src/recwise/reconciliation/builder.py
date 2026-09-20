@@ -10,7 +10,7 @@ from __future__ import annotations
 from decimal import Decimal
 
 from recwise.importer.models import Transaction
-from recwise.matching.models import MatchRun, MatchTier
+from recwise.matching.models import Match, MatchRun, MatchStatus
 from recwise.reconciliation.models import (
     DiscrepancyItem,
     PendingReviewNote,
@@ -57,6 +57,21 @@ def _suggest_journal_for_bank_only(txn: Transaction) -> SuggestedJournal:
     )
 
 
+def _has_residual(
+    m: Match, ledger_by_id: dict[str, Transaction], bank_by_id: dict[str, Transaction]
+) -> bool:
+    """True for a 1:1 match whose ledger and bank amounts genuinely differ.
+
+    Checked for every match, not just the fuzzy-discrepancy tier: a
+    manually confirmed match (a human can force-pair mismatched amounts
+    on purpose) must still surface as a discrepancy line, or the
+    reconciliation identity would silently stop balancing.
+    """
+    if len(m.ledger_ids) != 1 or len(m.bank_ids) != 1:
+        return False
+    return ledger_by_id[m.ledger_ids[0]].amount != bank_by_id[m.bank_ids[0]].amount
+
+
 def build_statement(
     ledger: list[Transaction], bank: list[Transaction], run: MatchRun
 ) -> ReconciliationStatement:
@@ -90,8 +105,8 @@ def build_statement(
 
     discrepancy_items: list[DiscrepancyItem] = []
     pending_review_notes: list[PendingReviewNote] = []
-    for m in run.review_matches():
-        if m.tier == MatchTier.FUZZY_DISCREPANCY:
+    for m in run.matches:
+        if _has_residual(m, ledger_by_id, bank_by_id):
             ledger_txn = ledger_by_id[m.ledger_ids[0]]
             bank_txn = bank_by_id[m.bank_ids[0]]
             discrepancy_items.append(
@@ -105,7 +120,7 @@ def build_statement(
                     reason=m.reason,
                 )
             )
-        else:
+        elif m.status == MatchStatus.REVIEW:
             pending_review_notes.append(
                 PendingReviewNote(
                     tier=m.tier.value,

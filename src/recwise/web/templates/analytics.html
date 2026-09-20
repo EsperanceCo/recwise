@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title_suffix %} - Analytics{% endblock %}
+
+{% macro benford_section(title, result) %}
+<div class="card">
+  <h2 style="margin-top:0">{{ title }}</h2>
+  <p class="card-muted">Sample size: {{ result.sample_size }}
+    &middot; Mean absolute deviation: {{ "%.4f"|format(result.mean_absolute_deviation) }}
+    &middot; <span class="pill conformity-{{ result.conformity.value }}">{{ result.conformity.value | replace("_", " ") }}</span>
+  </p>
+  {% if not result.sufficient_sample %}
+  <div class="alert alert-danger">
+    Sample size is under the recommended minimum of 300 for a meaningful first-digit test &mdash; treat this result as indicative only.
+  </div>
+  {% endif %}
+  <table>
+    <tr><th>Digit</th><th class="amount">Observed</th><th class="amount">Obs %</th><th class="amount">Expected %</th><th>Distribution</th></tr>
+    {% for stat in result.digit_stats %}
+    <tr>
+      <td>{{ stat.digit }}</td>
+      <td class="amount">{{ stat.observed_count }}</td>
+      <td class="amount">{{ "%.2f"|format(stat.observed_proportion * 100) }}%</td>
+      <td class="amount">{{ "%.2f"|format(stat.expected_proportion * 100) }}%</td>
+      <td>
+        <div class="digit-bar-track">
+          <div class="digit-bar-fill" style="width: {{ (stat.observed_proportion * 100) | round(1) }}%"></div>
+          <div class="digit-bar-expected" style="left: {{ (stat.expected_proportion * 100) | round(1) }}%"></div>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p class="card-muted" style="margin-top:0.75rem;">Bar = observed proportion. Red mark = Benford-expected proportion.</p>
+</div>
+{% endmacro %}
+
+{% block content %}
+<h1>Audit analytics</h1>
+<p class="card-muted" style="margin-top:-0.75rem; margin-bottom:1.5rem;">
+  Benford's Law first-digit analysis &mdash; a screening signal for data that looks fabricated or manually altered, not proof of anything on its own.
+</p>
+
+{{ benford_section("Ledger", ledger_result) }}
+{{ benford_section("Bank statement", bank_result) }}
+{% endblock %}

@@ -177,6 +177,27 @@
 
     .badge-source { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
 
+    .digit-bar-track {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      height: 10px;
+      overflow: visible;
+      position: relative;
+      width: 160px;
+    }
+    .digit-bar-fill { background: var(--primary); height: 100%; border-radius: 4px 0 0 4px; }
+    .digit-bar-expected {
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      width: 2px;
+      background: var(--danger);
+    }
+    .conformity-close, .conformity-acceptable { background: var(--success-bg); color: var(--success-text); }
+    .conformity-marginally_acceptable { background: var(--warning-bg); color: var(--warning-text); }
+    .conformity-nonconformity { background: var(--danger-bg); color: var(--danger-text); }
+
     button, .btn {
       font: inherit;
       font-weight: 600;
@@ -233,6 +254,7 @@
         <a href="{{ url_for('index') }}"{% if request.endpoint == 'index' %} class="active"{% endif %}>Dashboard</a>
         <a href="{{ url_for('review_list') }}"{% if request.endpoint == 'review_list' %} class="active"{% endif %}>Review</a>
         <a href="{{ url_for('statement_view') }}"{% if request.endpoint == 'statement_view' %} class="active"{% endif %}>Statement</a>
+        <a href="{{ url_for('analytics_view') }}"{% if request.endpoint == 'analytics_view' %} class="active"{% endif %}>Analytics</a>
       </nav>
     </div>
   </header>

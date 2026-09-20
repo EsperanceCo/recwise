@@ -22,6 +22,7 @@ from flask import Flask, abort, redirect, render_template, request, url_for
 from werkzeug.wrappers import Response
 
 from recwise import review
+from recwise.analytics import analyze as analyze_benford
 from recwise.export import export_reconciliation
 from recwise.importer.column_mapping import BankColumnMapping, LedgerColumnMapping
 from recwise.importer.loader import load_bank_statement, load_ledger
@@ -136,6 +137,15 @@ def create_app(
         except review.ManualMatchError as exc:
             abort(400, str(exc))
         return redirect(url_for("review_list"))
+
+    @app.get("/analytics")
+    def analytics_view() -> str:
+        ledger, bank, _ = _load()
+        return render_template(
+            "analytics.html",
+            ledger_result=analyze_benford(ledger),
+            bank_result=analyze_benford(bank),
+        )
 
     @app.get("/statement")
     def statement_view() -> str:

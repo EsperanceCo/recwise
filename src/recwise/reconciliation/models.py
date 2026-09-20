@@ -15,6 +15,7 @@ class ReconcilingItem:
     external_id: str
     txn_date: date
     amount: Decimal
+    description: str
 
 
 @dataclass(frozen=True)
@@ -27,6 +28,8 @@ class DiscrepancyItem:
     bank_id: str
     ledger_amount: Decimal
     bank_amount: Decimal
+    ledger_description: str
+    bank_description: str
     reason: str
 
     @property

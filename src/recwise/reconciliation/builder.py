@@ -65,13 +65,21 @@ def build_statement(
 
     ledger_only_items = [
         ReconcilingItem(
-            source="ledger", external_id=t.external_id, txn_date=t.txn_date, amount=t.amount
+            source="ledger",
+            external_id=t.external_id,
+            txn_date=t.txn_date,
+            amount=t.amount,
+            description=t.description,
         )
         for t in run.unmatched_ledger
     ]
     bank_only_items = [
         ReconcilingItem(
-            source="bank", external_id=t.external_id, txn_date=t.txn_date, amount=t.amount
+            source="bank",
+            external_id=t.external_id,
+            txn_date=t.txn_date,
+            amount=t.amount,
+            description=t.description,
         )
         for t in run.unmatched_bank
     ]
@@ -92,6 +100,8 @@ def build_statement(
                     bank_id=bank_txn.external_id,
                     ledger_amount=ledger_txn.amount,
                     bank_amount=bank_txn.amount,
+                    ledger_description=ledger_txn.description,
+                    bank_description=bank_txn.description,
                     reason=m.reason,
                 )
             )

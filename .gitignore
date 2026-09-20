@@ -23,6 +23,9 @@ htmlcov/
 .coverage
 .coverage.*
 
+# Briefcase (packaged desktop installers)
+logs/
+
 # Virtual environments
 .venv/
 venv/

@@ -1,0 +1,11 @@
+# Dev/test tooling, pinned to exact versions for reproducible builds.
+# Regenerate deliberately; do not bump without checking release notes.
+# No runtime dependencies exist for recwise itself.
+pytest==9.1.1
+hypothesis==6.168.0
+ruff==0.16.8
+mypy==2.3.1
+bandit==1.9.4
+pip-audit==2.10.1
+pre-commit==4.6.2
+pandas-stubs==3.0.5.260914

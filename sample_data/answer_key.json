@@ -1,0 +1,9067 @@
+{
+  "seed": 42,
+  "count": 1000,
+  "start_date": "2024-01-01",
+  "num_days": 90,
+  "ledger_file": "ledger.csv",
+  "bank_file": "bank_statement.csv",
+  "totals": {
+    "ledger_rows": 1000,
+    "bank_rows": 903,
+    "cases": 910
+  },
+  "balances": {
+    "balance_per_ledger": "2140035.30",
+    "balance_per_bank": "2124499.13"
+  },
+  "cases": [
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000001",
+        "LGR-000002"
+      ],
+      "bank_ids": [
+        "BNK-000001",
+        "BNK-000002"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000003"
+      ],
+      "bank_ids": [
+        "BNK-000003"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000004"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000005"
+      ],
+      "bank_ids": [
+        "BNK-000004"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000006"
+      ],
+      "bank_ids": [
+        "BNK-000005"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-14 vs bank date 2023-11-30"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000007"
+      ],
+      "bank_ids": [
+        "BNK-000006"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000008"
+      ],
+      "bank_ids": [
+        "BNK-000007"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000009"
+      ],
+      "bank_ids": [
+        "BNK-000008"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000010"
+      ],
+      "bank_ids": [
+        "BNK-000009"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000011"
+      ],
+      "bank_ids": [
+        "BNK-000010"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000012"
+      ],
+      "bank_ids": [
+        "BNK-000011"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-30 vs bank date 2023-12-16"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000013"
+      ],
+      "bank_ids": [
+        "BNK-000012"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000014"
+      ],
+      "bank_ids": [
+        "BNK-000013"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000015"
+      ],
+      "bank_ids": [
+        "BNK-000014"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000016"
+      ],
+      "bank_ids": [
+        "BNK-000015"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000017"
+      ],
+      "bank_ids": [
+        "BNK-000016"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000018"
+      ],
+      "bank_ids": [
+        "BNK-000017"
+      ],
+      "note": "transposed-digit error: ledger 8089.75 vs bank 8098.75"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000019"
+      ],
+      "bank_ids": [
+        "BNK-000018"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000020"
+      ],
+      "bank_ids": [
+        "BNK-000019"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-01 vs bank date 2024-03-01"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000021"
+      ],
+      "bank_ids": [
+        "BNK-000020"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000022"
+      ],
+      "bank_ids": [
+        "BNK-000021"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000023"
+      ],
+      "bank_ids": [
+        "BNK-000022"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000024"
+      ],
+      "bank_ids": [
+        "BNK-000023"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000025"
+      ],
+      "bank_ids": [
+        "BNK-000024"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000026"
+      ],
+      "bank_ids": [
+        "BNK-000025"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000027"
+      ],
+      "bank_ids": [
+        "BNK-000026"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000028"
+      ],
+      "bank_ids": [
+        "BNK-000027"
+      ],
+      "note": "wrong amount error: ledger 3435.98 vs bank 3397.84"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000029"
+      ],
+      "bank_ids": [
+        "BNK-000028"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000030",
+        "LGR-000031"
+      ],
+      "bank_ids": [
+        "BNK-000029",
+        "BNK-000030"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000032"
+      ],
+      "bank_ids": [
+        "BNK-000031"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000033"
+      ],
+      "bank_ids": [
+        "BNK-000032"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000034"
+      ],
+      "bank_ids": [
+        "BNK-000033"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000035"
+      ],
+      "bank_ids": [
+        "BNK-000034"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000036"
+      ],
+      "bank_ids": [
+        "BNK-000035"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000037"
+      ],
+      "bank_ids": [
+        "BNK-000036"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000038"
+      ],
+      "bank_ids": [
+        "BNK-000037"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000039"
+      ],
+      "bank_ids": [
+        "BNK-000038"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000040"
+      ],
+      "bank_ids": [
+        "BNK-000039"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000041"
+      ],
+      "bank_ids": [
+        "BNK-000040"
+      ],
+      "note": "transposed-digit error: ledger 7308.92 vs bank 7309.82"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000042"
+      ],
+      "bank_ids": [
+        "BNK-000041"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000043"
+      ],
+      "bank_ids": [
+        "BNK-000042"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000044"
+      ],
+      "bank_ids": [
+        "BNK-000043"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000045"
+      ],
+      "bank_ids": [
+        "BNK-000044"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000046"
+      ],
+      "bank_ids": [
+        "BNK-000045"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000047"
+      ],
+      "bank_ids": [
+        "BNK-000046"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000048"
+      ],
+      "bank_ids": [
+        "BNK-000047"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000049"
+      ],
+      "bank_ids": [
+        "BNK-000048"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000050"
+      ],
+      "bank_ids": [
+        "BNK-000049"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000051"
+      ],
+      "bank_ids": [
+        "BNK-000050"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000052"
+      ],
+      "bank_ids": [
+        "BNK-000051"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000053"
+      ],
+      "bank_ids": [
+        "BNK-000052"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000054",
+        "LGR-000055",
+        "LGR-000056"
+      ],
+      "bank_ids": [
+        "BNK-000053"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000057"
+      ],
+      "bank_ids": [
+        "BNK-000054"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000058"
+      ],
+      "bank_ids": [
+        "BNK-000055"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000059"
+      ],
+      "bank_ids": [
+        "BNK-000056"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000060"
+      ],
+      "bank_ids": [
+        "BNK-000057"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000061",
+        "LGR-000062"
+      ],
+      "bank_ids": [
+        "BNK-000058",
+        "BNK-000059"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000063"
+      ],
+      "bank_ids": [
+        "BNK-000060"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000064"
+      ],
+      "bank_ids": [
+        "BNK-000061"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000065"
+      ],
+      "bank_ids": [
+        "BNK-000062"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000066",
+        "LGR-000067"
+      ],
+      "bank_ids": [
+        "BNK-000063",
+        "BNK-000064"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000068"
+      ],
+      "bank_ids": [
+        "BNK-000065"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000069"
+      ],
+      "bank_ids": [
+        "BNK-000066"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000070"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000071"
+      ],
+      "bank_ids": [
+        "BNK-000067"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000072"
+      ],
+      "bank_ids": [
+        "BNK-000068"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000073"
+      ],
+      "bank_ids": [
+        "BNK-000069"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000074"
+      ],
+      "bank_ids": [
+        "BNK-000070"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000075"
+      ],
+      "bank_ids": [
+        "BNK-000071"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000076"
+      ],
+      "bank_ids": [
+        "BNK-000072"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000077"
+      ],
+      "bank_ids": [
+        "BNK-000073"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000078"
+      ],
+      "bank_ids": [
+        "BNK-000074"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-22 vs bank date 2024-03-22"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000079"
+      ],
+      "bank_ids": [
+        "BNK-000075"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000080"
+      ],
+      "bank_ids": [
+        "BNK-000076"
+      ],
+      "note": "transposed-digit error: ledger 6308.59 vs bank 6380.59"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000081"
+      ],
+      "bank_ids": [
+        "BNK-000077"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000082"
+      ],
+      "bank_ids": [
+        "BNK-000078"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000083"
+      ],
+      "bank_ids": [
+        "BNK-000079"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000084"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000085"
+      ],
+      "bank_ids": [
+        "BNK-000080"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000086"
+      ],
+      "bank_ids": [
+        "BNK-000081"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000087"
+      ],
+      "bank_ids": [
+        "BNK-000082"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000088"
+      ],
+      "bank_ids": [
+        "BNK-000083"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000089"
+      ],
+      "bank_ids": [
+        "BNK-000084"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000090"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000091"
+      ],
+      "bank_ids": [
+        "BNK-000085"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000092"
+      ],
+      "bank_ids": [
+        "BNK-000086"
+      ],
+      "note": "wrong amount error: ledger 3808.91 vs bank 3101.13"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000093"
+      ],
+      "bank_ids": [
+        "BNK-000087"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000094"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000095"
+      ],
+      "bank_ids": [
+        "BNK-000088"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-14 vs bank date 2023-11-30"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000096"
+      ],
+      "bank_ids": [
+        "BNK-000089"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000097"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000098"
+      ],
+      "bank_ids": [
+        "BNK-000090"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000099"
+      ],
+      "bank_ids": [
+        "BNK-000091"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000100"
+      ],
+      "bank_ids": [
+        "BNK-000092"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-21 vs bank date 2024-02-20"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000101",
+        "LGR-000102",
+        "LGR-000103"
+      ],
+      "bank_ids": [
+        "BNK-000093"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000104"
+      ],
+      "bank_ids": [
+        "BNK-000094"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000105"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000106"
+      ],
+      "bank_ids": [
+        "BNK-000095"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000107"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000108"
+      ],
+      "bank_ids": [
+        "BNK-000096"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000109"
+      ],
+      "bank_ids": [
+        "BNK-000097"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-23 vs bank date 2024-03-08"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000110"
+      ],
+      "bank_ids": [
+        "BNK-000098"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000111",
+        "LGR-000112",
+        "LGR-000113"
+      ],
+      "bank_ids": [
+        "BNK-000099"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000114"
+      ],
+      "bank_ids": [
+        "BNK-000100"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000115"
+      ],
+      "bank_ids": [
+        "BNK-000101"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-27 vs bank date 2024-02-26"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000116",
+        "LGR-000117"
+      ],
+      "bank_ids": [
+        "BNK-000102"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000118"
+      ],
+      "bank_ids": [
+        "BNK-000103"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000119"
+      ],
+      "bank_ids": [
+        "BNK-000104"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000120"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000121"
+      ],
+      "bank_ids": [
+        "BNK-000105"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000122",
+        "LGR-000123"
+      ],
+      "bank_ids": [
+        "BNK-000106"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000124"
+      ],
+      "bank_ids": [
+        "BNK-000107"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000125"
+      ],
+      "bank_ids": [
+        "BNK-000108"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000126"
+      ],
+      "bank_ids": [
+        "BNK-000109"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000127",
+        "LGR-000128",
+        "LGR-000129",
+        "LGR-000130"
+      ],
+      "bank_ids": [
+        "BNK-000110"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000131"
+      ],
+      "bank_ids": [
+        "BNK-000111"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000132"
+      ],
+      "bank_ids": [
+        "BNK-000112"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000133"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000134"
+      ],
+      "bank_ids": [
+        "BNK-000113"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000135"
+      ],
+      "bank_ids": [
+        "BNK-000114"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000136"
+      ],
+      "bank_ids": [
+        "BNK-000115"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000137"
+      ],
+      "bank_ids": [
+        "BNK-000116"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000138",
+        "LGR-000139",
+        "LGR-000140"
+      ],
+      "bank_ids": [
+        "BNK-000117"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000141",
+        "LGR-000142"
+      ],
+      "bank_ids": [
+        "BNK-000118",
+        "BNK-000119"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000143"
+      ],
+      "bank_ids": [
+        "BNK-000120"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000144"
+      ],
+      "bank_ids": [
+        "BNK-000121"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000145"
+      ],
+      "bank_ids": [
+        "BNK-000122"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000146"
+      ],
+      "bank_ids": [
+        "BNK-000123"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000147"
+      ],
+      "bank_ids": [
+        "BNK-000124"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000148",
+        "LGR-000149"
+      ],
+      "bank_ids": [
+        "BNK-000125",
+        "BNK-000126"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000150"
+      ],
+      "bank_ids": [
+        "BNK-000127"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000151"
+      ],
+      "bank_ids": [
+        "BNK-000128"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000152",
+        "LGR-000153"
+      ],
+      "bank_ids": [
+        "BNK-000129",
+        "BNK-000130"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000154",
+        "LGR-000155",
+        "LGR-000156",
+        "LGR-000157"
+      ],
+      "bank_ids": [
+        "BNK-000131"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000158"
+      ],
+      "bank_ids": [
+        "BNK-000132"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000159"
+      ],
+      "bank_ids": [
+        "BNK-000133"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000160"
+      ],
+      "bank_ids": [
+        "BNK-000134"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000161"
+      ],
+      "bank_ids": [
+        "BNK-000135"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000162"
+      ],
+      "bank_ids": [
+        "BNK-000136"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000163"
+      ],
+      "bank_ids": [
+        "BNK-000137"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000164"
+      ],
+      "bank_ids": [
+        "BNK-000138"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000165"
+      ],
+      "bank_ids": [
+        "BNK-000139"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000166",
+        "LGR-000167"
+      ],
+      "bank_ids": [
+        "BNK-000140",
+        "BNK-000141"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000168"
+      ],
+      "bank_ids": [
+        "BNK-000142"
+      ],
+      "note": "wrong amount error: ledger 2247.47 vs bank 1648.52"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000169"
+      ],
+      "bank_ids": [
+        "BNK-000143"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000170"
+      ],
+      "bank_ids": [
+        "BNK-000144"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000171",
+        "LGR-000172",
+        "LGR-000173"
+      ],
+      "bank_ids": [
+        "BNK-000145"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000174"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000175"
+      ],
+      "bank_ids": [
+        "BNK-000146"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000176"
+      ],
+      "bank_ids": [
+        "BNK-000147"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000177"
+      ],
+      "bank_ids": [
+        "BNK-000148"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000178"
+      ],
+      "bank_ids": [
+        "BNK-000149"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000179"
+      ],
+      "bank_ids": [
+        "BNK-000150"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-07 vs bank date 2023-11-23"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000180"
+      ],
+      "bank_ids": [
+        "BNK-000151"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000181"
+      ],
+      "bank_ids": [
+        "BNK-000152"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000182"
+      ],
+      "bank_ids": [
+        "BNK-000153"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000183"
+      ],
+      "bank_ids": [
+        "BNK-000154"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000184"
+      ],
+      "bank_ids": [
+        "BNK-000155"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000185"
+      ],
+      "bank_ids": [
+        "BNK-000156"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000186",
+        "LGR-000187"
+      ],
+      "bank_ids": [
+        "BNK-000157"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000188"
+      ],
+      "bank_ids": [
+        "BNK-000158"
+      ],
+      "note": "wrong amount error: ledger 1756.23 vs bank 4094.82"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000189"
+      ],
+      "bank_ids": [
+        "BNK-000159"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-14 vs bank date 2024-01-15"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000190"
+      ],
+      "bank_ids": [
+        "BNK-000160"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-10 vs bank date 2023-12-11"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000191"
+      ],
+      "bank_ids": [
+        "BNK-000161"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-27 vs bank date 2024-04-27"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000192"
+      ],
+      "bank_ids": [
+        "BNK-000162"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000193"
+      ],
+      "bank_ids": [
+        "BNK-000163"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000194"
+      ],
+      "bank_ids": [
+        "BNK-000164"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000195"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000196"
+      ],
+      "bank_ids": [
+        "BNK-000165"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000197"
+      ],
+      "bank_ids": [
+        "BNK-000166"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000198",
+        "LGR-000199"
+      ],
+      "bank_ids": [
+        "BNK-000167"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000200"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000201"
+      ],
+      "bank_ids": [
+        "BNK-000168"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000202",
+        "LGR-000203"
+      ],
+      "bank_ids": [
+        "BNK-000169",
+        "BNK-000170"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000204"
+      ],
+      "bank_ids": [
+        "BNK-000171"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000205"
+      ],
+      "bank_ids": [
+        "BNK-000172"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000206"
+      ],
+      "bank_ids": [
+        "BNK-000173"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000207",
+        "LGR-000208",
+        "LGR-000209",
+        "LGR-000210"
+      ],
+      "bank_ids": [
+        "BNK-000174"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000211"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000212"
+      ],
+      "bank_ids": [
+        "BNK-000175"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000213"
+      ],
+      "bank_ids": [
+        "BNK-000176"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000214"
+      ],
+      "bank_ids": [
+        "BNK-000177"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000215"
+      ],
+      "bank_ids": [
+        "BNK-000178"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000216"
+      ],
+      "bank_ids": [
+        "BNK-000179"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000217"
+      ],
+      "bank_ids": [
+        "BNK-000180"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000218"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000219"
+      ],
+      "bank_ids": [
+        "BNK-000181"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000220"
+      ],
+      "bank_ids": [
+        "BNK-000182"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000221"
+      ],
+      "bank_ids": [
+        "BNK-000183"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000222"
+      ],
+      "bank_ids": [
+        "BNK-000184"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000223"
+      ],
+      "bank_ids": [
+        "BNK-000185"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000224"
+      ],
+      "bank_ids": [
+        "BNK-000186"
+      ],
+      "note": "wrong amount error: ledger 709.45 vs bank 242.44"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000225"
+      ],
+      "bank_ids": [
+        "BNK-000187"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000226"
+      ],
+      "bank_ids": [
+        "BNK-000188"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000227"
+      ],
+      "bank_ids": [
+        "BNK-000189"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000228"
+      ],
+      "bank_ids": [
+        "BNK-000190"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000229"
+      ],
+      "bank_ids": [
+        "BNK-000191"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000230"
+      ],
+      "bank_ids": [
+        "BNK-000192"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000231"
+      ],
+      "bank_ids": [
+        "BNK-000193"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000232"
+      ],
+      "bank_ids": [
+        "BNK-000194"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000233"
+      ],
+      "bank_ids": [
+        "BNK-000195"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000234"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000235"
+      ],
+      "bank_ids": [
+        "BNK-000196"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000236"
+      ],
+      "bank_ids": [
+        "BNK-000197"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000237"
+      ],
+      "bank_ids": [
+        "BNK-000198"
+      ],
+      "note": "transposed-digit error: ledger 6515.99 vs bank 6551.99"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000238"
+      ],
+      "bank_ids": [
+        "BNK-000199"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000239"
+      ],
+      "bank_ids": [
+        "BNK-000200"
+      ],
+      "note": "transposed-digit error: ledger 5785.07 vs bank 5780.57"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000240",
+        "LGR-000241"
+      ],
+      "bank_ids": [
+        "BNK-000201"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000242"
+      ],
+      "bank_ids": [
+        "BNK-000202"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000243"
+      ],
+      "bank_ids": [
+        "BNK-000203"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-14 vs bank date 2024-01-29"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000244",
+        "LGR-000245",
+        "LGR-000246"
+      ],
+      "bank_ids": [
+        "BNK-000204"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000247"
+      ],
+      "bank_ids": [
+        "BNK-000205"
+      ],
+      "note": "transposed-digit error: ledger 5541.03 vs bank 5540.13"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000248",
+        "LGR-000249"
+      ],
+      "bank_ids": [
+        "BNK-000206",
+        "BNK-000207"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000250"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000251"
+      ],
+      "bank_ids": [
+        "BNK-000208"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000252"
+      ],
+      "bank_ids": [
+        "BNK-000209"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000253"
+      ],
+      "bank_ids": [
+        "BNK-000210"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000254"
+      ],
+      "bank_ids": [
+        "BNK-000211"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000255"
+      ],
+      "bank_ids": [
+        "BNK-000212"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000256"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000257"
+      ],
+      "bank_ids": [
+        "BNK-000213"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000258"
+      ],
+      "bank_ids": [
+        "BNK-000214"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000259"
+      ],
+      "bank_ids": [
+        "BNK-000215"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000260"
+      ],
+      "bank_ids": [
+        "BNK-000216"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000261",
+        "LGR-000262"
+      ],
+      "bank_ids": [
+        "BNK-000217"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000263"
+      ],
+      "bank_ids": [
+        "BNK-000218"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000264"
+      ],
+      "bank_ids": [
+        "BNK-000219"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000265",
+        "LGR-000266"
+      ],
+      "bank_ids": [
+        "BNK-000220",
+        "BNK-000221"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000267"
+      ],
+      "bank_ids": [
+        "BNK-000222"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000268"
+      ],
+      "bank_ids": [
+        "BNK-000223"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000269"
+      ],
+      "bank_ids": [
+        "BNK-000224"
+      ],
+      "note": "transposed-digit error: ledger 1649.54 vs bank 1694.54"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000270"
+      ],
+      "bank_ids": [
+        "BNK-000225"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000271"
+      ],
+      "bank_ids": [
+        "BNK-000226"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-01 vs bank date 2024-01-16"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000272",
+        "LGR-000273",
+        "LGR-000274",
+        "LGR-000275"
+      ],
+      "bank_ids": [
+        "BNK-000227"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000276"
+      ],
+      "bank_ids": [
+        "BNK-000228"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000277"
+      ],
+      "bank_ids": [
+        "BNK-000229"
+      ],
+      "note": "transposed-digit error: ledger 1377.94 vs bank 1377.49"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000278"
+      ],
+      "bank_ids": [
+        "BNK-000230"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000279"
+      ],
+      "bank_ids": [
+        "BNK-000231"
+      ],
+      "note": "wrong amount error: ledger 1069.41 vs bank 4350.85"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000280"
+      ],
+      "bank_ids": [
+        "BNK-000232"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000281"
+      ],
+      "bank_ids": [
+        "BNK-000233"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000282"
+      ],
+      "bank_ids": [
+        "BNK-000234"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000283"
+      ],
+      "bank_ids": [
+        "BNK-000235"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000284"
+      ],
+      "bank_ids": [
+        "BNK-000236"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000285"
+      ],
+      "bank_ids": [
+        "BNK-000237"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000286"
+      ],
+      "bank_ids": [
+        "BNK-000238"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000287"
+      ],
+      "bank_ids": [
+        "BNK-000239"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000288"
+      ],
+      "bank_ids": [
+        "BNK-000240"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-23 vs bank date 2024-03-23"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000289"
+      ],
+      "bank_ids": [
+        "BNK-000241"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000290"
+      ],
+      "bank_ids": [
+        "BNK-000242"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000291"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000292"
+      ],
+      "bank_ids": [
+        "BNK-000243"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000293"
+      ],
+      "bank_ids": [
+        "BNK-000244"
+      ],
+      "note": "transposed-digit error: ledger 7338.21 vs bank 7383.21"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000294"
+      ],
+      "bank_ids": [
+        "BNK-000245"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000295",
+        "LGR-000296",
+        "LGR-000297"
+      ],
+      "bank_ids": [
+        "BNK-000246"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000298"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000299"
+      ],
+      "bank_ids": [
+        "BNK-000247"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000300"
+      ],
+      "bank_ids": [
+        "BNK-000248"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000301"
+      ],
+      "bank_ids": [
+        "BNK-000249"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000302"
+      ],
+      "bank_ids": [
+        "BNK-000250"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000303"
+      ],
+      "bank_ids": [
+        "BNK-000251"
+      ],
+      "note": "wrong amount error: ledger 1973.25 vs bank 4683.15"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000304"
+      ],
+      "bank_ids": [
+        "BNK-000252"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000305"
+      ],
+      "bank_ids": [
+        "BNK-000253"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000306"
+      ],
+      "bank_ids": [
+        "BNK-000254"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000307"
+      ],
+      "bank_ids": [
+        "BNK-000255"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000308"
+      ],
+      "bank_ids": [
+        "BNK-000256"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000309"
+      ],
+      "bank_ids": [
+        "BNK-000257"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000310"
+      ],
+      "bank_ids": [
+        "BNK-000258"
+      ],
+      "note": "wrong amount error: ledger 3037.63 vs bank 3144.81"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000311"
+      ],
+      "bank_ids": [
+        "BNK-000259"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000312"
+      ],
+      "bank_ids": [
+        "BNK-000260"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000313"
+      ],
+      "bank_ids": [
+        "BNK-000261"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000314"
+      ],
+      "bank_ids": [
+        "BNK-000262"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000315"
+      ],
+      "bank_ids": [
+        "BNK-000263"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000316"
+      ],
+      "bank_ids": [
+        "BNK-000264"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000317"
+      ],
+      "bank_ids": [
+        "BNK-000265"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-26 vs bank date 2024-05-25"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000318"
+      ],
+      "bank_ids": [
+        "BNK-000266"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000319",
+        "LGR-000320",
+        "LGR-000321",
+        "LGR-000322"
+      ],
+      "bank_ids": [
+        "BNK-000267"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000323"
+      ],
+      "bank_ids": [
+        "BNK-000268"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000324"
+      ],
+      "bank_ids": [
+        "BNK-000269"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000325"
+      ],
+      "bank_ids": [
+        "BNK-000270"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000326"
+      ],
+      "bank_ids": [
+        "BNK-000271"
+      ],
+      "note": "transposed-digit error: ledger 4932.14 vs bank 4923.14"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000327"
+      ],
+      "bank_ids": [
+        "BNK-000272"
+      ],
+      "note": "transposed-digit error: ledger 2029.88 vs bank 2028.98"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000328"
+      ],
+      "bank_ids": [
+        "BNK-000273"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000329",
+        "LGR-000330"
+      ],
+      "bank_ids": [
+        "BNK-000274",
+        "BNK-000275"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000331"
+      ],
+      "bank_ids": [
+        "BNK-000276"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000332"
+      ],
+      "bank_ids": [
+        "BNK-000277"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000333"
+      ],
+      "bank_ids": [
+        "BNK-000278"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000334",
+        "LGR-000335"
+      ],
+      "bank_ids": [
+        "BNK-000279",
+        "BNK-000280"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000336"
+      ],
+      "bank_ids": [
+        "BNK-000281"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000337"
+      ],
+      "bank_ids": [
+        "BNK-000282"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000338",
+        "LGR-000339",
+        "LGR-000340",
+        "LGR-000341"
+      ],
+      "bank_ids": [
+        "BNK-000283"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000342"
+      ],
+      "bank_ids": [
+        "BNK-000284"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000343"
+      ],
+      "bank_ids": [
+        "BNK-000285"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000344"
+      ],
+      "bank_ids": [
+        "BNK-000286"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000345"
+      ],
+      "bank_ids": [
+        "BNK-000287"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000346"
+      ],
+      "bank_ids": [
+        "BNK-000288"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000347"
+      ],
+      "bank_ids": [
+        "BNK-000289"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000348"
+      ],
+      "bank_ids": [
+        "BNK-000290"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000349"
+      ],
+      "bank_ids": [
+        "BNK-000291"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000350"
+      ],
+      "bank_ids": [
+        "BNK-000292"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000351"
+      ],
+      "bank_ids": [
+        "BNK-000293"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000352"
+      ],
+      "bank_ids": [
+        "BNK-000294"
+      ],
+      "note": "transposed-digit error: ledger 6326.51 vs bank 6362.51"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000353",
+        "LGR-000354"
+      ],
+      "bank_ids": [
+        "BNK-000295",
+        "BNK-000296"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000355",
+        "LGR-000356",
+        "LGR-000357"
+      ],
+      "bank_ids": [
+        "BNK-000297"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000358"
+      ],
+      "bank_ids": [
+        "BNK-000298"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000359"
+      ],
+      "bank_ids": [
+        "BNK-000299"
+      ],
+      "note": "transposed-digit error: ledger 8464.33 vs bank 8446.33"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000360",
+        "LGR-000361",
+        "LGR-000362",
+        "LGR-000363"
+      ],
+      "bank_ids": [
+        "BNK-000300"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000364"
+      ],
+      "bank_ids": [
+        "BNK-000301"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000365"
+      ],
+      "bank_ids": [
+        "BNK-000302"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000366",
+        "LGR-000367"
+      ],
+      "bank_ids": [
+        "BNK-000303"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000368"
+      ],
+      "bank_ids": [
+        "BNK-000304"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000369"
+      ],
+      "bank_ids": [
+        "BNK-000305"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000370"
+      ],
+      "bank_ids": [
+        "BNK-000306"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000371"
+      ],
+      "bank_ids": [
+        "BNK-000307"
+      ],
+      "note": "wrong amount error: ledger 924.63 vs bank 2903.59"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000372"
+      ],
+      "bank_ids": [
+        "BNK-000308"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000373"
+      ],
+      "bank_ids": [
+        "BNK-000309"
+      ],
+      "note": "wrong amount error: ledger 2367.06 vs bank 3114.85"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000374"
+      ],
+      "bank_ids": [
+        "BNK-000310"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000375"
+      ],
+      "bank_ids": [
+        "BNK-000311"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000376",
+        "LGR-000377"
+      ],
+      "bank_ids": [
+        "BNK-000312",
+        "BNK-000313"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000378"
+      ],
+      "bank_ids": [
+        "BNK-000314"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000379"
+      ],
+      "bank_ids": [
+        "BNK-000315"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000380"
+      ],
+      "bank_ids": [
+        "BNK-000316"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000381",
+        "LGR-000382"
+      ],
+      "bank_ids": [
+        "BNK-000317",
+        "BNK-000318"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000383"
+      ],
+      "bank_ids": [
+        "BNK-000319"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000384"
+      ],
+      "bank_ids": [
+        "BNK-000320"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-07 vs bank date 2023-12-24"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000385"
+      ],
+      "bank_ids": [
+        "BNK-000321"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000386"
+      ],
+      "bank_ids": [
+        "BNK-000322"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-26 vs bank date 2024-04-26"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000387"
+      ],
+      "bank_ids": [
+        "BNK-000323"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000388",
+        "LGR-000389",
+        "LGR-000390",
+        "LGR-000391"
+      ],
+      "bank_ids": [
+        "BNK-000324"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000392"
+      ],
+      "bank_ids": [
+        "BNK-000325"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000393"
+      ],
+      "bank_ids": [
+        "BNK-000326"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000394"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000395"
+      ],
+      "bank_ids": [
+        "BNK-000327"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000396"
+      ],
+      "bank_ids": [
+        "BNK-000328"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000397",
+        "LGR-000398",
+        "LGR-000399"
+      ],
+      "bank_ids": [
+        "BNK-000329"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000400"
+      ],
+      "bank_ids": [
+        "BNK-000330"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000401"
+      ],
+      "bank_ids": [
+        "BNK-000331"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000402"
+      ],
+      "bank_ids": [
+        "BNK-000332"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000403"
+      ],
+      "bank_ids": [
+        "BNK-000333"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000404"
+      ],
+      "bank_ids": [
+        "BNK-000334"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000405"
+      ],
+      "bank_ids": [
+        "BNK-000335"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000406"
+      ],
+      "bank_ids": [
+        "BNK-000336"
+      ],
+      "note": "transposed-digit error: ledger 7946.16 vs bank 7964.16"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000407"
+      ],
+      "bank_ids": [
+        "BNK-000337"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000408"
+      ],
+      "bank_ids": [
+        "BNK-000338"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000409"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000410"
+      ],
+      "bank_ids": [
+        "BNK-000339"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000411"
+      ],
+      "bank_ids": [
+        "BNK-000340"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000412"
+      ],
+      "bank_ids": [
+        "BNK-000341"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000413"
+      ],
+      "bank_ids": [
+        "BNK-000342"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-03 vs bank date 2024-03-03"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000414"
+      ],
+      "bank_ids": [
+        "BNK-000343"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000415"
+      ],
+      "bank_ids": [
+        "BNK-000344"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000416"
+      ],
+      "bank_ids": [
+        "BNK-000345"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000417"
+      ],
+      "bank_ids": [
+        "BNK-000346"
+      ],
+      "note": "wrong amount error: ledger 313.59 vs bank 1291.77"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000418"
+      ],
+      "bank_ids": [
+        "BNK-000347"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000419"
+      ],
+      "bank_ids": [
+        "BNK-000348"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000420"
+      ],
+      "bank_ids": [
+        "BNK-000349"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000421"
+      ],
+      "bank_ids": [
+        "BNK-000350"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000422"
+      ],
+      "bank_ids": [
+        "BNK-000351"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000423"
+      ],
+      "bank_ids": [
+        "BNK-000352"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000424",
+        "LGR-000425"
+      ],
+      "bank_ids": [
+        "BNK-000353",
+        "BNK-000354"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000426"
+      ],
+      "bank_ids": [
+        "BNK-000355"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000427"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000428"
+      ],
+      "bank_ids": [
+        "BNK-000356"
+      ],
+      "note": "wrong amount error: ledger 2442.31 vs bank 1940.81"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000429"
+      ],
+      "bank_ids": [
+        "BNK-000357"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-10 vs bank date 2024-02-09"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000430",
+        "LGR-000431",
+        "LGR-000432"
+      ],
+      "bank_ids": [
+        "BNK-000358"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000433"
+      ],
+      "bank_ids": [
+        "BNK-000359"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000434"
+      ],
+      "bank_ids": [
+        "BNK-000360"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000435"
+      ],
+      "bank_ids": [
+        "BNK-000361"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000436"
+      ],
+      "bank_ids": [
+        "BNK-000362"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-14 vs bank date 2023-12-15"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000437"
+      ],
+      "bank_ids": [
+        "BNK-000363"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000438"
+      ],
+      "bank_ids": [
+        "BNK-000364"
+      ],
+      "note": "transposed-digit error: ledger 522.88 vs bank 528.28"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000439"
+      ],
+      "bank_ids": [
+        "BNK-000365"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000440"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000441"
+      ],
+      "bank_ids": [
+        "BNK-000366"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000442",
+        "LGR-000443"
+      ],
+      "bank_ids": [
+        "BNK-000367",
+        "BNK-000368"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000444"
+      ],
+      "bank_ids": [
+        "BNK-000369"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000445"
+      ],
+      "bank_ids": [
+        "BNK-000370"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000446"
+      ],
+      "bank_ids": [
+        "BNK-000371"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000447"
+      ],
+      "bank_ids": [
+        "BNK-000372"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000448"
+      ],
+      "bank_ids": [
+        "BNK-000373"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000449"
+      ],
+      "bank_ids": [
+        "BNK-000374"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000450"
+      ],
+      "bank_ids": [
+        "BNK-000375"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000451"
+      ],
+      "bank_ids": [
+        "BNK-000376"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000452"
+      ],
+      "bank_ids": [
+        "BNK-000377"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000453",
+        "LGR-000454",
+        "LGR-000455",
+        "LGR-000456"
+      ],
+      "bank_ids": [
+        "BNK-000378"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000457"
+      ],
+      "bank_ids": [
+        "BNK-000379"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000458"
+      ],
+      "bank_ids": [
+        "BNK-000380"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000459",
+        "LGR-000460",
+        "LGR-000461",
+        "LGR-000462"
+      ],
+      "bank_ids": [
+        "BNK-000381"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000463"
+      ],
+      "bank_ids": [
+        "BNK-000382"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000464"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000465",
+        "LGR-000466"
+      ],
+      "bank_ids": [
+        "BNK-000383",
+        "BNK-000384"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000467"
+      ],
+      "bank_ids": [
+        "BNK-000385"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000468",
+        "LGR-000469",
+        "LGR-000470"
+      ],
+      "bank_ids": [
+        "BNK-000386"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000471"
+      ],
+      "bank_ids": [
+        "BNK-000387"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000472"
+      ],
+      "bank_ids": [
+        "BNK-000388"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000473"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000474"
+      ],
+      "bank_ids": [
+        "BNK-000389"
+      ],
+      "note": "transposed-digit error: ledger 6953.86 vs bank 6935.86"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000475"
+      ],
+      "bank_ids": [
+        "BNK-000390"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000476"
+      ],
+      "bank_ids": [
+        "BNK-000391"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000477"
+      ],
+      "bank_ids": [
+        "BNK-000392"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000478"
+      ],
+      "bank_ids": [
+        "BNK-000393"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000479"
+      ],
+      "bank_ids": [
+        "BNK-000394"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000480"
+      ],
+      "bank_ids": [
+        "BNK-000395"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000481"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000482"
+      ],
+      "bank_ids": [
+        "BNK-000396"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000483"
+      ],
+      "bank_ids": [
+        "BNK-000397"
+      ],
+      "note": "transposed-digit error: ledger 6089.67 vs bank 6098.67"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000484"
+      ],
+      "bank_ids": [
+        "BNK-000398"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000485"
+      ],
+      "bank_ids": [
+        "BNK-000399"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000486"
+      ],
+      "bank_ids": [
+        "BNK-000400"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000487"
+      ],
+      "bank_ids": [
+        "BNK-000401"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-14 vs bank date 2024-03-14"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000488"
+      ],
+      "bank_ids": [
+        "BNK-000402"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000489",
+        "LGR-000490"
+      ],
+      "bank_ids": [
+        "BNK-000403",
+        "BNK-000404"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000491"
+      ],
+      "bank_ids": [
+        "BNK-000405"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000492"
+      ],
+      "bank_ids": [
+        "BNK-000406"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000493"
+      ],
+      "bank_ids": [
+        "BNK-000407"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000494"
+      ],
+      "bank_ids": [
+        "BNK-000408"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000495"
+      ],
+      "bank_ids": [
+        "BNK-000409"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000496"
+      ],
+      "bank_ids": [
+        "BNK-000410"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000497"
+      ],
+      "bank_ids": [
+        "BNK-000411"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000498"
+      ],
+      "bank_ids": [
+        "BNK-000412"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000499"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000500",
+        "LGR-000501",
+        "LGR-000502"
+      ],
+      "bank_ids": [
+        "BNK-000413"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000503"
+      ],
+      "bank_ids": [
+        "BNK-000414"
+      ],
+      "note": "transposed-digit error: ledger 2987.55 vs bank 2978.55"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000504"
+      ],
+      "bank_ids": [
+        "BNK-000415"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000505"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000506"
+      ],
+      "bank_ids": [
+        "BNK-000416"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000507"
+      ],
+      "bank_ids": [
+        "BNK-000417"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000508"
+      ],
+      "bank_ids": [
+        "BNK-000418"
+      ],
+      "note": "transposed-digit error: ledger 5315.33 vs bank 5351.33"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000509"
+      ],
+      "bank_ids": [
+        "BNK-000419"
+      ],
+      "note": "wrong amount error: ledger 3722.32 vs bank 3009.14"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000510",
+        "LGR-000511"
+      ],
+      "bank_ids": [
+        "BNK-000420",
+        "BNK-000421"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000512"
+      ],
+      "bank_ids": [
+        "BNK-000422"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000513"
+      ],
+      "bank_ids": [
+        "BNK-000423"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000514"
+      ],
+      "bank_ids": [
+        "BNK-000424"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000515",
+        "LGR-000516"
+      ],
+      "bank_ids": [
+        "BNK-000425",
+        "BNK-000426"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000517"
+      ],
+      "bank_ids": [
+        "BNK-000427"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000518",
+        "LGR-000519"
+      ],
+      "bank_ids": [
+        "BNK-000428",
+        "BNK-000429"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000520"
+      ],
+      "bank_ids": [
+        "BNK-000430"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000521"
+      ],
+      "bank_ids": [
+        "BNK-000431"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000522"
+      ],
+      "bank_ids": [
+        "BNK-000432"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-08 vs bank date 2024-02-07"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000523"
+      ],
+      "bank_ids": [
+        "BNK-000433"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000524"
+      ],
+      "bank_ids": [
+        "BNK-000434"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000525"
+      ],
+      "bank_ids": [
+        "BNK-000435"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000526"
+      ],
+      "bank_ids": [
+        "BNK-000436"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000527",
+        "LGR-000528"
+      ],
+      "bank_ids": [
+        "BNK-000437",
+        "BNK-000438"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000529"
+      ],
+      "bank_ids": [
+        "BNK-000439"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000530"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000531",
+        "LGR-000532"
+      ],
+      "bank_ids": [
+        "BNK-000440",
+        "BNK-000441"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000533"
+      ],
+      "bank_ids": [
+        "BNK-000442"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000534"
+      ],
+      "bank_ids": [
+        "BNK-000443"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000535",
+        "LGR-000536"
+      ],
+      "bank_ids": [
+        "BNK-000444"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000537"
+      ],
+      "bank_ids": [
+        "BNK-000445"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000538"
+      ],
+      "bank_ids": [
+        "BNK-000446"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000539"
+      ],
+      "bank_ids": [
+        "BNK-000447"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000540",
+        "LGR-000541",
+        "LGR-000542"
+      ],
+      "bank_ids": [
+        "BNK-000448"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000543",
+        "LGR-000544"
+      ],
+      "bank_ids": [
+        "BNK-000449"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000545"
+      ],
+      "bank_ids": [
+        "BNK-000450"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000546"
+      ],
+      "bank_ids": [
+        "BNK-000451"
+      ],
+      "note": "wrong amount error: ledger 1184.32 vs bank 3521.91"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000547",
+        "LGR-000548"
+      ],
+      "bank_ids": [
+        "BNK-000452",
+        "BNK-000453"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000549"
+      ],
+      "bank_ids": [
+        "BNK-000454"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000550"
+      ],
+      "bank_ids": [
+        "BNK-000455"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000551"
+      ],
+      "bank_ids": [
+        "BNK-000456"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000552"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000553",
+        "LGR-000554"
+      ],
+      "bank_ids": [
+        "BNK-000457",
+        "BNK-000458"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000555"
+      ],
+      "bank_ids": [
+        "BNK-000459"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000556"
+      ],
+      "bank_ids": [
+        "BNK-000460"
+      ],
+      "note": "transposed-digit error: ledger 7606.89 vs bank 7606.98"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000557",
+        "LGR-000558"
+      ],
+      "bank_ids": [
+        "BNK-000461",
+        "BNK-000462"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000559"
+      ],
+      "bank_ids": [
+        "BNK-000463"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000560"
+      ],
+      "bank_ids": [
+        "BNK-000464"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000561"
+      ],
+      "bank_ids": [
+        "BNK-000465"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000562"
+      ],
+      "bank_ids": [
+        "BNK-000466"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000563"
+      ],
+      "bank_ids": [
+        "BNK-000467"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000564"
+      ],
+      "bank_ids": [
+        "BNK-000468"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000565"
+      ],
+      "bank_ids": [
+        "BNK-000469"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000566",
+        "LGR-000567",
+        "LGR-000568",
+        "LGR-000569"
+      ],
+      "bank_ids": [
+        "BNK-000470"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000570"
+      ],
+      "bank_ids": [
+        "BNK-000471"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000571"
+      ],
+      "bank_ids": [
+        "BNK-000472"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-21 vs bank date 2024-02-20"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000572"
+      ],
+      "bank_ids": [
+        "BNK-000473"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000573"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000574"
+      ],
+      "bank_ids": [
+        "BNK-000474"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000575"
+      ],
+      "bank_ids": [
+        "BNK-000475"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-29 vs bank date 2024-02-28"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000576"
+      ],
+      "bank_ids": [
+        "BNK-000476"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-25 vs bank date 2024-02-24"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000577"
+      ],
+      "bank_ids": [
+        "BNK-000477"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000578"
+      ],
+      "bank_ids": [
+        "BNK-000478"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000579"
+      ],
+      "bank_ids": [
+        "BNK-000479"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-19 vs bank date 2024-04-18"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000580"
+      ],
+      "bank_ids": [
+        "BNK-000480"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000581"
+      ],
+      "bank_ids": [
+        "BNK-000481"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000582",
+        "LGR-000583"
+      ],
+      "bank_ids": [
+        "BNK-000482",
+        "BNK-000483"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000584"
+      ],
+      "bank_ids": [
+        "BNK-000484"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000585"
+      ],
+      "bank_ids": [
+        "BNK-000485"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000586"
+      ],
+      "bank_ids": [
+        "BNK-000486"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000587"
+      ],
+      "bank_ids": [
+        "BNK-000487"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000588"
+      ],
+      "bank_ids": [
+        "BNK-000488"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000589"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000590"
+      ],
+      "bank_ids": [
+        "BNK-000489"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000591",
+        "LGR-000592"
+      ],
+      "bank_ids": [
+        "BNK-000490",
+        "BNK-000491"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000593"
+      ],
+      "bank_ids": [
+        "BNK-000492"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000594"
+      ],
+      "bank_ids": [
+        "BNK-000493"
+      ],
+      "note": "wrong amount error: ledger 1556.53 vs bank 3334.22"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000595"
+      ],
+      "bank_ids": [
+        "BNK-000494"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000596"
+      ],
+      "bank_ids": [
+        "BNK-000495"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000597"
+      ],
+      "bank_ids": [
+        "BNK-000496"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000598"
+      ],
+      "bank_ids": [
+        "BNK-000497"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000599"
+      ],
+      "bank_ids": [
+        "BNK-000498"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000600"
+      ],
+      "bank_ids": [
+        "BNK-000499"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000601"
+      ],
+      "bank_ids": [
+        "BNK-000500"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000602"
+      ],
+      "bank_ids": [
+        "BNK-000501"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000603"
+      ],
+      "bank_ids": [
+        "BNK-000502"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000604"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000605"
+      ],
+      "bank_ids": [
+        "BNK-000503"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000606"
+      ],
+      "bank_ids": [
+        "BNK-000504"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000607",
+        "LGR-000608",
+        "LGR-000609",
+        "LGR-000610"
+      ],
+      "bank_ids": [
+        "BNK-000505"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000611"
+      ],
+      "bank_ids": [
+        "BNK-000506"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000612"
+      ],
+      "bank_ids": [
+        "BNK-000507"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000613"
+      ],
+      "bank_ids": [
+        "BNK-000508"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000614",
+        "LGR-000615"
+      ],
+      "bank_ids": [
+        "BNK-000509",
+        "BNK-000510"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000616"
+      ],
+      "bank_ids": [
+        "BNK-000511"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000617"
+      ],
+      "bank_ids": [
+        "BNK-000512"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000618"
+      ],
+      "bank_ids": [
+        "BNK-000513"
+      ],
+      "note": "transposed-digit error: ledger 7032.23 vs bank 7302.23"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000619"
+      ],
+      "bank_ids": [
+        "BNK-000514"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000620"
+      ],
+      "bank_ids": [
+        "BNK-000515"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000621"
+      ],
+      "bank_ids": [
+        "BNK-000516"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000622"
+      ],
+      "bank_ids": [
+        "BNK-000517"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000623"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000624"
+      ],
+      "bank_ids": [
+        "BNK-000518"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000625"
+      ],
+      "bank_ids": [
+        "BNK-000519"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000626"
+      ],
+      "bank_ids": [
+        "BNK-000520"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000627"
+      ],
+      "bank_ids": [
+        "BNK-000521"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000628"
+      ],
+      "bank_ids": [
+        "BNK-000522"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000629"
+      ],
+      "bank_ids": [
+        "BNK-000523"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-11 vs bank date 2024-02-10"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000630"
+      ],
+      "bank_ids": [
+        "BNK-000524"
+      ],
+      "note": "transposed-digit error: ledger 6160.63 vs bank 6610.63"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000631"
+      ],
+      "bank_ids": [
+        "BNK-000525"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000632",
+        "LGR-000633"
+      ],
+      "bank_ids": [
+        "BNK-000526",
+        "BNK-000527"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000634"
+      ],
+      "bank_ids": [
+        "BNK-000528"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000635",
+        "LGR-000636",
+        "LGR-000637",
+        "LGR-000638"
+      ],
+      "bank_ids": [
+        "BNK-000529"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000639"
+      ],
+      "bank_ids": [
+        "BNK-000530"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000640"
+      ],
+      "bank_ids": [
+        "BNK-000531"
+      ],
+      "note": "transposed-digit error: ledger 6537.89 vs bank 6538.79"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000641"
+      ],
+      "bank_ids": [
+        "BNK-000532"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000642",
+        "LGR-000643",
+        "LGR-000644",
+        "LGR-000645"
+      ],
+      "bank_ids": [
+        "BNK-000533"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000646"
+      ],
+      "bank_ids": [
+        "BNK-000534"
+      ],
+      "note": "wrong amount error: ledger 4829.13 vs bank 482.72"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000647"
+      ],
+      "bank_ids": [
+        "BNK-000535"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000648"
+      ],
+      "bank_ids": [
+        "BNK-000536"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000649"
+      ],
+      "bank_ids": [
+        "BNK-000537"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000650"
+      ],
+      "bank_ids": [
+        "BNK-000538"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000651"
+      ],
+      "bank_ids": [
+        "BNK-000539"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000652"
+      ],
+      "bank_ids": [
+        "BNK-000540"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000653"
+      ],
+      "bank_ids": [
+        "BNK-000541"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000654",
+        "LGR-000655",
+        "LGR-000656"
+      ],
+      "bank_ids": [
+        "BNK-000542"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000657",
+        "LGR-000658",
+        "LGR-000659"
+      ],
+      "bank_ids": [
+        "BNK-000543"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000660"
+      ],
+      "bank_ids": [
+        "BNK-000544"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000661"
+      ],
+      "bank_ids": [
+        "BNK-000545"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000662"
+      ],
+      "bank_ids": [
+        "BNK-000546"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000663"
+      ],
+      "bank_ids": [
+        "BNK-000547"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000664"
+      ],
+      "bank_ids": [
+        "BNK-000548"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000665"
+      ],
+      "bank_ids": [
+        "BNK-000549"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000666"
+      ],
+      "bank_ids": [
+        "BNK-000550"
+      ],
+      "note": "wrong amount error: ledger 4234.02 vs bank 61.07"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000667"
+      ],
+      "bank_ids": [
+        "BNK-000551"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000668",
+        "LGR-000669"
+      ],
+      "bank_ids": [
+        "BNK-000552",
+        "BNK-000553"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000670"
+      ],
+      "bank_ids": [
+        "BNK-000554"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000671"
+      ],
+      "bank_ids": [
+        "BNK-000555"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000672"
+      ],
+      "bank_ids": [
+        "BNK-000556"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000673",
+        "LGR-000674"
+      ],
+      "bank_ids": [
+        "BNK-000557",
+        "BNK-000558"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000675"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000676"
+      ],
+      "bank_ids": [
+        "BNK-000559"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000677"
+      ],
+      "bank_ids": [
+        "BNK-000560"
+      ],
+      "note": "wrong amount error: ledger 1114.00 vs bank 885.09"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000678"
+      ],
+      "bank_ids": [
+        "BNK-000561"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000679"
+      ],
+      "bank_ids": [
+        "BNK-000562"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000680",
+        "LGR-000681",
+        "LGR-000682"
+      ],
+      "bank_ids": [
+        "BNK-000563"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000683",
+        "LGR-000684"
+      ],
+      "bank_ids": [
+        "BNK-000564",
+        "BNK-000565"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000685"
+      ],
+      "bank_ids": [
+        "BNK-000566"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000686"
+      ],
+      "bank_ids": [
+        "BNK-000567"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000687"
+      ],
+      "bank_ids": [
+        "BNK-000568"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000688"
+      ],
+      "bank_ids": [
+        "BNK-000569"
+      ],
+      "note": "wrong amount error: ledger 4353.34 vs bank 1993.68"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000689"
+      ],
+      "bank_ids": [
+        "BNK-000570"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000690"
+      ],
+      "bank_ids": [
+        "BNK-000571"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000691"
+      ],
+      "bank_ids": [
+        "BNK-000572"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000692"
+      ],
+      "bank_ids": [
+        "BNK-000573"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000693"
+      ],
+      "bank_ids": [
+        "BNK-000574"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000694"
+      ],
+      "bank_ids": [
+        "BNK-000575"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000695"
+      ],
+      "bank_ids": [
+        "BNK-000576"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000696"
+      ],
+      "bank_ids": [
+        "BNK-000577"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000697",
+        "LGR-000698"
+      ],
+      "bank_ids": [
+        "BNK-000578",
+        "BNK-000579"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000699"
+      ],
+      "bank_ids": [
+        "BNK-000580"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000700"
+      ],
+      "bank_ids": [
+        "BNK-000581"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000701"
+      ],
+      "bank_ids": [
+        "BNK-000582"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000702"
+      ],
+      "bank_ids": [
+        "BNK-000583"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000703"
+      ],
+      "bank_ids": [
+        "BNK-000584"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000704"
+      ],
+      "bank_ids": [
+        "BNK-000585"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000705"
+      ],
+      "bank_ids": [
+        "BNK-000586"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000706",
+        "LGR-000707"
+      ],
+      "bank_ids": [
+        "BNK-000587",
+        "BNK-000588"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000708"
+      ],
+      "bank_ids": [
+        "BNK-000589"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000709"
+      ],
+      "bank_ids": [
+        "BNK-000590"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000710"
+      ],
+      "bank_ids": [
+        "BNK-000591"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000711",
+        "LGR-000712",
+        "LGR-000713"
+      ],
+      "bank_ids": [
+        "BNK-000592"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000714"
+      ],
+      "bank_ids": [
+        "BNK-000593"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000715"
+      ],
+      "bank_ids": [
+        "BNK-000594"
+      ],
+      "note": "wrong amount error: ledger 418.60 vs bank 4962.44"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000716"
+      ],
+      "bank_ids": [
+        "BNK-000595"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000717"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000718",
+        "LGR-000719",
+        "LGR-000720",
+        "LGR-000721"
+      ],
+      "bank_ids": [
+        "BNK-000596"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000722"
+      ],
+      "bank_ids": [
+        "BNK-000597"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000723"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000724"
+      ],
+      "bank_ids": [
+        "BNK-000598"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000725"
+      ],
+      "bank_ids": [
+        "BNK-000599"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000726"
+      ],
+      "bank_ids": [
+        "BNK-000600"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000727"
+      ],
+      "bank_ids": [
+        "BNK-000601"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000728"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000729"
+      ],
+      "bank_ids": [
+        "BNK-000602"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000730"
+      ],
+      "bank_ids": [
+        "BNK-000603"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-12 vs bank date 2024-03-13"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000731"
+      ],
+      "bank_ids": [
+        "BNK-000604"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-24 vs bank date 2024-05-23"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000732"
+      ],
+      "bank_ids": [
+        "BNK-000605"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000733"
+      ],
+      "bank_ids": [
+        "BNK-000606"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000734"
+      ],
+      "bank_ids": [
+        "BNK-000607"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000735"
+      ],
+      "bank_ids": [
+        "BNK-000608"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000736"
+      ],
+      "bank_ids": [
+        "BNK-000609"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000737"
+      ],
+      "bank_ids": [
+        "BNK-000610"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000738"
+      ],
+      "bank_ids": [
+        "BNK-000611"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000739"
+      ],
+      "bank_ids": [
+        "BNK-000612"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000740"
+      ],
+      "bank_ids": [
+        "BNK-000613"
+      ],
+      "note": "wrong amount error: ledger 599.15 vs bank 3887.53"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000741"
+      ],
+      "bank_ids": [
+        "BNK-000614"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000742"
+      ],
+      "bank_ids": [
+        "BNK-000615"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000743",
+        "LGR-000744",
+        "LGR-000745"
+      ],
+      "bank_ids": [
+        "BNK-000616"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000746",
+        "LGR-000747"
+      ],
+      "bank_ids": [
+        "BNK-000617"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000748"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000749"
+      ],
+      "bank_ids": [
+        "BNK-000618"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000750"
+      ],
+      "bank_ids": [
+        "BNK-000619"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000751",
+        "LGR-000752"
+      ],
+      "bank_ids": [
+        "BNK-000620",
+        "BNK-000621"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000753"
+      ],
+      "bank_ids": [
+        "BNK-000622"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000754"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000755"
+      ],
+      "bank_ids": [
+        "BNK-000623"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000756"
+      ],
+      "bank_ids": [
+        "BNK-000624"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000757"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000758"
+      ],
+      "bank_ids": [
+        "BNK-000625"
+      ],
+      "note": "transposed-digit error: ledger 3430.25 vs bank 3403.25"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000759"
+      ],
+      "bank_ids": [
+        "BNK-000626"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000760",
+        "LGR-000761"
+      ],
+      "bank_ids": [
+        "BNK-000627",
+        "BNK-000628"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000762",
+        "LGR-000763",
+        "LGR-000764"
+      ],
+      "bank_ids": [
+        "BNK-000629"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000765"
+      ],
+      "bank_ids": [
+        "BNK-000630"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000766"
+      ],
+      "bank_ids": [
+        "BNK-000631"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000767"
+      ],
+      "bank_ids": [
+        "BNK-000632"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000768"
+      ],
+      "bank_ids": [
+        "BNK-000633"
+      ],
+      "note": "wrong amount error: ledger 2821.01 vs bank 2763.72"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000769"
+      ],
+      "bank_ids": [
+        "BNK-000634"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000770"
+      ],
+      "bank_ids": [
+        "BNK-000635"
+      ],
+      "note": "wrong amount error: ledger 2041.08 vs bank 2715.99"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000771"
+      ],
+      "bank_ids": [
+        "BNK-000636"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000772"
+      ],
+      "bank_ids": [
+        "BNK-000637"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000773"
+      ],
+      "bank_ids": [
+        "BNK-000638"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000774",
+        "LGR-000775"
+      ],
+      "bank_ids": [
+        "BNK-000639",
+        "BNK-000640"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000776"
+      ],
+      "bank_ids": [
+        "BNK-000641"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000777"
+      ],
+      "bank_ids": [
+        "BNK-000642"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000778"
+      ],
+      "bank_ids": [
+        "BNK-000643"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000779"
+      ],
+      "bank_ids": [
+        "BNK-000644"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000780"
+      ],
+      "bank_ids": [
+        "BNK-000645"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000781",
+        "LGR-000782"
+      ],
+      "bank_ids": [
+        "BNK-000646",
+        "BNK-000647"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000783"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000784"
+      ],
+      "bank_ids": [
+        "BNK-000648"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000785"
+      ],
+      "bank_ids": [
+        "BNK-000649"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000786"
+      ],
+      "bank_ids": [
+        "BNK-000650"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000787"
+      ],
+      "bank_ids": [
+        "BNK-000651"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000788",
+        "LGR-000789"
+      ],
+      "bank_ids": [
+        "BNK-000652",
+        "BNK-000653"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000790"
+      ],
+      "bank_ids": [
+        "BNK-000654"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000791"
+      ],
+      "bank_ids": [
+        "BNK-000655"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000792"
+      ],
+      "bank_ids": [
+        "BNK-000656"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000793"
+      ],
+      "bank_ids": [
+        "BNK-000657"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000794"
+      ],
+      "bank_ids": [
+        "BNK-000658"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000795"
+      ],
+      "bank_ids": [
+        "BNK-000659"
+      ],
+      "note": "transposed-digit error: ledger 405.31 vs bank 450.31"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000796"
+      ],
+      "bank_ids": [
+        "BNK-000660"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000797"
+      ],
+      "bank_ids": [
+        "BNK-000661"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000798",
+        "LGR-000799",
+        "LGR-000800",
+        "LGR-000801"
+      ],
+      "bank_ids": [
+        "BNK-000662"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000802"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000803"
+      ],
+      "bank_ids": [
+        "BNK-000663"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000804"
+      ],
+      "bank_ids": [
+        "BNK-000664"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000805"
+      ],
+      "bank_ids": [
+        "BNK-000665"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000806"
+      ],
+      "bank_ids": [
+        "BNK-000666"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000807"
+      ],
+      "bank_ids": [
+        "BNK-000667"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000808"
+      ],
+      "bank_ids": [
+        "BNK-000668"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000809"
+      ],
+      "bank_ids": [
+        "BNK-000669"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000810"
+      ],
+      "bank_ids": [
+        "BNK-000670"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000811"
+      ],
+      "bank_ids": [
+        "BNK-000671"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000812"
+      ],
+      "bank_ids": [
+        "BNK-000672"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000813"
+      ],
+      "bank_ids": [
+        "BNK-000673"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000814",
+        "LGR-000815"
+      ],
+      "bank_ids": [
+        "BNK-000674"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000816"
+      ],
+      "bank_ids": [
+        "BNK-000675"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000817"
+      ],
+      "bank_ids": [
+        "BNK-000676"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000818"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000819"
+      ],
+      "bank_ids": [
+        "BNK-000677"
+      ],
+      "note": "transposed-digit error: ledger 3516.99 vs bank 3519.69"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000820"
+      ],
+      "bank_ids": [
+        "BNK-000678"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000821"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000822"
+      ],
+      "bank_ids": [
+        "BNK-000679"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000823"
+      ],
+      "bank_ids": [
+        "BNK-000680"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000824"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000825"
+      ],
+      "bank_ids": [
+        "BNK-000681"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000826",
+        "LGR-000827",
+        "LGR-000828"
+      ],
+      "bank_ids": [
+        "BNK-000682"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000829"
+      ],
+      "bank_ids": [
+        "BNK-000683"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000830"
+      ],
+      "bank_ids": [
+        "BNK-000684"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000831"
+      ],
+      "bank_ids": [
+        "BNK-000685"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000832"
+      ],
+      "bank_ids": [
+        "BNK-000686"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000833"
+      ],
+      "bank_ids": [
+        "BNK-000687"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000834"
+      ],
+      "bank_ids": [
+        "BNK-000688"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000835",
+        "LGR-000836",
+        "LGR-000837"
+      ],
+      "bank_ids": [
+        "BNK-000689"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000838"
+      ],
+      "bank_ids": [
+        "BNK-000690"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000839"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000840",
+        "LGR-000841"
+      ],
+      "bank_ids": [
+        "BNK-000691"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000842",
+        "LGR-000843"
+      ],
+      "bank_ids": [
+        "BNK-000692",
+        "BNK-000693"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000844"
+      ],
+      "bank_ids": [
+        "BNK-000694"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000845"
+      ],
+      "bank_ids": [
+        "BNK-000695"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000846"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000847"
+      ],
+      "bank_ids": [
+        "BNK-000696"
+      ],
+      "note": "wrong amount error: ledger 1513.74 vs bank 2551.53"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000848",
+        "LGR-000849"
+      ],
+      "bank_ids": [
+        "BNK-000697",
+        "BNK-000698"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000850",
+        "LGR-000851",
+        "LGR-000852"
+      ],
+      "bank_ids": [
+        "BNK-000699"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000853"
+      ],
+      "bank_ids": [
+        "BNK-000700"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000854"
+      ],
+      "bank_ids": [
+        "BNK-000701"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000855"
+      ],
+      "bank_ids": [
+        "BNK-000702"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000856"
+      ],
+      "bank_ids": [
+        "BNK-000703"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000857"
+      ],
+      "bank_ids": [
+        "BNK-000704"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000858"
+      ],
+      "bank_ids": [
+        "BNK-000705"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000859"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000860"
+      ],
+      "bank_ids": [
+        "BNK-000706"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000861"
+      ],
+      "bank_ids": [
+        "BNK-000707"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000862"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000863"
+      ],
+      "bank_ids": [
+        "BNK-000708"
+      ],
+      "note": "transposed-digit error: ledger 6440.59 vs bank 6404.59"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000864"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000865"
+      ],
+      "bank_ids": [
+        "BNK-000709"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000866",
+        "LGR-000867",
+        "LGR-000868"
+      ],
+      "bank_ids": [
+        "BNK-000710"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000869"
+      ],
+      "bank_ids": [
+        "BNK-000711"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000870",
+        "LGR-000871"
+      ],
+      "bank_ids": [
+        "BNK-000712",
+        "BNK-000713"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000872"
+      ],
+      "bank_ids": [
+        "BNK-000714"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000873"
+      ],
+      "bank_ids": [
+        "BNK-000715"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000874"
+      ],
+      "bank_ids": [
+        "BNK-000716"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000875"
+      ],
+      "bank_ids": [
+        "BNK-000717"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000876",
+        "LGR-000877",
+        "LGR-000878"
+      ],
+      "bank_ids": [
+        "BNK-000718"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000879"
+      ],
+      "bank_ids": [
+        "BNK-000719"
+      ],
+      "note": "transposed-digit error: ledger 5229.97 vs bank 5229.79"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000880"
+      ],
+      "bank_ids": [
+        "BNK-000720"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000881"
+      ],
+      "bank_ids": [
+        "BNK-000721"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000882"
+      ],
+      "bank_ids": [
+        "BNK-000722"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000883"
+      ],
+      "bank_ids": [
+        "BNK-000723"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000884"
+      ],
+      "bank_ids": [
+        "BNK-000724"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000885"
+      ],
+      "bank_ids": [
+        "BNK-000725"
+      ],
+      "note": "wrong amount error: ledger 1709.92 vs bank 643.35"
+    },
+    {
+      "category": "unpresented_cheque",
+      "ledger_ids": [
+        "LGR-000886"
+      ],
+      "bank_ids": [],
+      "note": "unpresented cheque: recorded in ledger, not yet cleared by bank"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000887"
+      ],
+      "bank_ids": [
+        "BNK-000726"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000888",
+        "LGR-000889"
+      ],
+      "bank_ids": [
+        "BNK-000727",
+        "BNK-000728"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000890"
+      ],
+      "bank_ids": [
+        "BNK-000729"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-29 vs bank date 2024-02-28"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000891"
+      ],
+      "bank_ids": [
+        "BNK-000730"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000892"
+      ],
+      "bank_ids": [
+        "BNK-000731"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000893",
+        "LGR-000894"
+      ],
+      "bank_ids": [
+        "BNK-000732",
+        "BNK-000733"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000895"
+      ],
+      "bank_ids": [
+        "BNK-000734"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000896"
+      ],
+      "bank_ids": [
+        "BNK-000735"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000897"
+      ],
+      "bank_ids": [
+        "BNK-000736"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000898"
+      ],
+      "bank_ids": [
+        "BNK-000737"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000899"
+      ],
+      "bank_ids": [
+        "BNK-000738"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000900"
+      ],
+      "bank_ids": [
+        "BNK-000739"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000901"
+      ],
+      "bank_ids": [
+        "BNK-000740"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000902"
+      ],
+      "bank_ids": [
+        "BNK-000741"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000903"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000904"
+      ],
+      "bank_ids": [
+        "BNK-000742"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000905"
+      ],
+      "bank_ids": [
+        "BNK-000743"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000906"
+      ],
+      "bank_ids": [
+        "BNK-000744"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000907",
+        "LGR-000908"
+      ],
+      "bank_ids": [
+        "BNK-000745"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000909"
+      ],
+      "bank_ids": [
+        "BNK-000746"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000910"
+      ],
+      "bank_ids": [
+        "BNK-000747"
+      ],
+      "note": "wrong amount error: ledger 2394.67 vs bank 2441.44"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000911"
+      ],
+      "bank_ids": [
+        "BNK-000748"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000912",
+        "LGR-000913",
+        "LGR-000914",
+        "LGR-000915"
+      ],
+      "bank_ids": [
+        "BNK-000749"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000916"
+      ],
+      "bank_ids": [
+        "BNK-000750"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000917"
+      ],
+      "bank_ids": [
+        "BNK-000751"
+      ],
+      "note": "transposed-digit error: ledger 7537.93 vs bank 7573.93"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000918"
+      ],
+      "bank_ids": [
+        "BNK-000752"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000919"
+      ],
+      "bank_ids": [
+        "BNK-000753"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000920"
+      ],
+      "bank_ids": [
+        "BNK-000754"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000921",
+        "LGR-000922"
+      ],
+      "bank_ids": [
+        "BNK-000755"
+      ],
+      "note": "2 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000923"
+      ],
+      "bank_ids": [
+        "BNK-000756"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000924"
+      ],
+      "bank_ids": [
+        "BNK-000757"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000925"
+      ],
+      "bank_ids": [
+        "BNK-000758"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000926"
+      ],
+      "bank_ids": [
+        "BNK-000759"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000927"
+      ],
+      "bank_ids": [
+        "BNK-000760"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000928"
+      ],
+      "bank_ids": [
+        "BNK-000761"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000929"
+      ],
+      "bank_ids": [
+        "BNK-000762"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000930"
+      ],
+      "bank_ids": [
+        "BNK-000763"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000931"
+      ],
+      "bank_ids": [
+        "BNK-000764"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000932"
+      ],
+      "bank_ids": [
+        "BNK-000765"
+      ],
+      "note": "wrong amount error: ledger 1746.86 vs bank 3403.42"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000933"
+      ],
+      "bank_ids": [
+        "BNK-000766"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-26 vs bank date 2024-02-25"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000934"
+      ],
+      "bank_ids": [
+        "BNK-000767"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000935"
+      ],
+      "bank_ids": [
+        "BNK-000768"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000936"
+      ],
+      "bank_ids": [
+        "BNK-000769"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000937"
+      ],
+      "bank_ids": [
+        "BNK-000770"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000938",
+        "LGR-000939",
+        "LGR-000940"
+      ],
+      "bank_ids": [
+        "BNK-000771"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000941"
+      ],
+      "bank_ids": [
+        "BNK-000772"
+      ],
+      "note": "wrong amount error: ledger 4390.48 vs bank 3088.51"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000942"
+      ],
+      "bank_ids": [
+        "BNK-000773"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000943"
+      ],
+      "bank_ids": [
+        "BNK-000774"
+      ],
+      "note": "transposed-digit error: ledger 2189.36 vs bank 2198.36"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000944"
+      ],
+      "bank_ids": [
+        "BNK-000775"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "duplicate_same_day",
+      "ledger_ids": [
+        "LGR-000945",
+        "LGR-000946"
+      ],
+      "bank_ids": [
+        "BNK-000776",
+        "BNK-000777"
+      ],
+      "note": "identical amounts, same day: pair a<->a, b<->b by id order, not swapped"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000947"
+      ],
+      "bank_ids": [
+        "BNK-000778"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000948"
+      ],
+      "bank_ids": [
+        "BNK-000779"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000949"
+      ],
+      "bank_ids": [
+        "BNK-000780"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000950"
+      ],
+      "bank_ids": [
+        "BNK-000781"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000951"
+      ],
+      "bank_ids": [
+        "BNK-000782"
+      ],
+      "note": "wrong-date error: ledger date 2024-01-24 vs bank date 2023-12-10"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000952",
+        "LGR-000953",
+        "LGR-000954"
+      ],
+      "bank_ids": [
+        "BNK-000783"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000955"
+      ],
+      "bank_ids": [
+        "BNK-000784"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000956"
+      ],
+      "bank_ids": [
+        "BNK-000785"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000957"
+      ],
+      "bank_ids": [
+        "BNK-000786"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000958"
+      ],
+      "bank_ids": [
+        "BNK-000787"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000959"
+      ],
+      "bank_ids": [
+        "BNK-000788"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000960"
+      ],
+      "bank_ids": [
+        "BNK-000789"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000961"
+      ],
+      "bank_ids": [
+        "BNK-000790"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000962"
+      ],
+      "bank_ids": [
+        "BNK-000791"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000963"
+      ],
+      "bank_ids": [
+        "BNK-000792"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000964"
+      ],
+      "bank_ids": [
+        "BNK-000793"
+      ],
+      "note": "transposed-digit error: ledger 1901.17 vs bank 1901.71"
+    },
+    {
+      "category": "error_transposed_digits",
+      "ledger_ids": [
+        "LGR-000965"
+      ],
+      "bank_ids": [
+        "BNK-000794"
+      ],
+      "note": "transposed-digit error: ledger 7420.45 vs bank 7402.45"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000966"
+      ],
+      "bank_ids": [
+        "BNK-000795"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000967"
+      ],
+      "bank_ids": [
+        "BNK-000796"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000968"
+      ],
+      "bank_ids": [
+        "BNK-000797"
+      ],
+      "note": "wrong amount error: ledger 4419.73 vs bank 2337.60"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000969"
+      ],
+      "bank_ids": [
+        "BNK-000798"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000970"
+      ],
+      "bank_ids": [
+        "BNK-000799"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000971"
+      ],
+      "bank_ids": [
+        "BNK-000800"
+      ],
+      "note": "wrong amount error: ledger 1916.88 vs bank 1053.78"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000972"
+      ],
+      "bank_ids": [
+        "BNK-000801"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000973"
+      ],
+      "bank_ids": [
+        "BNK-000802"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-23 vs bank date 2024-05-07"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000974"
+      ],
+      "bank_ids": [
+        "BNK-000803"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000975"
+      ],
+      "bank_ids": [
+        "BNK-000804"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000976"
+      ],
+      "bank_ids": [
+        "BNK-000805"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000977",
+        "LGR-000978",
+        "LGR-000979",
+        "LGR-000980"
+      ],
+      "bank_ids": [
+        "BNK-000806"
+      ],
+      "note": "4 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000981"
+      ],
+      "bank_ids": [
+        "BNK-000807"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000982"
+      ],
+      "bank_ids": [
+        "BNK-000808"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000983"
+      ],
+      "bank_ids": [
+        "BNK-000809"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000984"
+      ],
+      "bank_ids": [
+        "BNK-000810"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000985"
+      ],
+      "bank_ids": [
+        "BNK-000811"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000986"
+      ],
+      "bank_ids": [
+        "BNK-000812"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "one_to_many_deposit",
+      "ledger_ids": [
+        "LGR-000987",
+        "LGR-000988",
+        "LGR-000989"
+      ],
+      "bank_ids": [
+        "BNK-000813"
+      ],
+      "note": "3 ledger receipts sum to one bank deposit"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000990"
+      ],
+      "bank_ids": [
+        "BNK-000814"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000991"
+      ],
+      "bank_ids": [
+        "BNK-000815"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-13 vs bank date 2024-01-14"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000992"
+      ],
+      "bank_ids": [
+        "BNK-000816"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "error_wrong_amount",
+      "ledger_ids": [
+        "LGR-000993"
+      ],
+      "bank_ids": [
+        "BNK-000817"
+      ],
+      "note": "wrong amount error: ledger 506.67 vs bank 3113.07"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000994"
+      ],
+      "bank_ids": [
+        "BNK-000818"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "normal_date_diff",
+      "ledger_ids": [
+        "LGR-000995"
+      ],
+      "bank_ids": [
+        "BNK-000819"
+      ],
+      "note": "matches but bank date lags ledger date"
+    },
+    {
+      "category": "deposit_in_transit",
+      "ledger_ids": [
+        "LGR-000996"
+      ],
+      "bank_ids": [],
+      "note": "deposit in transit: recorded in ledger, not yet on bank statement"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-000997"
+      ],
+      "bank_ids": [
+        "BNK-000820"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000998"
+      ],
+      "bank_ids": [
+        "BNK-000821"
+      ],
+      "note": "wrong-date error: ledger date 2024-03-13 vs bank date 2024-01-28"
+    },
+    {
+      "category": "error_wrong_date",
+      "ledger_ids": [
+        "LGR-000999"
+      ],
+      "bank_ids": [
+        "BNK-000822"
+      ],
+      "note": "wrong-date error: ledger date 2024-02-25 vs bank date 2024-04-10"
+    },
+    {
+      "category": "normal_exact",
+      "ledger_ids": [
+        "LGR-001000"
+      ],
+      "bank_ids": [
+        "BNK-000823"
+      ],
+      "note": "exact one-to-one match"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000824"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000825"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000826"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000827"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000828"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000829"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000830"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000831"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000832"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000833"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000834"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000835"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000836"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000837"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000838"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000839"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000840"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000841"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000842"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000843"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000844"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000845"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000846"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000847"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000848"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000849"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000850"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000851"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000852"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000853"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000854"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000855"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000856"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000857"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000858"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000859"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000860"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000861"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000862"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000863"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000864"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000865"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000866"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000867"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000868"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000869"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000870"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000871"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000872"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000873"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000874"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000875"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000876"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000877"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000878"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000879"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000880"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000881"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000882"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000883"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000884"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000885"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000886"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000887"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000888"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000889"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000890"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_interest",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000891"
+      ],
+      "note": "bank interest not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000892"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000893"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000894"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000895"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000896"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000897"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000898"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "direct_debit",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000899"
+      ],
+      "note": "direct debit not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000900"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000901"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000902"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    },
+    {
+      "category": "bank_charge",
+      "ledger_ids": [],
+      "bank_ids": [
+        "BNK-000903"
+      ],
+      "note": "bank charge not yet recorded in ledger"
+    }
+  ]
+}

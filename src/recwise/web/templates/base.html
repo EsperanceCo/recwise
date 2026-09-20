@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Recwise{% block title_suffix %}{% endblock %}</title>
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --border: #e3e6eb;
+      --text: #1a1d23;
+      --text-muted: #6b7280;
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-bg: #eef2ff;
+      /* Fixed across themes: solid-fill buttons need reliable contrast
+         with white text (verified ~6.3:1, WCAG AA), unlike --primary
+         above which is allowed to shift for link/nav legibility. */
+      --primary-solid: #4f46e5;
+      --primary-solid-hover: #4338ca;
+      --success: #16a34a;
+      --success-bg: #dcfce7;
+      --success-text: #166534;
+      --warning-bg: #fef3c7;
+      --warning-text: #92400e;
+      --danger: #dc2626;
+      --danger-bg: #fee2e2;
+      --danger-text: #991b1b;
+      --info-bg: #dbeafe;
+      --info-text: #1e40af;
+      --radius: 10px;
+      --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 8px rgba(16, 24, 40, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101215;
+        --surface: #1a1d22;
+        --border: #2c3038;
+        --text: #e7e9ec;
+        --text-muted: #9aa1ac;
+        --primary: #818cf8;
+        --primary-hover: #a5b0fb;
+        --primary-bg: rgba(129, 140, 248, 0.16);
+        --success: #4ade80;
+        --success-bg: rgba(74, 222, 128, 0.16);
+        --success-text: #86efac;
+        --warning-bg: rgba(245, 158, 11, 0.16);
+        --warning-text: #fbbf24;
+        --danger: #f87171;
+        --danger-bg: rgba(248, 113, 113, 0.16);
+        --danger-text: #fca5a5;
+        --info-bg: rgba(96, 165, 250, 0.16);
+        --info-text: #93c5fd;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 8px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .app-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .app-header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      height: 56px;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .brand:hover { text-decoration: none; }
+    .app-nav { display: flex; gap: 0.25rem; }
+    .app-nav a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.4rem 0.75rem;
+      border-radius: 7px;
+    }
+    .app-nav a:hover { background: var(--bg); text-decoration: none; color: var(--text); }
+    .app-nav a.active { background: var(--primary-bg); color: var(--primary); }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    h1 { font-size: 1.4rem; font-weight: 700; margin: 0 0 1.25rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1rem; font-weight: 600; margin: 1.75rem 0 0.75rem; color: var(--text); }
+    h2:first-child { margin-top: 0; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.25rem;
+    }
+    .card p { margin: 0.35rem 0; }
+    .card-muted { color: var(--text-muted); font-size: 0.9rem; }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .stat { padding: 0.25rem 0; }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+    .stat-value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .stat-value.neg { color: var(--danger); }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th {
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
+      padding: 0.6rem 0.75rem;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+    }
+    td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:hover td { background: var(--bg); }
+    tbody tr:last-child td { border-bottom: none; }
+
+    .amount { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .amount.neg { color: var(--danger); }
+
+    .pill {
+      display: inline-block;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      background: var(--info-bg);
+      color: var(--info-text);
+      white-space: nowrap;
+    }
+    .pill-one_to_many { background: var(--warning-bg); color: var(--warning-text); }
+    .pill-fuzzy_discrepancy { background: var(--danger-bg); color: var(--danger-text); }
+    .pill-manual { background: var(--success-bg); color: var(--success-text); }
+
+    .badge-source { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+
+    button, .btn {
+      font: inherit;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .btn-primary { background: var(--primary-solid); color: #fff; }
+    .btn-primary:hover { background: var(--primary-solid-hover); }
+    .accept { background: var(--success-bg); color: var(--success-text); border-color: rgba(22, 163, 74, 0.25); }
+    .accept:hover { background: #bbf7d0; }
+    .reject { background: var(--danger-bg); color: var(--danger-text); border-color: rgba(220, 38, 38, 0.25); }
+    .reject:hover { background: #fecaca; }
+
+    .actions { display: flex; gap: 0.5rem; margin-top: 0.9rem; }
+
+    .suggestion-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+    .suggestion-reason { color: var(--text-muted); font-size: 0.88rem; margin: 0 0 0.9rem; }
+    .confidence { font-size: 0.78rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+    .alert {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    .alert-danger { background: var(--danger-bg); color: var(--danger-text); }
+
+    .empty-state { color: var(--text-muted); font-size: 0.9rem; padding: 1rem 0; }
+
+    label { display: block; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.3rem; margin-top: 0.9rem; }
+    select, input[type="text"] {
+      font: inherit;
+      font-size: 0.85rem;
+      padding: 0.45rem 0.6rem;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      width: 100%;
+      max-width: 480px;
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="{{ url_for('index') }}">Recwise</a>
+      <nav class="app-nav">
+        <a href="{{ url_for('index') }}"{% if request.endpoint == 'index' %} class="active"{% endif %}>Dashboard</a>
+        <a href="{{ url_for('review_list') }}"{% if request.endpoint == 'review_list' %} class="active"{% endif %}>Review</a>
+        <a href="{{ url_for('statement_view') }}"{% if request.endpoint == 'statement_view' %} class="active"{% endif %}>Statement</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

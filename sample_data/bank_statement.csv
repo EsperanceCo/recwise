@@ -1,0 +1,904 @@
+﻿id,date,description,debit,credit,account_ref
+BNK-000001,04/01/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"3.897,86",TEST216739
+BNK-000002,04/01/2024,Ödəniş - Ulduz Tekstil,,"3.897,86",TEST216739
+BNK-000003,24/02/2024,Malların dəyəri - Şəms MMC,,"176,63",TEST719176
+BNK-000004,06/02/2024,  Xidmət haqqı - Xəzər Konsalting ,,"3.988,33",TEST717889
+BNK-000005,30/11/2023,Ödəniş - Günəş...,,"2.001,91",TEST452944
+BNK-000006,28/02/2024,Malların dəyəri - Günəş Ticarət MMC,,"2.821,37",TEST865179
+BNK-000007,25/01/2024,Fatura ödənişi - Günəş Ticarət MMC,,"3.703,98",TEST705397
+BNK-000008,18/02/2024,  Fatura ödənişi - Bahar Qida MMC ,,"1.467,38",TEST205907
+BNK-000009,28/03/2024,Malların dəyəri - Günəş Ticarət MMC,,"3.407,57",TEST835911
+BNK-000010,18/02/2024,Fatura ödənişi - Qızıl Balıq Restoranı,,"1.425,30",TEST584714
+BNK-000011,16/12/2023,Ödəniş  -  ÖZNUR  Xidmətləri,,"4.230,75",TEST158655
+BNK-000012,27/03/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"759,05",TEST514850
+BNK-000013,15/03/2024,Mədaxil - İpək Yolu Ticarət,,"2.256,22",TEST883300
+BNK-000014,07/01/2024,Xidmət haqqı - Günəş Ticarət MMC,,"4.524,65",TEST892495
+BNK-000015,17/03/2024,Ödəniş - Zümrüd Logistika,,"2.463,92",TEST500156
+BNK-000016,09/03/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"3.946,76",TEST814825
+BNK-000017,05/03/2024,Ödəniş - Zümrüd Logistika,,"8.098,75",TEST376183
+BNK-000018,22/03/2024,Mədaxil - İpək Yolu Ticarət,,"2.671,61",TEST982554
+BNK-000019,01/03/2024,Ödəniş - Bahar Qida MMC,,"1.709,51",TEST656116
+BNK-000020,08/01/2024,Malların dəyəri - İpək Yolu Ticarət,,"1.272,86",TEST351083
+BNK-000021,01/03/2024,Xidmət haqqı - Zümrüd Logistika,,"4.974,21",TEST791798
+BNK-000022,31/03/2024,Xidmət haqqı - Nərgiz Dizayn Studiyası,,"3.747,90",TEST891952
+BNK-000023,28/02/2024,Ödəniş - Ulduz Tekstil,,"1.309,73",TEST642717
+BNK-000024,21/03/2024,Fatura  ÖDƏNIŞI  -  Ulduz  Tekstil,,"318,66",TEST174441
+BNK-000025,12/03/2024,Malların dəyəri - İpək Yolu Ticarət,,"3.802,45",TEST324643
+BNK-000026,13/01/2024,Xidmət haqqı - Qızıl Balıq Restoranı,,"518,19",TEST299659
+BNK-000027,27/03/2024,Ödəniş  -  Günəş  Ticarət  MMC,,"3.397,84",TEST156802
+BNK-000028,26/02/2024,Mədaxil  -  Bahar  Qida  MMC,,"1.470,37",TEST246991
+BNK-000029,02/01/2024,Ödəniş - Ulduz Tekstil,,"498,96",TEST666847
+BNK-000030,02/01/2024,Ödəniş - Xəzər Konsalting,,"498,96",TEST666847
+BNK-000031,01/01/2024,  Mədaxil - Nərgiz Dizayn Studiyası ,,"2.056,93",TEST497382
+BNK-000032,15/03/2024,Ödəniş  -  Zümrüd  logistika,,"3.867,38",TEST161324
+BNK-000033,13/01/2024,Ödəniş - Xəzər Konsalting,,"430,01",TEST265080
+BNK-000034,16/01/2024,Ödəniş - İpək Yolu Ticarət,,"4.946,67",TEST523389
+BNK-000035,15/03/2024,Mədaxil - Zümrüd Logistika,,"2.973,41",TEST789305
+BNK-000036,03/02/2024,ÖDƏNIŞ  -  Xəzər  Konsalting,,"2.085,05",TEST350280
+BNK-000037,03/02/2024,Fatura ödənişi - Özn...,,"704,45",TEST630458
+BNK-000038,13/02/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"4.241,52",TEST837715
+BNK-000039,15/01/2024,Fatura ödənişi - Günəş Ticarət MMC,,"4.674,65",TEST377312
+BNK-000040,27/01/2024,Ödəniş - Zümrüd Logistika,,"7.309,82",TEST459536
+BNK-000041,22/03/2024,  Fatura ödənişi - Nərgiz Dizayn Studiyası ,,"2.230,75",TEST196781
+BNK-000042,29/02/2024,Ödəniş - Günəş Ticarət MMC,,"60,69",TEST678478
+BNK-000043,05/01/2024,Xidmət  haqqı  -  Öznur  Xidmətləri,,"4.385,68",TEST672092
+BNK-000044,27/01/2024,Malların dəyəri - Ulduz Tekstil,,"3.585,99",TEST475190
+BNK-000045,20/01/2024,Mədaxil - Ulduz Tekstil,,"4.863,66",TEST750810
+BNK-000046,12/02/2024,Xidmət haqqı - Çinar Tikinti MMC,,"4.111,95",TEST288073
+BNK-000047,30/01/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"1.843,21",TEST333238
+BNK-000048,05/02/2024,Malların dəyəri - Günəş Ticarət MMC,,"4.541,69",TEST444207
+BNK-000049,05/01/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"4.608,20",TEST447235
+BNK-000050,17/03/2024,Malların  dəyəri  -  Öznur  XIDMƏTLƏRI,,"2.288,36",TEST213668
+BNK-000051,25/02/2024,Mədaxil - Zümrüd Logistika,,"18,86",TEST843215
+BNK-000052,12/02/2024,Fatura ödənişi - Öznur Xidmətləri,,"3.277,12",TEST796503
+BNK-000053,21/02/2024,Toplu mədaxil,,"1.044,01",TEST528231
+BNK-000054,01/01/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"1.603,17",TEST674553
+BNK-000055,26/02/2024,Mədaxil - Qızıl Balıq Restoranı,,"2.328,19",TEST587575
+BNK-000056,25/03/2024,Mədaxil - İpək Yolu Ticarət,,"3.328,43",TEST640490
+BNK-000057,06/01/2024,Ödəniş - Bahar Qida MMC,,"1.293,68",TEST125611
+BNK-000058,25/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.776,20",TEST703634
+BNK-000059,25/01/2024,ödəniş  -  Çinar  Tikinti  MMC,,"3.776,20",TEST703634
+BNK-000060,30/03/2024,Ödəniş - Bahar Qida MMC,,"2.725,59",TEST284430
+BNK-000061,13/03/2024,Xidmət haqqı - Öznur Xidmətləri,,"3.131,88",TEST800005
+BNK-000062,15/03/2024,Xidmət haqqı - Xəzər Konsalting,,"4.713,95",TEST547470
+BNK-000063,07/03/2024,  Ödəniş - Qızıl Balıq Restoranı ,,"2.550,68",TEST390782
+BNK-000064,07/03/2024,Ödəniş -...,,"2.550,68",TEST390782
+BNK-000065,30/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"2.018,20",TEST258157
+BNK-000066,29/02/2024,Xidmət haqqı - Şəms MMC,,"2.189,85",TEST668969
+BNK-000067,08/02/2024,Malların dəyəri - Çinar Tikinti MMC,,"3.960,37",TEST468845
+BNK-000068,29/01/2024,Xidmət haqqı - Çinar Tikinti MMC,,"1.440,96",TEST611945
+BNK-000069,25/03/2024,Malların  dəyəri  -  Çinar  Tikinti  MMC,,"151,38",TEST233827
+BNK-000070,10/01/2024,Mədaxil - Öznur Xi...,,"1.997,59",TEST290556
+BNK-000071,23/02/2024,  Fatura ödənişi - Günəş Ticarət MMC ,,"1.332,62",TEST888539
+BNK-000072,24/03/2024,Ödəniş - Şəms MMC,,"221,06",TEST919182
+BNK-000073,01/03/2024,Xidmət haqqı - Günəş Ticarət MMC,,"3.519,89",TEST232352
+BNK-000074,22/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.193,72",TEST486814
+BNK-000075,14/01/2024,Xidmət haqqı - Şəms MMC,,"3.043,97",TEST426147
+BNK-000076,10/01/2024,Ödəniş - Günəş Ticarət MM...,,"6.380,59",TEST307963
+BNK-000077,13/03/2024,Fatura  ödənişi  -  Şəms  MMC,,"4.113,26",TEST934904
+BNK-000078,03/03/2024,Xidmət haqqı - Çinar Tikinti MMC,,"563,32",TEST962276
+BNK-000079,10/03/2024,Xidmət haqqı - Zümrüd Logistika,,"3.239,15",TEST284692
+BNK-000080,27/02/2024,Xidmət haqqı - Bahar...,,"1.288,54",TEST392477
+BNK-000081,03/03/2024,Fatura ödənişi - Öznur Xidmətləri,,"1.122,11",TEST290672
+BNK-000082,13/01/2024,  Xidmət haqqı - Çinar Tikinti MMC ,,"3.785,26",TEST300337
+BNK-000083,07/03/2024,Ödəniş - Şəms MMC,,"4.167,25",TEST777278
+BNK-000084,15/03/2024,Xidmət haqqı - Bahar Qida MMC,,"1.944,72",TEST796212
+BNK-000085,25/01/2024,  Mədaxil - Günəş Ticarət MMC ,,"1.664,38",TEST226516
+BNK-000086,05/02/2024,Ödəniş - Zümrüd Logistika,,"3.101,13",TEST607719
+BNK-000087,30/01/2024,Ödəniş - Xəzər Konsalting,,"1.902,05",TEST410636
+BNK-000088,30/11/2023,Ödəniş - Nərgiz Dizayn Studiyası,,"3.019,74",TEST614723
+BNK-000089,02/02/2024,Xidmət haqqı - Bahar Qida MMC,,"4.943,88",TEST153872
+BNK-000090,12/03/2024,  Malların dəyəri - Çinar Tikinti MMC ,,"4.017,88",TEST224205
+BNK-000091,02/03/2024,Xidmət  haqqı  -  İpək  Yolu  TICARƏT,,"1.568,98",TEST498855
+BNK-000092,20/02/2024,ÖDƏNIŞ  -  Qızıl  Balıq  Restoranı,,"1.397,50",TEST317881
+BNK-000093,07/02/2024,Toplu mədaxil,,"391,90",TEST722656
+BNK-000094,15/01/2024,Mədaxil  -  Ulduz  Tekstil,,"2.865,07",TEST545790
+BNK-000095,12/02/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"4.952,33",TEST822131
+BNK-000096,30/01/2024,Fatura ödənişi - İpək Yolu Ticarət,,"3.545,26",TEST195763
+BNK-000097,08/03/2024,Ödəniş - Qızıl Balıq Res...,,"2.730,86",TEST893005
+BNK-000098,04/03/2024,Xidmət  HAQQI  -  Öznur  Xidmətləri,,"2.474,20",TEST765620
+BNK-000099,25/03/2024,Toplu mədaxil,,"676,99",TEST619536
+BNK-000100,09/01/2024,Malların dəyəri - Öznur Xidmətləri,,"2.728,11",TEST533321
+BNK-000101,26/02/2024,Ödəniş - Xəzər Konsalting,,"2.889,49",TEST154118
+BNK-000102,04/01/2024,Toplu mədaxil,,"831,92",TEST608257
+BNK-000103,15/01/2024,Fatura ödənişi - Günəş Ticarət MMC,,"2.429,31",TEST335615
+BNK-000104,02/03/2024,  Xidmət haqqı - Ulduz Tekstil ,,"2.485,79",TEST535673
+BNK-000105,05/03/2024,Malların dəyəri - Şəms MMC,,"1.410,75",TEST925981
+BNK-000106,27/02/2024,Toplu mədaxil,,"690,37",TEST613425
+BNK-000107,30/03/2024,Xidmət  haqqı  -  İpək  Yolu  TICARƏT,,"1.262,02",TEST297816
+BNK-000108,25/03/2024,Ödəniş  -  Qızıl  Balıq  RESTORANI,,"4.164,42",TEST504832
+BNK-000109,26/02/2024,Mədaxil  -  ZÜMRÜD  Logistika,,"532,77",TEST986088
+BNK-000110,11/01/2024,Toplu mədaxil,,"1.296,01",TEST516791
+BNK-000111,22/03/2024,Fatura ödənişi - Günəş Ticarət MMC,,"3.700,41",TEST897305
+BNK-000112,08/01/2024,Mədaxil - Öznur Xidmətləri,,"1.548,09",TEST440131
+BNK-000113,15/03/2024,Xidmət...,,"760,34",TEST621841
+BNK-000114,01/04/2024,Xidmət haqqı - Günəş Ticarət MMC,,"838,24",TEST401603
+BNK-000115,24/02/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"3.629,23",TEST769975
+BNK-000116,04/02/2024,Malların dəyəri - Öznur Xidmətlə...,,"3.008,52",TEST211834
+BNK-000117,02/01/2024,Toplu mədaxil,,"1.338,34",TEST515032
+BNK-000118,27/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.971,40",TEST362801
+BNK-000119,27/03/2024,Ödəniş - Qızıl Balıq...,,"3.971,40",TEST362801
+BNK-000120,16/02/2024,Fatura ödənişi - Xəzər Konsalting,,"3.849,67",TEST707727
+BNK-000121,17/01/2024,Fatura ödənişi - Zümrüd Logistika,,"4.133,59",TEST310548
+BNK-000122,02/03/2024,Xidmət haqqı - Nərgiz Dizayn Studiyası,,"4.238,32",TEST964749
+BNK-000123,29/01/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"4.519,61",TEST890785
+BNK-000124,03/02/2024,Fatura ödənişi - Günəş Ticarət MMC,,"2.823,18",TEST114594
+BNK-000125,14/01/2024,Ödəniş  -  Ulduz  tekstil,,"3.548,08",TEST489518
+BNK-000126,14/01/2024,Ödəniş - Bahar Qida...,,"3.548,08",TEST489518
+BNK-000127,06/01/2024,Ödəniş  -  Şəms  MMC,,"4.971,13",TEST246566
+BNK-000128,30/03/2024,Mədaxil - Zümrüd Logistika,,"4.969,62",TEST803055
+BNK-000129,03/03/2024,  Ödəniş - Çinar Tikinti MMC ,,"3.237,79",TEST203831
+BNK-000130,03/03/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"3.237,79",TEST203831
+BNK-000131,23/03/2024,Toplu mədaxil,,"756,46",TEST485178
+BNK-000132,13/03/2024,Mədaxil - Günəş Ticarət MMC,,"1.085,86",TEST232040
+BNK-000133,19/01/2024,Mədaxil - İpək Yolu Ticarət,,"4.144,76",TEST444519
+BNK-000134,25/03/2024,  Ödəniş - Şəms MMC ,,"4.552,68",TEST215266
+BNK-000135,23/02/2024,Fatura ödənişi - Günəş Ticarət MMC,,"2.768,20",TEST232915
+BNK-000136,05/03/2024,Malların dəyəri - İpək Yol...,,"1.171,55",TEST573962
+BNK-000137,02/03/2024,Xidmət haqqı - Çinar Tikinti MMC,,"4.452,28",TEST163780
+BNK-000138,14/01/2024,Ödəniş - Xəzər Konsalting,,"3.199,23",TEST177060
+BNK-000139,05/03/2024,Ödəniş - Çinar Tikinti MMC,,"3.184,18",TEST575755
+BNK-000140,11/03/2024,Ödəniş - Ulduz Tekst...,,"3.789,27",TEST906315
+BNK-000141,11/03/2024,Ödəniş - Çinar Tikinti MMC,,"3.789,27",TEST906315
+BNK-000142,10/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"1.648,52",TEST199704
+BNK-000143,13/01/2024,Ödəniş - Çinar Tikinti MMC,,"498,79",TEST170394
+BNK-000144,08/01/2024,Xidmət haqqı - Zümrüd Logistika,,"3.084,76",TEST683397
+BNK-000145,07/01/2024,Toplu mədaxil,,"816,74",TEST886730
+BNK-000146,12/03/2024,Malların  dəyəri  -  İpək  Yolu  ticarət,,"4.033,55",TEST986209
+BNK-000147,24/01/2024,Fatura  ödənişi  -  Şəfəq  Baytarlıq  Kliniki,,"1.442,72",TEST130359
+BNK-000148,19/01/2024,Xidmət haqqı - Qızıl Balıq Restoranı,,"3.894,81",TEST172965
+BNK-000149,09/02/2024,  Ödəniş - Öznur Xidmətləri ,,"3.793,24",TEST488028
+BNK-000150,23/11/2023,Ödəniş - Bahar Qida MMC,,"1.436,60",TEST747850
+BNK-000151,06/02/2024,Ödəniş - Zümrüd Logistik...,,"3.968,07",TEST534303
+BNK-000152,29/03/2024,Xidmət  HAQQI  -  Ulduz  Tekstil,,"248,11",TEST652530
+BNK-000153,18/01/2024,Xidmət haqqı - Nərgiz Dizayn Studiyası,,"4.016,40",TEST904624
+BNK-000154,18/02/2024,Fatura  ödənişi  -  Şəfəq  Baytarlıq  KLINIKI,,"2.802,26",TEST235461
+BNK-000155,10/01/2024,Xidmət haqqı - Öznur Xidmətləri,,"4.529,93",TEST582087
+BNK-000156,15/01/2024,Malların dəyəri - Şəms MMC,,"2.133,53",TEST403578
+BNK-000157,25/02/2024,Toplu mədaxil,,"248,82",TEST479430
+BNK-000158,29/01/2024,  Ödəniş - Xəzər Konsalting ,,"4.094,82",TEST456005
+BNK-000159,15/01/2024,  Ödəniş - Günəş Ticarət MMC ,,"1.248,72",TEST466346
+BNK-000160,11/12/2023,Ödəniş - Qızıl Balıq Restoranı,,"4.997,51",TEST787351
+BNK-000161,27/04/2024,Ödəniş - Qızıl Balıq Resto...,,"3.381,12",TEST707616
+BNK-000162,26/02/2024,Fatura ödənişi - Bahar Qida MMC,,"368,01",TEST258290
+BNK-000163,10/01/2024,Ödəniş - Bahar Qida MMC,,"1.637,43",TEST631981
+BNK-000164,17/03/2024,Ödəniş - Çinar Tikinti MMC,,"2.668,49",TEST744883
+BNK-000165,27/02/2024,Mədaxil  -  Öznur  xidmətləri,,"552,64",TEST164879
+BNK-000166,21/03/2024,Fatura ödənişi - Öznur Xidmətləri,,"1.917,87",TEST648141
+BNK-000167,21/03/2024,Toplu mədaxil,,"663,52",TEST726928
+BNK-000168,24/03/2024,Fatura ödənişi - Qızıl Balıq Restoranı,,"3.672,04",TEST425301
+BNK-000169,12/02/2024,Ödəniş - Xəzər Konsalting,,"4.273,43",TEST930117
+BNK-000170,12/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"4.273,43",TEST930117
+BNK-000171,26/03/2024,Mədaxil - Zümrüd Logi...,,"2.229,86",TEST777406
+BNK-000172,18/01/2024,Ödəniş - Günəş Ticarət MMC,,"822,35",TEST337547
+BNK-000173,09/03/2024,  Malların dəyəri - Öznur Xidmətləri ,,"3.480,41",TEST975686
+BNK-000174,22/01/2024,Toplu mədaxil,,"1.097,35",TEST908554
+BNK-000175,25/02/2024,Malların dəyəri - Ulduz Tekstil,,"4.292,86",TEST653081
+BNK-000176,14/01/2024,Fatura ödənişi - Zümrüd Logistika,,"3.739,78",TEST681478
+BNK-000177,26/02/2024,Xidmət haqqı - Ulduz Tekstil,,"4.971,93",TEST254506
+BNK-000178,20/02/2024,Ödəniş - Öznur Xidmətləri,,"2.641,96",TEST155843
+BNK-000179,13/01/2024,Mədaxil  -  Şəfəq  baytarlıq  Kliniki,,"4.409,70",TEST434165
+BNK-000180,01/03/2024,Ödəniş - İ...,,"2.361,96",TEST895702
+BNK-000181,31/01/2024,Ödəniş - Qızıl Balıq Restoranı,,"2.211,09",TEST150068
+BNK-000182,10/03/2024,Malların  dəyəri  -  ZÜMRÜD  Logistika,,"3.323,26",TEST725726
+BNK-000183,14/03/2024,Fatura  ödənişi  -  Xəzər  konsalting,,"2.194,01",TEST352249
+BNK-000184,07/01/2024,Ödəniş - Bahar Qida MMC,,"4.588,77",TEST681070
+BNK-000185,03/01/2024,Ödəniş - Günəş Ticarət MMC,,"1.882,20",TEST883618
+BNK-000186,12/02/2024,Ödəniş - Öznur Xidmətləri,,"242,44",TEST893435
+BNK-000187,28/03/2024,Mədaxil  -  Şəfəq  BAYTARLIQ  Kliniki,,"2.445,96",TEST970720
+BNK-000188,26/01/2024,Malların dəyəri - Şəms MMC,,"4.654,09",TEST145934
+BNK-000189,03/02/2024,Mədaxil  -  QIZIL  Balıq  Restoranı,,"3.959,41",TEST596395
+BNK-000190,21/02/2024,Xidmət haqqı - Bahar Qida MMC,,"3.907,07",TEST558176
+BNK-000191,07/03/2024,Mədaxil - Günəş Ticarət MMC,,"1.408,38",TEST936020
+BNK-000192,11/01/2024,Mədaxil - Qızıl Balıq Restoranı,,"1.729,24",TEST207581
+BNK-000193,06/01/2024,Fatura ödənişi - Öznur Xidmətləri,,"3.820,60",TEST568849
+BNK-000194,26/03/2024,Mədaxil - Çinar Tikinti MMC,,"3.352,40",TEST178686
+BNK-000195,18/03/2024,Fatura ödənişi - Bahar Qida MMC,,"3.565,13",TEST989894
+BNK-000196,26/02/2024,  Fatura ödənişi - Günəş Ticarət MMC ,,"4.010,76",TEST490084
+BNK-000197,24/01/2024,Ödəniş - Zümrü...,,"2.626,42",TEST127172
+BNK-000198,28/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"6.551,99",TEST567951
+BNK-000199,10/01/2024,Fatura ödənişi - Xəzər Konsalting,,"2.380,00",TEST242321
+BNK-000200,11/03/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"5.780,57",TEST168093
+BNK-000201,16/02/2024,Toplu mədaxil,,"500,36",TEST768676
+BNK-000202,13/03/2024,Ödəniş - Günəş Ticarət MMC,,"3.218,37",TEST942700
+BNK-000203,29/01/2024,Ödəniş - Öznur Xidmətləri,,"667,07",TEST529322
+BNK-000204,17/01/2024,Toplu mədaxil,,"1.195,80",TEST642491
+BNK-000205,14/02/2024,Ödəniş - Günəş...,,"5.540,13",TEST336422
+BNK-000206,12/01/2024,  Ödəniş - Qızıl Balıq Restoranı ,,"2.644,93",TEST659392
+BNK-000207,12/01/2024,Ödəniş - Xəzər Konsalting,,"2.644,93",TEST659392
+BNK-000208,14/03/2024,Malların dəyəri...,,"2.194,11",TEST904214
+BNK-000209,01/04/2024,  Ödəniş - Bahar Qida MMC ,,"1.569,41",TEST356773
+BNK-000210,29/02/2024,Fatura ödənişi - Öznur Xidmətləri,,"1.079,66",TEST607774
+BNK-000211,17/02/2024,Ödəniş - Zümr...,,"2.709,97",TEST897615
+BNK-000212,07/01/2024,Mədaxil - Çinar Tikinti MMC,,"1.531,54",TEST201514
+BNK-000213,07/03/2024,Ödəniş - Şəms MMC,,"2.617,65",TEST589491
+BNK-000214,15/03/2024,Xidmət...,,"1.860,18",TEST325595
+BNK-000215,18/01/2024,fatura  ödənişi  -  Nərgiz  Dizayn  Studiyası,,"4.636,60",TEST551860
+BNK-000216,11/03/2024,Malların dəyəri - Günəş T...,,"1.523,10",TEST480133
+BNK-000217,17/01/2024,Toplu mədaxil,,"341,50",TEST740725
+BNK-000218,06/03/2024,Mədaxil - Şəms MMC,,"247,52",TEST520884
+BNK-000219,25/01/2024,Mədaxil - Zümrüd L...,,"4.692,58",TEST579187
+BNK-000220,08/02/2024,Ödəniş - Öznur Xidmətləri,,"3.122,82",TEST875232
+BNK-000221,08/02/2024,Ödəniş...,,"3.122,82",TEST875232
+BNK-000222,27/03/2024,Ödəniş - Çinar Tikinti MMC,,"584,64",TEST447329
+BNK-000223,15/03/2024,Mədaxil - Ulduz Tekstil,,"3.038,46",TEST787436
+BNK-000224,18/02/2024,Ödəniş - Şəms MMC,,"1.694,54",TEST749840
+BNK-000225,26/02/2024,Mədaxil - Çinar Tikinti MMC,,"1.654,65",TEST119857
+BNK-000226,16/01/2024,Ödəniş - Xəzər Konsalting,,"3.710,29",TEST741181
+BNK-000227,18/02/2024,Toplu mədaxil,,"1.009,74",TEST601608
+BNK-000228,06/02/2024,Malların dəyəri - Ulduz Tekstil,,"3.705,71",TEST412071
+BNK-000229,06/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"1.377,49",TEST386741
+BNK-000230,14/02/2024,Xidmət haqqı - Xəzər Konsalting,,"4.063,08",TEST958130
+BNK-000231,28/01/2024,Ödəniş - Zümrüd Logistika,,"4.350,85",TEST602351
+BNK-000232,19/03/2024,  Malların dəyəri - İpək Yolu Ticarət ,,"3.894,40",TEST214532
+BNK-000233,13/01/2024,Malların dəyəri - Öznur Xidmətləri,,"2.176,88",TEST155040
+BNK-000234,24/03/2024,Fatura ödənişi - Bahar Qid...,,"4.912,26",TEST526673
+BNK-000235,12/01/2024,Ödəniş - İpək Yolu Ticarət,,"3.429,92",TEST906066
+BNK-000236,23/01/2024,Mədaxil - Şəms MMC,,"4.906,44",TEST538184
+BNK-000237,02/01/2024,Malların dəyəri - İpək Yolu Ticarət,,"1.574,43",TEST139286
+BNK-000238,05/03/2024,  Fatura ödənişi - Nərgiz Dizayn Studiyası ,,"2.463,77",TEST992400
+BNK-000239,04/02/2024,Fatura ödənişi - Şəfəq Baytarlıq Kliniki,,"83,84",TEST779776
+BNK-000240,23/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"4.498,67",TEST302544
+BNK-000241,16/01/2024,Mədaxil - Günəş Ticarət MMC,,"3.518,82",TEST443856
+BNK-000242,03/02/2024,Fatura ödənişi - Ulduz Teksti...,,"2.021,03",TEST107161
+BNK-000243,16/01/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"2.450,01",TEST800224
+BNK-000244,09/02/2024,Ödəniş - Qızıl Balıq Rest...,,"7.383,21",TEST907236
+BNK-000245,18/01/2024,Malların dəyəri - Xəzər Konsalting,,"2.517,05",TEST329772
+BNK-000246,09/03/2024,Toplu mədaxil,,"770,52",TEST675914
+BNK-000247,30/03/2024,Xidmət  haqqı  -  İpək  Yolu  Ticarət,,"3.768,71",TEST221886
+BNK-000248,13/01/2024,Fatura ödənişi - Qızıl Balıq Restoranı,,"2.434,19",TEST691303
+BNK-000249,28/01/2024,Ödəniş - Günəş Ticarət MMC,,"3.042,01",TEST882032
+BNK-000250,01/03/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"176,38",TEST172371
+BNK-000251,23/02/2024,Ödəniş - Çinar Tikinti MMC,,"4.683,15",TEST777255
+BNK-000252,11/01/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"3.589,47",TEST493892
+BNK-000253,29/01/2024,Xidmət haqqı - Şəms MMC,,"4.386,86",TEST863214
+BNK-000254,13/03/2024,  Mədaxil - Ulduz Tekstil ,,"4.326,77",TEST544730
+BNK-000255,15/01/2024,  Ödəniş - Qızıl Balıq Restoranı ,,"178,91",TEST860242
+BNK-000256,17/03/2024,  Ödəniş - Bahar Qida MMC ,,"186,03",TEST205797
+BNK-000257,26/02/2024,Ödəniş  -  ZÜMRÜD  Logistika,,"1.238,61",TEST521805
+BNK-000258,10/02/2024,  Ödəniş - Qızıl Balıq Restoranı ,,"3.144,81",TEST704095
+BNK-000259,07/03/2024,Malların dəyəri - Çinar Tikinti MMC,,"1.168,90",TEST792282
+BNK-000260,27/03/2024,Xidmət haqqı - Zümrüd Logistika,,"2.249,76",TEST756401
+BNK-000261,23/02/2024,Malların dəyəri - Xəzər Konsalting,,"2.150,45",TEST830132
+BNK-000262,19/01/2024,Xidmət haqqı - Bahar Qida MMC,,"4.234,58",TEST415344
+BNK-000263,01/02/2024,Xidmət haqqı - Ulduz Tekstil,,"1.346,91",TEST507286
+BNK-000264,25/01/2024,MALLARIN  dəyəri  -  Nərgiz  Dizayn  Studiyası,,"280,20",TEST661654
+BNK-000265,25/05/2024,Ödəniş - Bahar Qida MMC,,"1.147,79",TEST716126
+BNK-000266,28/01/2024,Xidmət haqqı - Ulduz Tekstil,,"4.923,41",TEST116078
+BNK-000267,27/01/2024,Toplu mədaxil,,"1.029,35",TEST733760
+BNK-000268,17/02/2024,Mədaxil - Çinar Tikinti MMC,,"1.650,61",TEST312994
+BNK-000269,11/03/2024,  Fatura ödənişi - İpək Yolu Ticarət ,,"4.910,82",TEST373441
+BNK-000270,18/02/2024,Fatura ödənişi - Uldu...,,"2.997,33",TEST341192
+BNK-000271,03/03/2024,  Ödəniş - Şəfəq Baytarlıq Kliniki ,,"4.923,14",TEST772865
+BNK-000272,03/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"2.028,98",TEST673095
+BNK-000273,26/03/2024,Mədaxil  -  Şəms  MMC,,"264,35",TEST957730
+BNK-000274,26/03/2024,Ödəniş  -  İpək  Yolu  ticarət,,"4.906,34",TEST768706
+BNK-000275,26/03/2024,Ödəniş - Bahar Qida MMC,,"4.906,34",TEST768706
+BNK-000276,05/03/2024,mədaxil  -  Şəfəq  Baytarlıq  Kliniki,,"4.273,28",TEST117975
+BNK-000277,20/03/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"2.770,14",TEST301255
+BNK-000278,13/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"1.285,10",TEST581294
+BNK-000279,05/01/2024,Ödəniş - Çinar Tikinti MMC,,"500,21",TEST896483
+BNK-000280,05/01/2024,Ödəniş - Çinar Tikinti MMC,,"500,21",TEST896483
+BNK-000281,25/02/2024,Ödəniş - Öznur Xidmətləri,,"3.391,17",TEST624139
+BNK-000282,28/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"4.735,26",TEST340927
+BNK-000283,13/03/2024,Toplu mədaxil,,"816,49",TEST393992
+BNK-000284,21/02/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"4.154,48",TEST447843
+BNK-000285,25/02/2024,Malların dəyəri - Günəş Ticarət MMC,,"1.227,10",TEST202430
+BNK-000286,11/02/2024,Xidmət haqqı - Qızıl Balıq Restoranı,,"165,32",TEST911131
+BNK-000287,18/02/2024,Ödəniş - Xəzər Konsalting,,"2.274,12",TEST679902
+BNK-000288,01/02/2024,Mədaxil - Günəş Ticarət MMC,,"3.748,74",TEST936821
+BNK-000289,14/01/2024,FATURA  ödənişi  -  Şəms  MMC,,"489,83",TEST478221
+BNK-000290,17/03/2024,Ödəniş - Günəş Ticarət MMC,,"2.149,32",TEST684041
+BNK-000291,02/01/2024,Malların dəyəri - Çinar Tikinti MMC,,"1.540,12",TEST503951
+BNK-000292,07/03/2024,Fatura ödənişi - Qızıl Balıq Restoran...,,"899,10",TEST699743
+BNK-000293,22/01/2024,Fatura ödənişi - Nərg...,,"2.288,95",TEST166340
+BNK-000294,04/03/2024,Ödəniş - Bahar Qida MMC,,"6.362,51",TEST755395
+BNK-000295,12/02/2024,Ödəniş - Öznur Xidmətləri,,"2.318,03",TEST498343
+BNK-000296,12/02/2024,Ödəniş  -  çinar  Tikinti  MMC,,"2.318,03",TEST498343
+BNK-000297,10/02/2024,Toplu mədaxil,,"616,55",TEST310608
+BNK-000298,13/03/2024,Malların  dəyəri  -  İpək  Yolu  TICARƏT,,"1.057,52",TEST219420
+BNK-000299,26/02/2024,Ödəniş  -  ŞƏFƏQ  Baytarlıq  Kliniki,,"8.446,33",TEST319832
+BNK-000300,24/02/2024,Toplu mədaxil,,"1.021,69",TEST261630
+BNK-000301,01/02/2024,Malların  dəyəri  -  Qızıl  Balıq  restoranı,,"3.457,72",TEST214682
+BNK-000302,12/02/2024,Malların dəyəri - Çinar Tikinti MMC,,"4.184,54",TEST889245
+BNK-000303,27/02/2024,Toplu mədaxil,,"521,51",TEST703178
+BNK-000304,11/02/2024,Ödəniş - Günəş Ticarət MMC,,"4.836,32",TEST209627
+BNK-000305,13/02/2024,Xidmət  haqqı  -  ULDUZ  Tekstil,,"2.397,25",TEST427040
+BNK-000306,15/01/2024,Mədaxil - Öznur Xidmətləri,,"128,41",TEST146853
+BNK-000307,07/03/2024,Ödəniş - Xəzər Konsalting,,"2.903,59",TEST355761
+BNK-000308,21/02/2024,Xidmət haqqı - Xəzər Konsalting,,"3.311,75",TEST936507
+BNK-000309,26/01/2024,Ödəniş - Çinar Tikinti MMC,,"3.114,85",TEST743937
+BNK-000310,09/01/2024,  Fatura ödənişi - Günəş Ticarət MMC ,,"3.036,96",TEST391865
+BNK-000311,26/03/2024,Fatura ödənişi - Bahar Qida MMC,,"4.532,69",TEST375097
+BNK-000312,16/03/2024,Ödəniş - Öznur Xidmətləri,,"608,90",TEST511612
+BNK-000313,16/03/2024,Ödəniş - Öznur Xidmətləri,,"608,90",TEST511612
+BNK-000314,16/03/2024,Fatura  ödənişi  -  Qızıl  Balıq  Restoranı,,"454,34",TEST744333
+BNK-000315,28/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"732,82",TEST507333
+BNK-000316,25/03/2024,Xidmət haqqı - Xəzər...,,"2.919,34",TEST827117
+BNK-000317,15/02/2024,Ödəniş - Bahar Qida MMC,,"60,24",TEST156215
+BNK-000318,15/02/2024,Ödəniş - Xəzər Konsalting,,"60,24",TEST156215
+BNK-000319,03/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"2.189,10",TEST817956
+BNK-000320,24/12/2023,  Ödəniş - Ulduz Tekstil ,,"1.451,02",TEST331241
+BNK-000321,09/03/2024,Malların dəyəri - Günəş Ticarət MMC,,"2.688,09",TEST693127
+BNK-000322,26/04/2024,Ödəniş - Çinar Tikinti MMC,,"1.155,78",TEST143631
+BNK-000323,15/02/2024,Mədaxil - Günəş Ticarət MMC,,"2.311,99",TEST375581
+BNK-000324,19/03/2024,Toplu mədaxil,,"1.247,86",TEST467663
+BNK-000325,06/03/2024,Fatura ödənişi - Qızıl Balıq Restoranı,,"4.729,40",TEST999695
+BNK-000326,17/01/2024,Xidmət haqqı - Xəzər Konsalting,,"1.319,02",TEST835499
+BNK-000327,12/01/2024,Fatura ödənişi - Zümrüd Logistika,,"2.122,09",TEST764406
+BNK-000328,16/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"4.565,57",TEST443187
+BNK-000329,09/01/2024,Toplu mədaxil,,"783,63",TEST831160
+BNK-000330,07/01/2024,Ödəniş - Günəş Ticarət MMC,,"250,87",TEST815707
+BNK-000331,29/03/2024,Fatura  ödənişi  -  Xəzər  Konsalting,,"4.777,91",TEST312146
+BNK-000332,24/03/2024,Mədaxil - Şəms MMC,,"877,82",TEST796787
+BNK-000333,13/01/2024,Xidmət  haqqı  -  Ulduz  Tekstil,,"15,69",TEST837880
+BNK-000334,17/01/2024,Ödəniş  -  günəş  Ticarət  MMC,,"2.514,52",TEST827744
+BNK-000335,18/01/2024,Mədaxil - Qızıl Balıq Restoranı,,"3.373,70",TEST501312
+BNK-000336,21/03/2024,Ödəniş - Çinar Tikinti MMC,,"7.964,16",TEST323404
+BNK-000337,13/01/2024,Fatura ödənişi - Günəş Ticarət MMC,,"744,07",TEST190898
+BNK-000338,18/01/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"1.309,11",TEST929504
+BNK-000339,18/03/2024,Mədaxil - Ulduz Tekstil,,"2.681,36",TEST642899
+BNK-000340,04/03/2024,Ödəniş - İpək Yolu Ticarət,,"3.355,38",TEST352792
+BNK-000341,19/02/2024,Mədaxil - İpək Yolu Ticarət,,"4.523,14",TEST238394
+BNK-000342,03/03/2024,Ödəniş - Şəms MMC,,"364,06",TEST176537
+BNK-000343,06/02/2024,Xidmət haqqı - Şəfəq Baytarlıq Kliniki,,"3.305,52",TEST631219
+BNK-000344,09/03/2024,Ödəniş - İpək Yolu Ticarət,,"2.828,86",TEST771652
+BNK-000345,20/01/2024,Ödəniş - Öznur Xidm...,,"2.822,22",TEST947312
+BNK-000346,31/01/2024,Ödəniş  -  Günəş  Ticarət  mmc,,"1.291,77",TEST987586
+BNK-000347,25/03/2024,Mədaxil - Xəzər Konsalting,,"3.893,18",TEST798435
+BNK-000348,07/03/2024,Mədaxil - Şəfəq Baytarlıq Kliniki,,"4.115,10",TEST648410
+BNK-000349,16/01/2024,Fatura ödənişi - Şəms MMC,,"4.054,51",TEST868538
+BNK-000350,14/03/2024,Fatura  ödənişi  -  Günəş  TICARƏT  MMC,,"3.300,07",TEST846925
+BNK-000351,14/01/2024,MALLARIN  dəyəri  -  İpək  Yolu  Ticarət,,"4.698,54",TEST367508
+BNK-000352,21/02/2024,Malların dəyəri - Şəms MMC,,"948,27",TEST481657
+BNK-000353,29/01/2024,Ödəniş - Ulduz Tekstil,,"1.697,16",TEST539740
+BNK-000354,29/01/2024,ÖDƏNIŞ  -  Çinar  Tikinti  MMC,,"1.697,16",TEST539740
+BNK-000355,22/02/2024,Fatura ö...,,"4.607,95",TEST148159
+BNK-000356,01/02/2024,Ödəniş - İpək Yolu Ticarət,,"1.940,81",TEST752966
+BNK-000357,09/02/2024,Ödəniş  -  şəms  MMC,,"799,40",TEST304915
+BNK-000358,01/01/2024,Toplu mədaxil,,"1.191,06",TEST110060
+BNK-000359,07/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"2.175,60",TEST986575
+BNK-000360,26/03/2024,  Malların dəyəri - İpək Yolu Ticarət ,,"402,32",TEST239999
+BNK-000361,10/02/2024,Mədaxil  -  Çinar  Tikinti  MMC,,"4.865,12",TEST992247
+BNK-000362,15/12/2023,Ödəniş -...,,"563,95",TEST713110
+BNK-000363,31/01/2024,Fatura  ödənişi  -  Bahar  Qida  MMC,,"1.626,42",TEST475691
+BNK-000364,18/03/2024,Ödəniş - Öznur Xidmətləri,,"528,28",TEST830729
+BNK-000365,08/02/2024,Xidmət haqqı - Xəzər Konsalting,,"1.374,02",TEST810078
+BNK-000366,02/01/2024,Xidmət haqqı - Ulduz Tekstil,,"333,32",TEST227352
+BNK-000367,11/01/2024,Ödəniş - İpək Yolu Ticarət,,"3.063,05",TEST776001
+BNK-000368,11/01/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"3.063,05",TEST776001
+BNK-000369,12/02/2024,Xidmət haqqı - Şəms MMC,,"652,39",TEST988432
+BNK-000370,24/02/2024,Fatura ödə...,,"916,00",TEST816400
+BNK-000371,20/03/2024,Malların dəyəri - Ulduz Tekstil,,"3.244,73",TEST743937
+BNK-000372,19/02/2024,  Malların dəyəri - Çinar Tikinti MMC ,,"729,51",TEST393366
+BNK-000373,07/01/2024,Fatura ödənişi - Şəfəq Baytarlıq Kliniki,,"4.109,49",TEST933456
+BNK-000374,05/03/2024,Fatura ödənişi - Çinar Tikinti MMC,,"1.696,13",TEST693128
+BNK-000375,05/02/2024,Malların dəyəri - Bahar Qida MMC,,"317,18",TEST950069
+BNK-000376,01/02/2024,Ödəniş - Ulduz Tekstil,,"3.453,86",TEST204998
+BNK-000377,19/02/2024,Fatura ödənişi - Xəzər Konsalting,,"1.870,19",TEST703656
+BNK-000378,04/01/2024,Toplu mədaxil,,"1.562,60",TEST476211
+BNK-000379,19/03/2024,Fatura  ödənişi  -  Xəzər  Konsalting,,"1.066,25",TEST447848
+BNK-000380,15/01/2024,Fatura ödənişi - Zümrüd Logistika,,"4.447,99",TEST911982
+BNK-000381,13/01/2024,Toplu mədaxil,,"759,16",TEST514812
+BNK-000382,16/03/2024,fatura  ödənişi  -  Xəzər  Konsalting,,"4.280,08",TEST797860
+BNK-000383,22/03/2024,  Ödəniş - Günəş Ticarət MMC ,,"2.975,11",TEST331625
+BNK-000384,22/03/2024,Ödəniş - Bahar Qida MMC,,"2.975,11",TEST331625
+BNK-000385,26/03/2024,  Fatura ödənişi - Şəfəq Baytarlıq Kliniki ,,"3.360,73",TEST961574
+BNK-000386,02/02/2024,Toplu mədaxil,,"573,76",TEST171087
+BNK-000387,02/03/2024,Ödəniş - İpək Yolu Ticarət,,"4.145,21",TEST206355
+BNK-000388,03/01/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"1.680,99",TEST409234
+BNK-000389,25/02/2024,  Ödəniş - İpək Yolu Ticarət ,,"6.935,86",TEST132498
+BNK-000390,27/01/2024,Malların dəyəri...,,"1.006,06",TEST447177
+BNK-000391,13/01/2024,  Xidmət haqqı - Çinar Tikinti MMC ,,"270,23",TEST349087
+BNK-000392,24/02/2024,Ödəniş  -  Nərgiz  Dizayn  Studiyası,,"469,42",TEST104000
+BNK-000393,15/01/2024,Fatura  ödənişi  -  Çinar  TIKINTI  MMC,,"1.626,65",TEST596574
+BNK-000394,17/02/2024,  Fatura ödənişi - Bahar Qida MMC ,,"988,23",TEST499974
+BNK-000395,08/01/2024,Xidmət haqqı - Şəfəq Baytarlıq Kliniki,,"802,35",TEST691655
+BNK-000396,28/03/2024,Xidmət haqqı - Bah...,,"4.555,02",TEST661527
+BNK-000397,05/03/2024,Ödəniş - Günəş Ticarət MMC,,"6.098,67",TEST136415
+BNK-000398,25/01/2024,Mədaxil - Şəms MMC,,"671,57",TEST322182
+BNK-000399,09/01/2024,Fatura ödənişi - Çinar Tikinti MMC,,"466,27",TEST435281
+BNK-000400,07/01/2024,Xidmət haqqı - Zümrüd Logistika,,"3.090,59",TEST580412
+BNK-000401,14/03/2024,Ödəniş - Günəş Ticarət MMC,,"4.097,05",TEST205071
+BNK-000402,03/02/2024,Xidmət  haqqı  -  Qızıl  Balıq  Restoranı,,"2.018,25",TEST530849
+BNK-000403,28/03/2024,Ödəniş - Çinar Tikinti MMC,,"3.646,78",TEST738221
+BNK-000404,28/03/2024,Ödəniş  -  Şəms  mmc,,"3.646,78",TEST738221
+BNK-000405,13/02/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"4.295,45",TEST121215
+BNK-000406,08/02/2024,Malların dəyəri - Bahar Qida MMC,,"3.909,25",TEST240913
+BNK-000407,28/01/2024,Fatura ödənişi - Çinar Tikinti MMC,,"4.799,01",TEST563173
+BNK-000408,22/01/2024,Malların dəyəri - Şəfəq Baytarlıq Kliniki,,"1.641,18",TEST929937
+BNK-000409,06/01/2024,Ödəniş - Ulduz Tekstil,,"1.020,63",TEST696296
+BNK-000410,26/01/2024,Ödəniş - Öznur Xidmətləri,,"1.446,43",TEST838862
+BNK-000411,03/03/2024,Xidmət haqqı - Bahar Qida MMC,,"3.124,49",TEST490559
+BNK-000412,21/01/2024,  Ödəniş - Nərgiz Dizayn Studiyası ,,"4.401,71",TEST460971
+BNK-000413,24/03/2024,Toplu mədaxil,,"647,89",TEST316773
+BNK-000414,23/03/2024,Ödəniş - Çinar Tikinti MMC,,"2.978,55",TEST843826
+BNK-000415,08/02/2024,Ödəniş  -  zümrüd  Logistika,,"3.560,45",TEST589368
+BNK-000416,11/02/2024,  Fatura ödənişi - Nərgiz Dizayn Studiyası ,,"4.526,69",TEST771712
+BNK-000417,01/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"4.232,77",TEST902658
+BNK-000418,24/03/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"5.351,33",TEST126691
+BNK-000419,15/03/2024,Ödəniş - Ulduz Tekstil,,"3.009,14",TEST137034
+BNK-000420,01/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"4.762,80",TEST923024
+BNK-000421,01/03/2024,Ödəniş - Öznur Xidmətləri,,"4.762,80",TEST923024
+BNK-000422,13/01/2024,Malların dəyəri - Xəzər Konsalting,,"2.478,24",TEST408054
+BNK-000423,12/02/2024,Fatura ödənişi - Günəş Ticarət MMC,,"3.441,12",TEST812730
+BNK-000424,03/02/2024,Xidmət  haqqı  -  Nərgiz  Dizayn  studiyası,,"3.080,07",TEST489737
+BNK-000425,01/03/2024,Ödəniş - Ulduz Tekstil,,"4.673,15",TEST174675
+BNK-000426,01/03/2024,  Ödəniş - Zümrüd Logistika ,,"4.673,15",TEST174675
+BNK-000427,22/02/2024,Ödəniş - Bahar Qida MMC,,"2.995,31",TEST459315
+BNK-000428,10/02/2024,Ödəniş - Şəms MMC,,"3.336,60",TEST285413
+BNK-000429,10/02/2024,Ödəniş - Şəms MMC,,"3.336,60",TEST285413
+BNK-000430,12/01/2024,Xidmət haqqı - İpək Yolu Ticarət,,"688,45",TEST613358
+BNK-000431,02/01/2024,Fatura ödənişi - Ulduz Tekstil,,"2.808,55",TEST501936
+BNK-000432,07/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"103,93",TEST973703
+BNK-000433,14/01/2024,Ödəniş - Zümrüd...,,"2.020,90",TEST235193
+BNK-000434,12/03/2024,Xidmət haqqı - Öznur Xidmətləri,,"2.757,88",TEST863187
+BNK-000435,15/02/2024,Xidmət  haqqı  -  Ulduz  Tekstil,,"3.942,76",TEST613989
+BNK-000436,03/01/2024,Fatura ödənişi - Zümrüd Logistika,,"3.101,68",TEST321449
+BNK-000437,17/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"261,45",TEST150947
+BNK-000438,17/03/2024,Ödəniş - Günəş Ticarət MMC,,"261,45",TEST150947
+BNK-000439,22/01/2024,Ödəniş  -  Qızıl  Balıq  RESTORANI,,"3.654,80",TEST835962
+BNK-000440,06/02/2024,Ödəniş - Günəş Ticarət...,,"607,75",TEST223453
+BNK-000441,06/02/2024,Ödəniş - Bahar Qida MMC,,"607,75",TEST223453
+BNK-000442,22/02/2024,Mədaxil - Xəzər Konsalting,,"1.558,49",TEST837606
+BNK-000443,01/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"76,84",TEST446663
+BNK-000444,12/01/2024,Toplu mədaxil,,"404,53",TEST618105
+BNK-000445,23/01/2024,Fatura ödənişi - Şəms MMC,,"4.593,01",TEST952679
+BNK-000446,06/01/2024,Malların dəyəri - Xəzər Konsa...,,"60,71",TEST199613
+BNK-000447,13/02/2024,Xidmət haqqı - Gün...,,"968,76",TEST490722
+BNK-000448,23/02/2024,Toplu mədaxil,,"638,61",TEST991993
+BNK-000449,19/03/2024,Toplu mədaxil,,"503,88",TEST559447
+BNK-000450,26/02/2024,Fatura  ödənişi  -  Günəş  Ticarət  mmc,,"251,02",TEST218423
+BNK-000451,13/03/2024,Ödəniş - Öznur Xidmətləri,,"3.521,91",TEST704660
+BNK-000452,25/02/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.479,28",TEST199868
+BNK-000453,25/02/2024,ÖDƏNIŞ  -  Ulduz  Tekstil,,"3.479,28",TEST199868
+BNK-000454,01/03/2024,Fatura ödənişi - Bahar Qida MMC,,"4.476,25",TEST630126
+BNK-000455,29/01/2024,Mədaxil  -  Qızıl  balıq  Restoranı,,"2.896,18",TEST631553
+BNK-000456,08/03/2024,Xidmət  haqqı  -  GÜNƏŞ  Ticarət  MMC,,"1.667,07",TEST192295
+BNK-000457,08/02/2024,Ödəniş - Zümrüd Logistika,,"4.676,74",TEST768507
+BNK-000458,08/02/2024,Ödəniş - Zümrüd Logistika,,"4.676,74",TEST768507
+BNK-000459,29/01/2024,Malların dəyəri - Bahar Qida MMC,,"4.436,65",TEST956255
+BNK-000460,16/02/2024,Ödəniş - Günəş Ticarət MMC,,"7.606,98",TEST789089
+BNK-000461,07/02/2024,Ödəniş - Zümrüd Logistika,,"2.881,47",TEST938769
+BNK-000462,07/02/2024,Ödəniş - Öznur Xidmətləri,,"2.881,47",TEST938769
+BNK-000463,02/02/2024,Mədaxil - Ulduz Tekstil,,"3.212,62",TEST212157
+BNK-000464,23/02/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"253,79",TEST893928
+BNK-000465,01/01/2024,Xidmət haqqı - Şəfəq Baytarlıq Kliniki,,"2.790,63",TEST623059
+BNK-000466,28/01/2024,Mədaxil - Şəfəq Ba...,,"920,42",TEST633025
+BNK-000467,29/03/2024,Fatura ödənişi - Ulduz Tekstil,,"4.007,03",TEST738576
+BNK-000468,20/01/2024,Malların dəyəri - İpək Yolu Ticarət,,"2.173,97",TEST943890
+BNK-000469,11/03/2024,Fatura ödənişi - Ulduz Tekstil,,"3.326,55",TEST846454
+BNK-000470,24/03/2024,Toplu mədaxil,,"1.297,30",TEST239116
+BNK-000471,25/02/2024,ÖDƏNIŞ  -  Günəş  Ticarət  MMC,,"2.750,61",TEST399817
+BNK-000472,20/02/2024,Ödəniş - Nərgiz Dizayn Studiya...,,"3.592,93",TEST923690
+BNK-000473,19/02/2024,Malların dəyəri - İpək Yolu Ticarət,,"547,29",TEST133875
+BNK-000474,19/02/2024,Ödəniş  -  QIZIL  Balıq  Restoranı,,"2.194,00",TEST500118
+BNK-000475,28/02/2024,Ödəniş - İpək Yolu Ticarət,,"3.968,93",TEST564586
+BNK-000476,24/02/2024,Ödəniş  -  Xəzər  Konsalting,,"2.363,08",TEST860127
+BNK-000477,06/01/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"2.256,61",TEST495521
+BNK-000478,29/02/2024,Fatura ödənişi - Xəzər Konsalting,,"3.730,81",TEST446620
+BNK-000479,18/04/2024,Ödəniş  -  i̇pək  Yolu  Ticarət,,"2.581,89",TEST755744
+BNK-000480,09/01/2024,Malların dəyəri - Zümrüd Logistika,,"4.132,25",TEST645895
+BNK-000481,28/01/2024,Mədaxil - Öznur Xidmətləri,,"3.487,78",TEST331942
+BNK-000482,01/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"2.953,01",TEST656268
+BNK-000483,01/03/2024,Ödəniş - Şəms MMC,,"2.953,01",TEST656268
+BNK-000484,11/02/2024,Fatura  ödənişi  -  Günəş  ticarət  MMC,,"2.009,49",TEST815706
+BNK-000485,06/03/2024,Fatura ödənişi - Bahar Qida MMC,,"2.346,00",TEST639292
+BNK-000486,09/03/2024,Mədaxil - Şəms MMC,,"2.805,53",TEST275526
+BNK-000487,14/01/2024,Ödəniş - Zümrüd Logistika,,"1.087,82",TEST976258
+BNK-000488,28/02/2024,Fatura ödənişi - Öznur Xidmətləri,,"3.768,45",TEST124906
+BNK-000489,25/02/2024,Xidmət haqqı - Şəms MMC,,"1.668,86",TEST760830
+BNK-000490,20/03/2024,Ödəniş - Şəfəq Baytarlıq Kl...,,"341,54",TEST855274
+BNK-000491,20/03/2024,Ödəniş -...,,"341,54",TEST855274
+BNK-000492,26/02/2024,  Malların dəyəri - Çinar Tikinti MMC ,,"2.009,70",TEST902448
+BNK-000493,10/03/2024,Ödəniş - Xəzər Konsalting,,"3.334,22",TEST509985
+BNK-000494,12/03/2024,Malların dəyəri - Günəş Ticarət MMC,,"751,20",TEST680412
+BNK-000495,14/02/2024,  Fatura ödənişi - Çinar Tikinti MMC ,,"1.120,11",TEST320256
+BNK-000496,13/03/2024,MALLARIN  dəyəri  -  Şəms  MMC,,"4.478,25",TEST803571
+BNK-000497,15/03/2024,Malların  DƏYƏRI  -  Öznur  Xidmətləri,,"2.564,28",TEST860835
+BNK-000498,22/03/2024,Mədaxil - İpək Yolu Ticarət,,"3.645,71",TEST444295
+BNK-000499,22/01/2024,Xidmət haqqı - Öz...,,"35,33",TEST549112
+BNK-000500,12/02/2024,Fatura ödənişi - Bahar Qida MMC,,"4.612,65",TEST812591
+BNK-000501,23/03/2024,Mədaxil - Günəş Ticarət MMC,,"3.190,47",TEST284308
+BNK-000502,21/03/2024,Malların dəyəri - Şəfəq Baytarlıq Kliniki,,"410,88",TEST376021
+BNK-000503,03/02/2024,Mədaxil - Zümrüd Logistika,,"2.859,34",TEST678388
+BNK-000504,16/03/2024,Malların  dəyəri  -  Nərgiz  Dizayn  Studiyası,,"3.854,22",TEST909652
+BNK-000505,28/03/2024,Toplu mədaxil,,"870,04",TEST350484
+BNK-000506,12/01/2024,Ödəniş - Ulduz Tekstil,,"1.946,90",TEST343007
+BNK-000507,01/03/2024,Malların dəyəri - Bahar Qida MMC,,"4.822,44",TEST506945
+BNK-000508,03/02/2024,Xidmət haqqı - Zümrüd Logistika,,"3.043,69",TEST975427
+BNK-000509,10/01/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"2.718,80",TEST976052
+BNK-000510,10/01/2024,Ödəniş - Çinar Tikinti MMC,,"2.718,80",TEST976052
+BNK-000511,02/03/2024,Mədaxil - İpək Yolu Ticarət,,"4.661,33",TEST610511
+BNK-000512,06/03/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"3.383,67",TEST180832
+BNK-000513,16/01/2024,Ödəniş - Çinar Tikinti MMC,,"7.302,23",TEST956639
+BNK-000514,06/03/2024,Mədaxil - İpək Yolu Ticarət,,"1.114,69",TEST808029
+BNK-000515,17/01/2024,Malların  DƏYƏRI  -  İpək  Yolu  Ticarət,,"3.016,72",TEST145240
+BNK-000516,21/02/2024,Fatura ödənişi - İpək Yolu Ticarət,,"3.152,35",TEST641737
+BNK-000517,18/03/2024,Xidmət haqqı - Bahar Qida MMC,,"2.481,56",TEST571023
+BNK-000518,28/03/2024,Mədaxil - Bahar Qida MMC,,"1.806,58",TEST859364
+BNK-000519,03/01/2024,Mədaxil - Zümrüd Logistika,,"1.070,88",TEST213844
+BNK-000520,19/03/2024,Ödəniş  -  Şəms  MMC,,"3.154,75",TEST598985
+BNK-000521,05/01/2024,Fatura ödənişi - Çinar Tikinti MMC,,"2.747,01",TEST967719
+BNK-000522,02/03/2024,Malların  DƏYƏRI  -  Çinar  Tikinti  MMC,,"4.149,54",TEST340633
+BNK-000523,10/02/2024,  Ödəniş - Zümrüd Logistika ,,"3.146,77",TEST343807
+BNK-000524,01/01/2024,Ödəniş - Zümrüd L...,,"6.610,63",TEST879769
+BNK-000525,24/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"3.426,13",TEST262297
+BNK-000526,28/03/2024,  Ödəniş - Ulduz Tekstil ,,"2.093,80",TEST388946
+BNK-000527,28/03/2024,Ödəniş - Çinar Tikinti MMC,,"2.093,80",TEST388946
+BNK-000528,14/02/2024,Xidmət haqqı - Şəfəq Baytarlıq Kliniki,,"1.815,41",TEST366105
+BNK-000529,30/01/2024,Toplu mədaxil,,"962,72",TEST224870
+BNK-000530,26/02/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"345,96",TEST729402
+BNK-000531,21/02/2024,Ödəniş  -  Şəfəq  Baytarlıq  Kliniki,,"6.538,79",TEST502995
+BNK-000532,31/01/2024,Ödəniş - Ulduz Tekstil,,"1.509,49",TEST111230
+BNK-000533,22/01/2024,Toplu mədaxil,,"897,89",TEST342924
+BNK-000534,09/01/2024,Ödəniş - Zümrüd Logistika,,"482,72",TEST837801
+BNK-000535,05/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"1.196,44",TEST464354
+BNK-000536,22/02/2024,Ödəniş - Günəş Ticarət MMC,,"2.664,14",TEST283537
+BNK-000537,14/03/2024,Malların dəyəri - Şəfəq Baytarlıq Kliniki,,"1.321,46",TEST664032
+BNK-000538,13/02/2024,Ödəniş - Bahar Qida MMC,,"4.076,37",TEST894268
+BNK-000539,18/02/2024,Xidmət haqqı - Ulduz Tekstil,,"3.332,21",TEST170835
+BNK-000540,05/01/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"1.311,58",TEST661671
+BNK-000541,11/03/2024,Malların dəyəri - Xəzər Konsa...,,"4.893,19",TEST179721
+BNK-000542,26/01/2024,Toplu mədaxil,,"824,51",TEST299405
+BNK-000543,19/03/2024,Toplu mədaxil,,"416,89",TEST795650
+BNK-000544,22/02/2024,Mədaxil - İpək Yolu Ticarət,,"3.943,04",TEST393880
+BNK-000545,22/02/2024,Malların dəyəri - Günəş Ticarət MMC,,"2.407,02",TEST464158
+BNK-000546,27/01/2024,  Fatura ödənişi - İpək Yolu Ticarət ,,"1.999,29",TEST806848
+BNK-000547,04/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"2.481,20",TEST348658
+BNK-000548,17/02/2024,Malların  dəyəri  -  Çinar  tikinti  MMC,,"1.924,06",TEST834750
+BNK-000549,04/02/2024,  Xidmət haqqı - Ulduz Tekstil ,,"4.225,73",TEST855829
+BNK-000550,01/03/2024,Ödəniş  -  xəzər  Konsalting,,"61,07",TEST256812
+BNK-000551,12/03/2024,Mədaxil  -  İPƏK  Yolu  Ticarət,,"4.511,02",TEST363165
+BNK-000552,27/02/2024,Ödəniş - Öznur Xidmətləri,,"3.913,81",TEST200979
+BNK-000553,27/02/2024,Ödəniş...,,"3.913,81",TEST200979
+BNK-000554,14/02/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"4.557,50",TEST227126
+BNK-000555,09/02/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"1.714,40",TEST283017
+BNK-000556,19/03/2024,Fatura ödənişi - Bahar Qida MMC,,"1.512,20",TEST499581
+BNK-000557,21/02/2024,Ödəniş - Günəş...,,"4.460,68",TEST699405
+BNK-000558,21/02/2024,Ödəniş - Günəş Ticarət MMC,,"4.460,68",TEST699405
+BNK-000559,16/03/2024,Ödəniş  -  Bahar  Qida  MMC,,"2.741,20",TEST884225
+BNK-000560,11/01/2024,Ödəniş - Çinar Tikinti MMC,,"885,09",TEST834733
+BNK-000561,20/02/2024,Ödəniş - Günəş Ticarət MMC,,"2.757,17",TEST127645
+BNK-000562,30/01/2024,Mədaxil  -  Şəfəq  Baytarlıq  Kliniki,,"1.307,07",TEST424398
+BNK-000563,01/03/2024,Toplu mədaxil,,"868,96",TEST474175
+BNK-000564,09/03/2024,Ödəniş - Öznur Xidmətləri,,"1.633,51",TEST770593
+BNK-000565,09/03/2024,Ödəniş - Bahar Qida MMC,,"1.633,51",TEST770593
+BNK-000566,08/02/2024,Mədaxil - Şəm...,,"65,34",TEST263281
+BNK-000567,02/04/2024,Fatura ödənişi - Bahar Qida MMC,,"4.974,78",TEST108721
+BNK-000568,17/02/2024,  Mədaxil - Çinar Tikinti MMC ,,"998,65",TEST674842
+BNK-000569,19/02/2024,Ödəniş - Ulduz Tekstil,,"1.993,68",TEST777370
+BNK-000570,22/03/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"1.502,52",TEST901676
+BNK-000571,18/01/2024,Fatura ödənişi - Günəş Ticarət MMC,,"1.528,31",TEST291267
+BNK-000572,12/02/2024,Malların  dəyəri  -  şəms  MMC,,"807,70",TEST296911
+BNK-000573,20/01/2024,Xidmət haqqı - Bahar Qida MMC,,"87,20",TEST194578
+BNK-000574,08/01/2024,Ödəniş  -  Xəzər  KONSALTING,,"430,60",TEST830789
+BNK-000575,18/02/2024,Mədaxil - Şəms MMC,,"4.352,42",TEST956949
+BNK-000576,07/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"2.426,10",TEST359168
+BNK-000577,31/03/2024,MƏDAXIL  -  Öznur  Xidmətləri,,"4.918,46",TEST508024
+BNK-000578,26/01/2024,  Ödəniş - Şəms MMC ,,"1.899,67",TEST413328
+BNK-000579,26/01/2024,Ödəniş -...,,"1.899,67",TEST413328
+BNK-000580,01/02/2024,Xidmət haqqı - Şəms MMC,,"56,81",TEST927477
+BNK-000581,12/01/2024,Ödəniş  -  Xəzər  Konsalting,,"1.314,02",TEST489439
+BNK-000582,03/03/2024,Fatura ödənişi - Öznur Xidmətləri,,"1.229,88",TEST231939
+BNK-000583,26/01/2024,Fatura...,,"3.623,65",TEST868804
+BNK-000584,02/03/2024,  Xidmət haqqı - Zümrüd Logistika ,,"1.555,15",TEST840951
+BNK-000585,29/02/2024,  Malların dəyəri - İpək Yolu Ticarət ,,"1.453,49",TEST439403
+BNK-000586,03/02/2024,Mədaxil - Öznur Xidmətləri,,"2.849,57",TEST959222
+BNK-000587,16/02/2024,Ödəniş - İpək Yolu Ticarət,,"4.078,56",TEST998450
+BNK-000588,16/02/2024,Ödəniş - Ulduz Tekstil,,"4.078,56",TEST998450
+BNK-000589,09/03/2024,Fatura öd...,,"818,09",TEST816412
+BNK-000590,10/01/2024,  Mədaxil - Xəzər Konsalting ,,"4.388,81",TEST790897
+BNK-000591,14/01/2024,Xidmət haqqı - Qızıl Balıq Restoranı,,"3.003,74",TEST300924
+BNK-000592,07/01/2024,Toplu mədaxil,,"811,85",TEST718975
+BNK-000593,17/02/2024,Fatura ödənişi - Şəfəq Baytarlıq Kliniki,,"4.174,15",TEST961957
+BNK-000594,08/02/2024,Ödəniş  -  Ulduz  Tekstil,,"4.962,44",TEST173807
+BNK-000595,08/03/2024,Mədaxil - Ulduz Tekstil,,"3.453,92",TEST302500
+BNK-000596,26/03/2024,Toplu mədaxil,,"615,64",TEST581003
+BNK-000597,17/02/2024,Fatura ödənişi - Qızıl Balıq Restoranı,,"2.171,86",TEST985893
+BNK-000598,27/02/2024,Fatura ödənişi - Çinar Tikinti MMC,,"2.356,18",TEST477496
+BNK-000599,09/02/2024,Mədaxil  -  ulduz  Tekstil,,"1.584,61",TEST241647
+BNK-000600,19/03/2024,  Ödəniş - Günəş Ticarət MMC ,,"821,15",TEST683347
+BNK-000601,15/03/2024,Ödəniş - Ulduz Tekstil,,"1.319,96",TEST484914
+BNK-000602,29/03/2024,Fatura  ödənişi  -  İpək  YOLU  Ticarət,,"3.694,94",TEST611994
+BNK-000603,13/03/2024,Ödəniş - Çinar Tikinti MMC,,"4.622,64",TEST158639
+BNK-000604,23/05/2024,Ödəniş - Şəms MMC,,"4.878,81",TEST337730
+BNK-000605,08/03/2024,Fatura ödənişi - Öznur Xidmətləri,,"225,91",TEST419588
+BNK-000606,07/01/2024,Malların dəyəri - Şəfəq Baytarlıq Kliniki,,"3.541,78",TEST260639
+BNK-000607,25/02/2024,Ödəniş - Çinar Tikinti MMC,,"1.529,29",TEST332873
+BNK-000608,21/02/2024,Xidmət haqqı - Çinar Tikinti MMC,,"2.640,99",TEST189211
+BNK-000609,29/03/2024,Malların dəyəri - Zümrüd Logistika,,"1.038,12",TEST514521
+BNK-000610,04/02/2024,Malların  dəyəri  -  Çinar  Tikinti  MMC,,"4.082,52",TEST175124
+BNK-000611,25/01/2024,  Fatura ödənişi - Öznur Xidmətləri ,,"1.691,59",TEST465227
+BNK-000612,26/02/2024,  Fatura ödənişi - Xəzər Konsalting ,,"3.277,26",TEST746154
+BNK-000613,11/01/2024,Ödəniş - Şəms MMC,,"3.887,53",TEST994188
+BNK-000614,06/02/2024,Ödəniş - Öznur Xidmətlə...,,"82,00",TEST972881
+BNK-000615,10/03/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"2.753,42",TEST313701
+BNK-000616,15/03/2024,Toplu mədaxil,,"838,57",TEST119281
+BNK-000617,03/01/2024,Toplu mədaxil,,"637,27",TEST477717
+BNK-000618,04/01/2024,Fatura ödənişi - Zümrüd Logistika,,"1.307,04",TEST687923
+BNK-000619,28/03/2024,Malları...,,"1.855,03",TEST463625
+BNK-000620,19/02/2024,Ödəniş - Şəm...,,"4.678,27",TEST370196
+BNK-000621,19/02/2024,Ödəniş - Zümrüd Logistika,,"4.678,27",TEST370196
+BNK-000622,18/02/2024,Mədaxil - Qızıl Balıq Restoranı,,"2.740,06",TEST865344
+BNK-000623,24/03/2024,Mədaxil - İpək Yolu Ticarət,,"736,54",TEST316800
+BNK-000624,08/03/2024,Mədaxil - Xəzər Konsalting,,"4.778,72",TEST821978
+BNK-000625,24/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.403,25",TEST224138
+BNK-000626,26/02/2024,Mədaxil  -  Qızıl  Balıq  Restoranı,,"3.919,14",TEST418083
+BNK-000627,04/02/2024,Ödəniş - İpək Yolu Ticarət,,"3.185,11",TEST746915
+BNK-000628,04/02/2024,Ödəniş - İpək Yolu Ticarət,,"3.185,11",TEST746915
+BNK-000629,18/01/2024,Toplu mədaxil,,"1.062,70",TEST917707
+BNK-000630,02/01/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"4.861,94",TEST901677
+BNK-000631,26/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"4.556,25",TEST285679
+BNK-000632,06/01/2024,Xidmət haqqı - Şəfəq Baytarlıq Kliniki,,"3.197,30",TEST524533
+BNK-000633,17/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"2.763,72",TEST699716
+BNK-000634,02/03/2024,Mədaxil - Şəms MMC,,"4.345,91",TEST214626
+BNK-000635,12/03/2024,  Ödəniş - Qızıl Balıq Restoranı ,,"2.715,99",TEST141158
+BNK-000636,11/02/2024,Xidmət haqqı - Xəzər Konsalting,,"2.428,78",TEST517375
+BNK-000637,23/03/2024,Malların  dəyəri  -  GÜNƏŞ  Ticarət  MMC,,"2.378,19",TEST586097
+BNK-000638,28/02/2024,Ödəniş - Şəfəq Baytarlıq Kli...,,"3.104,95",TEST287567
+BNK-000639,21/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.776,35",TEST846030
+BNK-000640,21/01/2024,Ödəniş - Günəş Ticarət MMC,,"3.776,35",TEST846030
+BNK-000641,11/03/2024,Malların dəyəri - Şəms MMC,,"2.005,47",TEST497073
+BNK-000642,19/01/2024,Fatura ödənişi - Şəfəq Baytarlıq Kliniki,,"947,77",TEST269999
+BNK-000643,23/03/2024,Mədaxil - Xəzər Konsalting,,"626,32",TEST402808
+BNK-000644,06/01/2024,Mədaxil - Bahar Qida MMC,,"4.637,90",TEST669902
+BNK-000645,27/02/2024,Ödəniş - İpək Yolu Ticarət,,"3.162,10",TEST530074
+BNK-000646,12/03/2024,Ödəniş - Ulduz Tekstil,,"4.309,79",TEST759172
+BNK-000647,12/03/2024,Ödəniş - Şəms MMC,,"4.309,79",TEST759172
+BNK-000648,06/02/2024,  Malların dəyəri - Qızıl Balıq Restoranı ,,"3.213,87",TEST804737
+BNK-000649,18/03/2024,Ödəniş - Şəm...,,"4.893,63",TEST885734
+BNK-000650,24/02/2024,Ödəniş - Zümrüd Logistika,,"4.431,37",TEST895284
+BNK-000651,08/03/2024,Malların  dəyəri  -  Zümrüd  logistika,,"2.179,28",TEST445200
+BNK-000652,12/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"2.545,78",TEST654640
+BNK-000653,12/01/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"2.545,78",TEST654640
+BNK-000654,08/03/2024,Malların dəyəri - İpək Yolu Ticarət,,"3.025,40",TEST372273
+BNK-000655,25/03/2024,Malların dəy...,,"2.592,14",TEST864605
+BNK-000656,04/01/2024,Mədaxil - Qızıl Balıq Restoranı,,"2.447,33",TEST223949
+BNK-000657,06/01/2024,Mədaxil  -  Öznur  Xidmətləri,,"1.760,03",TEST534153
+BNK-000658,09/01/2024,Ödəniş  -  NƏRGIZ  Dizayn  Studiyası,,"1.623,61",TEST928580
+BNK-000659,19/03/2024,Ödəniş - Ulduz Tekstil,,"450,31",TEST696557
+BNK-000660,07/01/2024,Xidmət haqqı - Xəzər Konsalting,,"2.534,42",TEST597549
+BNK-000661,22/02/2024,Fatura ödənişi - Şəfəq Baytarlıq Kliniki,,"4.874,29",TEST584935
+BNK-000662,09/03/2024,Toplu mədaxil,,"1.016,38",TEST430828
+BNK-000663,12/01/2024,  Fatura ödənişi - Ulduz Tekstil ,,"2.615,99",TEST533973
+BNK-000664,15/01/2024,Xidmət haqqı - Şəms MMC,,"1.971,96",TEST283514
+BNK-000665,22/01/2024,malların  dəyəri  -  Bahar  Qida  MMC,,"1.793,18",TEST624344
+BNK-000666,19/01/2024,Xidmət haqqı - Şəms MMC,,"3.808,83",TEST809589
+BNK-000667,09/02/2024,Fatura ödənişi - Şəms MMC,,"4.898,13",TEST104309
+BNK-000668,07/03/2024,Mədaxil - Qı...,,"4.026,99",TEST208111
+BNK-000669,09/03/2024,Fatura  ödənişi  -  Bahar  qida  MMC,,"1.683,26",TEST390088
+BNK-000670,10/03/2024,Fatura ödənişi - Zümrüd Logistika,,"1.846,67",TEST316612
+BNK-000671,09/02/2024,MƏDAXIL  -  Öznur  Xidmətləri,,"3.225,26",TEST174703
+BNK-000672,24/02/2024,Xidmət haqqı - Xəzər Konsalting,,"2.064,77",TEST190302
+BNK-000673,26/01/2024,Ödəniş - Qızıl Balıq Restoranı,,"3.747,64",TEST448475
+BNK-000674,28/02/2024,Toplu mədaxil,,"671,98",TEST591022
+BNK-000675,03/02/2024,Fatura ödənişi - Öznur Xidmətləri,,"4.796,02",TEST746910
+BNK-000676,03/03/2024,Mədaxil - Günəş T...,,"168,67",TEST575301
+BNK-000677,14/01/2024,Ödəniş - Qızıl Balıq Restoranı,,"3.519,69",TEST935461
+BNK-000678,20/03/2024,Xidmət  haqqı  -  Zümrüd  Logistika,,"1.287,64",TEST350164
+BNK-000679,25/03/2024,Ödəniş - Günəş Ticarət MMC,,"3.520,65",TEST281493
+BNK-000680,13/03/2024,mədaxil  -  Bahar  Qida  MMC,,"4.319,76",TEST441183
+BNK-000681,28/01/2024,Ödəniş - Xəzər Konsalting,,"4.293,60",TEST194930
+BNK-000682,09/03/2024,Toplu mədaxil,,"880,02",TEST256464
+BNK-000683,15/03/2024,Mədaxil - İpək Yolu Ticarət,,"52,56",TEST193624
+BNK-000684,11/03/2024,Fatura  ödənişi  -  Şəms  MMC,,"288,54",TEST487158
+BNK-000685,30/03/2024,Xidmət haqqı - Çinar Tikinti MMC,,"3.104,15",TEST552686
+BNK-000686,27/03/2024,Mədaxil - Xəzər Konsalting,,"2.499,69",TEST321476
+BNK-000687,23/02/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"818,80",TEST980764
+BNK-000688,27/02/2024,Xidmət haqqı - Xəzər Konsalting,,"453,88",TEST789886
+BNK-000689,20/03/2024,Toplu mədaxil,,"779,47",TEST733790
+BNK-000690,05/03/2024,Ödəniş - Çinar Tikinti MMC,,"1.421,64",TEST846722
+BNK-000691,08/03/2024,Toplu mədaxil,,"507,82",TEST183952
+BNK-000692,25/03/2024,Ödəniş...,,"3.516,00",TEST877714
+BNK-000693,25/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"3.516,00",TEST877714
+BNK-000694,06/01/2024,Xidmət haqqı - Zü...,,"2.390,44",TEST916344
+BNK-000695,22/01/2024,Malların dəyəri - Şəfəq Baytarlıq Kl...,,"195,21",TEST403257
+BNK-000696,04/01/2024,Ödəniş - G...,,"2.551,53",TEST754643
+BNK-000697,05/02/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"4.507,64",TEST394620
+BNK-000698,05/02/2024,Ödəniş - Şəms MMC,,"4.507,64",TEST394620
+BNK-000699,23/01/2024,Toplu mədaxil,,"815,25",TEST568349
+BNK-000700,04/03/2024,Xidmət haqqı - Çinar Tikinti MMC,,"3.956,63",TEST978302
+BNK-000701,14/03/2024,Ödəniş  -  Öznur  XIDMƏTLƏRI,,"3.860,16",TEST321099
+BNK-000702,09/03/2024,Mədaxil - Çinar Tikinti MMC,,"1.235,05",TEST599401
+BNK-000703,10/02/2024,Fatura ödənişi - Qızıl Balıq Restoranı,,"2.012,80",TEST112439
+BNK-000704,09/03/2024,Fatura ödənişi...,,"3.351,93",TEST202093
+BNK-000705,24/03/2024,Mədaxil - Çinar Tikinti MMC,,"3.072,76",TEST367747
+BNK-000706,11/03/2024,Ödəniş - Qızıl Balıq Restoranı,,"65,45",TEST428487
+BNK-000707,01/04/2024,FATURA  ödənişi  -  Ulduz  Tekstil,,"1.852,95",TEST208954
+BNK-000708,12/01/2024,Ödəniş - Çinar Tikinti MMC,,"6.404,59",TEST225805
+BNK-000709,29/02/2024,Fatura ödənişi - Günəş Ticarət MMC,,"3.472,80",TEST408877
+BNK-000710,02/02/2024,Toplu mədaxil,,"366,35",TEST800007
+BNK-000711,23/03/2024,  Xidmət haqqı - Qızıl Balıq Restoranı ,,"945,55",TEST310416
+BNK-000712,26/02/2024,Ödəniş  -  Nərgiz  DIZAYN  Studiyası,,"3.760,75",TEST211410
+BNK-000713,26/02/2024,Ödəniş - Günəş Ticarət MMC,,"3.760,75",TEST211410
+BNK-000714,19/02/2024,Malların  dəyəri  -  XƏZƏR  Konsalting,,"1.406,89",TEST796889
+BNK-000715,09/01/2024,Xidmət  haqqı  -  Ulduz  tekstil,,"2.841,83",TEST985049
+BNK-000716,28/03/2024,Ödəniş - Çinar Tikinti MMC,,"1.597,69",TEST449636
+BNK-000717,28/02/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"3.996,96",TEST184365
+BNK-000718,30/03/2024,Toplu mədaxil,,"768,90",TEST300281
+BNK-000719,31/01/2024,Ödəniş - Günəş Ticarət MMC,,"5.229,79",TEST721748
+BNK-000720,28/02/2024,Ödəniş - Öznur Xidmətləri,,"204,21",TEST659876
+BNK-000721,24/03/2024,Malların  dəyəri  -  Zümrüd  LOGISTIKA,,"3.508,65",TEST946309
+BNK-000722,19/01/2024,Malların  dəyəri  -  Qızıl  Balıq  restoranı,,"2.573,21",TEST138669
+BNK-000723,21/03/2024,Mədaxil - Nərgiz Dizayn Studiyası,,"271,92",TEST280616
+BNK-000724,14/01/2024,Mədaxil  -  Bahar  Qida  MMC,,"608,63",TEST957525
+BNK-000725,21/02/2024,Ödəniş  -  Qızıl  Balıq  Restoranı,,"643,35",TEST811351
+BNK-000726,30/03/2024,malların  dəyəri  -  Zümrüd  Logistika,,"1.949,48",TEST276214
+BNK-000727,18/02/2024,Ödəniş  -  XƏZƏR  Konsalting,,"4.087,18",TEST742191
+BNK-000728,18/02/2024,Ödəniş - Şəms MMC,,"4.087,18",TEST742191
+BNK-000729,28/02/2024,Ödəniş - Xəzər Konsalting,,"1.090,87",TEST599135
+BNK-000730,23/01/2024,Xidmət haqqı - Şəfəq Baytarlıq Kliniki,,"3.210,97",TEST350875
+BNK-000731,08/02/2024,Mədaxil  -  Çinar  Tikinti  mmc,,"1.833,75",TEST757658
+BNK-000732,10/03/2024,Ödəniş - Uld...,,"2.670,97",TEST479481
+BNK-000733,10/03/2024,Ödəniş  -  Bahar  Qida  MMC,,"2.670,97",TEST479481
+BNK-000734,25/01/2024,Ödəniş - Şəm...,,"3.523,47",TEST621682
+BNK-000735,19/03/2024,  Mədaxil - Bahar Qida MMC ,,"4.231,32",TEST450533
+BNK-000736,06/03/2024,Malların dəyəri - Günəş Ticarət MMC,,"618,51",TEST608623
+BNK-000737,27/03/2024,  Fatura ödənişi - Öznur Xidmətləri ,,"4.720,06",TEST308405
+BNK-000738,22/02/2024,Ödəniş - Ulduz Tekstil,,"4.570,70",TEST873584
+BNK-000739,27/02/2024,Xidmət haqqı - İpək Yolu Ticarət,,"1.143,32",TEST156978
+BNK-000740,28/01/2024,Fatura  ödənişi  -  ULDUZ  Tekstil,,"1.423,97",TEST854787
+BNK-000741,13/02/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"1.162,66",TEST897273
+BNK-000742,20/03/2024,  Fatura ödənişi - Bahar Qida MMC ,,"4.398,23",TEST326956
+BNK-000743,15/03/2024,Ödəniş - İpək Yolu Ticarət,,"1.176,05",TEST555342
+BNK-000744,01/03/2024,Xidmət haqqı - Zümrüd Logistika,,"3.855,52",TEST142004
+BNK-000745,27/02/2024,Toplu mədaxil,,"502,21",TEST961186
+BNK-000746,15/02/2024,Xidmət haqqı - Ulduz Tekstil,,"1.560,79",TEST239158
+BNK-000747,04/01/2024,Ödəniş - Xəzər Konsalting,,"2.441,44",TEST712011
+BNK-000748,29/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"3.700,47",TEST757258
+BNK-000749,05/01/2024,Toplu mədaxil,,"1.147,75",TEST449077
+BNK-000750,16/02/2024,Mədaxil - İpək Yolu Ticarət,,"2.449,78",TEST501557
+BNK-000751,12/03/2024,  Ödəniş - Xəzər Konsalting ,,"7.573,93",TEST170260
+BNK-000752,02/03/2024,Mədaxil - İpək...,,"3.875,99",TEST780566
+BNK-000753,27/02/2024,Fatura ödənişi - Günəş Ticarət MMC,,"295,52",TEST813269
+BNK-000754,09/03/2024,Fatura ödənişi - Zümrüd Logistika,,"3.566,28",TEST593002
+BNK-000755,25/01/2024,Toplu mədaxil,,"377,28",TEST948083
+BNK-000756,20/01/2024,Ödəniş - U...,,"4.597,48",TEST620438
+BNK-000757,27/02/2024,Ödəniş  -  Qızıl  Balıq  Restoranı,,"3.877,72",TEST463541
+BNK-000758,16/02/2024,Fatura ödənişi - Öznur Xidmətləri,,"3.044,07",TEST775987
+BNK-000759,15/03/2024,Malların dəyəri - Nərgiz Dizayn Stud...,,"2.411,27",TEST982804
+BNK-000760,07/01/2024,Mədaxil - Öznur Xidmətləri,,"787,72",TEST402143
+BNK-000761,09/03/2024,  Mədaxil - Xəzər Konsalting ,,"1.505,51",TEST846389
+BNK-000762,10/02/2024,Mədaxil - Xəzər Konsalting,,"3.022,16",TEST143150
+BNK-000763,10/02/2024,Mədaxil - Xəzər Konsalting,,"1.812,74",TEST797883
+BNK-000764,21/02/2024,  Fatura ödənişi - Bahar Qida MMC ,,"4.891,48",TEST126135
+BNK-000765,05/03/2024,Ödəniş - Şəfəq Baytarlıq Kliniki,,"3.403,42",TEST672675
+BNK-000766,25/02/2024,Ödəniş - İpək Yolu Ticarət,,"4.202,08",TEST701596
+BNK-000767,15/01/2024,Ödəniş - Bahar Qida MMC,,"3.845,90",TEST822622
+BNK-000768,15/02/2024,Mədaxil - Öznur Xidmətləri,,"494,86",TEST567636
+BNK-000769,05/02/2024,Xidmət haqqı - Şəms MMC,,"1.036,11",TEST919234
+BNK-000770,20/02/2024,Malların dəyəri - Bahar Qida MMC,,"1.029,47",TEST636648
+BNK-000771,19/01/2024,Toplu mədaxil,,"1.021,70",TEST478603
+BNK-000772,18/01/2024,Ödəniş - İpək Yolu Ticarət,,"3.088,51",TEST534313
+BNK-000773,14/01/2024,Ödəniş - Çinar Tikinti MMC,,"3.974,21",TEST451709
+BNK-000774,18/01/2024,Ödəniş  -  çinar  Tikinti  MMC,,"2.198,36",TEST695503
+BNK-000775,12/03/2024,Fatura ödənişi - Bahar Qida MMC,,"3.888,97",TEST618101
+BNK-000776,16/01/2024,Ödəniş - Qızıl Balıq Restoranı,,"3.437,86",TEST595495
+BNK-000777,16/01/2024,  Ödəniş - Nərgiz Dizayn Studiyası ,,"3.437,86",TEST595495
+BNK-000778,05/02/2024,Malların dəyəri - Günəş Ticarət MMC,,"2.595,00",TEST901865
+BNK-000779,25/03/2024,Fatura ödənişi - Günəş Ticarət MMC,,"3.649,84",TEST370439
+BNK-000780,15/03/2024,Mədaxil - Xəzər Konsalting,,"316,76",TEST270757
+BNK-000781,16/02/2024,Ödəniş - Qızıl Balıq Restoranı,,"2.209,46",TEST385915
+BNK-000782,10/12/2023,Ödəniş - Xəzər Konsalting,,"3.149,23",TEST758537
+BNK-000783,04/02/2024,Toplu mədaxil,,"1.387,73",TEST938732
+BNK-000784,20/01/2024,Malların dəyəri - Ulduz Tekstil,,"2.649,17",TEST328459
+BNK-000785,14/03/2024,Xidmət  haqqı  -  Günəş  Ticarət  MMC,,"3.691,89",TEST987168
+BNK-000786,12/02/2024,Malların dəyəri - Bahar Qida MMC,,"738,83",TEST465124
+BNK-000787,08/02/2024,Mədaxil - Şəfəq Baytarlıq Kliniki,,"160,78",TEST844378
+BNK-000788,27/01/2024,Ödəniş  -  Günəş  ticarət  MMC,,"692,71",TEST231432
+BNK-000789,14/01/2024,Xidmət  haqqı  -  Qızıl  Balıq  Restoranı,,"181,92",TEST305888
+BNK-000790,02/01/2024,Mədaxil - Günəş Ticarət MMC,,"3.966,01",TEST800015
+BNK-000791,26/03/2024,Fatura ödənişi - Şəms MMC,,"1.853,04",TEST293757
+BNK-000792,21/03/2024,Ödəniş - İpək Yolu Ticarət,,"2.657,17",TEST918730
+BNK-000793,06/02/2024,Ödəniş  -  Şəms  MMC,,"1.901,71",TEST300852
+BNK-000794,16/02/2024,Ödəniş  -  bahar  Qida  MMC,,"7.402,45",TEST597775
+BNK-000795,06/03/2024,fatura  ödənişi  -  Çinar  Tikinti  MMC,,"1.203,03",TEST324682
+BNK-000796,19/02/2024,Ödəniş - Şəfəq Baytarlıq...,,"2.930,97",TEST899301
+BNK-000797,28/03/2024,Ödəniş - Ulduz Teks...,,"2.337,60",TEST427162
+BNK-000798,09/01/2024,Xidmət haqqı - Bahar Qida MMC,,"4.701,09",TEST998392
+BNK-000799,07/03/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"3.462,68",TEST559337
+BNK-000800,09/01/2024,Ödəniş - Öznur Xidmətləri,,"1.053,78",TEST276919
+BNK-000801,30/01/2024,Malların dəyəri - Çinar Tikinti MMC,,"4.404,10",TEST228725
+BNK-000802,07/05/2024,Ödəniş - Bahar Qida MMC,,"1.876,97",TEST927843
+BNK-000803,07/02/2024,Ödəniş - Bahar Qida MMC,,"4.036,52",TEST636256
+BNK-000804,13/01/2024,Ödəniş - Şəms MMC,,"3.878,18",TEST131167
+BNK-000805,27/03/2024,Ödəniş - Xəzər Konsalting,,"1.724,19",TEST733952
+BNK-000806,04/03/2024,Toplu mədaxil,,"1.104,02",TEST888119
+BNK-000807,28/02/2024,Fatura ödənişi - Şəms MMC,,"198,64",TEST564053
+BNK-000808,25/02/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"715,10",TEST615353
+BNK-000809,16/03/2024,  Xidmət haqqı - Bahar Qida MMC ,,"3.010,02",TEST792142
+BNK-000810,03/02/2024,Fatura ödənişi - İpək Yolu Ticarət,,"2.603,60",TEST510396
+BNK-000811,08/01/2024,Malların  dəyəri  -  İpək  Yolu  TICARƏT,,"157,57",TEST436050
+BNK-000812,14/02/2024,Fatura ödənişi - Çinar Tikinti MMC,,"1.883,62",TEST548945
+BNK-000813,15/01/2024,Toplu mədaxil,,"375,41",TEST168681
+BNK-000814,13/01/2024,Mədaxil - Bahar Qida M...,,"4.247,95",TEST700350
+BNK-000815,14/01/2024,Ödəniş - Nərgiz Dizayn Studiyası,,"3.233,46",TEST799806
+BNK-000816,15/01/2024,  Fatura ödənişi - Nərgiz Dizayn Studiyası ,,"1.132,39",TEST766311
+BNK-000817,15/03/2024,Ödəniş - Öznur Xidmətləri,,"3.113,07",TEST196424
+BNK-000818,30/01/2024,Fatura ödənişi - Günəş Tica...,,"4.181,50",TEST547852
+BNK-000819,30/01/2024,Malların dəyəri - Nərgiz Dizayn Studiyası,,"2.119,21",TEST428574
+BNK-000820,04/03/2024,Malların dəyəri - Qızıl Balıq Restoranı,,"1.126,48",TEST704864
+BNK-000821,28/01/2024,Ödəniş  -  Ulduz  Tekstil,,"2.748,19",TEST554793
+BNK-000822,10/04/2024,Ödəniş - Günəş Ticarət MMC,,"1.680,66",TEST414861
+BNK-000823,06/02/2024,Mədaxil - Xəzər Konsalting,,"3.397,12",TEST963723
+BNK-000824,20/01/2024,Hesab xidmət haqqı,"21,11",,TEST219074
+BNK-000825,25/02/2024,  Bank komissiyası ,"4,03",,TEST687019
+BNK-000826,04/01/2024,Kartın illik haqqı,"23,75",,TEST243057
+BNK-000827,06/01/2024,BIRBAŞA  debet,"164,20",,TEST775591
+BNK-000828,09/01/2024,Abunə ödənişi,"138,36",,TEST412453
+BNK-000829,20/02/2024,  Birbaşa debet ,"242,31",,TEST194693
+BNK-000830,05/03/2024,Kommunal ödəniş,"176,03",,TEST698708
+BNK-000831,08/03/2024,Bank komissiyası,"8,39",,TEST912767
+BNK-000832,10/02/2024,Kartın illik haqqı,"48,86",,TEST910749
+BNK-000833,31/01/2024,birbaşa  debet,"76,43",,TEST884727
+BNK-000834,22/02/2024,Bank komissiyası,"49,29",,TEST560823
+BNK-000835,30/03/2024,Kommunal ödəniş,"108,70",,TEST492906
+BNK-000836,01/02/2024,Birbaşa debet,"293,17",,TEST815903
+BNK-000837,17/02/2024,Kommunal ödəniş,"11,90",,TEST850435
+BNK-000838,05/01/2024,Birbaşa debet,"221,99",,TEST735242
+BNK-000839,26/03/2024,Hesab xidmət haqq...,"46,27",,TEST927119
+BNK-000840,28/03/2024,Hesab xidmət haqqı,"20,36",,TEST480481
+BNK-000841,02/02/2024,  Hesab xidmət haqqı ,"20,28",,TEST512064
+BNK-000842,26/02/2024,Depozit faizi,,"27,39",TEST268010
+BNK-000843,11/01/2024,Abunə ödənişi,"166,11",,TEST387348
+BNK-000844,12/02/2024,Birbaşa debet,"292,29",,TEST982023
+BNK-000845,03/02/2024,Depozit faizi,,"15,41",TEST832411
+BNK-000846,11/03/2024,kommunal  ödəniş,"153,52",,TEST952941
+BNK-000847,21/03/2024,Bank komissiyası,"12,14",,TEST292664
+BNK-000848,09/02/2024,  Bank komissiyası ,"7,73",,TEST758816
+BNK-000849,24/03/2024,Kommunal ödəniş,"282,53",,TEST641448
+BNK-000850,10/02/2024,  Hesab xidmət haqqı ,"11,93",,TEST931145
+BNK-000851,11/02/2024,Birbaşa debet,"70,09",,TEST721826
+BNK-000852,20/02/2024,  Kommunal ödəniş ,"278,50",,TEST290724
+BNK-000853,12/03/2024,Faiz gəliri,,"26,66",TEST124085
+BNK-000854,26/01/2024,Bank komissiyası,"14,82",,TEST584887
+BNK-000855,17/03/2024,  Hesab xidmət haqqı ,"8,29",,TEST549737
+BNK-000856,16/01/2024,Hesab xidmət haqqı,"44,07",,TEST694797
+BNK-000857,27/03/2024,  Kartın illik haqqı ,"19,38",,TEST575747
+BNK-000858,04/02/2024,hesab  xidmət  haqqı,"41,48",,TEST952924
+BNK-000859,06/02/2024,  Abunə ödənişi ,"67,05",,TEST964119
+BNK-000860,19/01/2024,Bank komissiyası,"22,44",,TEST930958
+BNK-000861,17/02/2024,Depozit  FAIZI,,"27,51",TEST360380
+BNK-000862,29/03/2024,Kartın illik haqqı,"18,38",,TEST438947
+BNK-000863,17/03/2024,Kartın  illik  haqqı,"8,80",,TEST543852
+BNK-000864,15/02/2024,Kommunal ödəniş,"224,80",,TEST593808
+BNK-000865,06/01/2024,Kartın illik haqqı,"42,33",,TEST949192
+BNK-000866,26/03/2024,Bank komissiyası,"46,83",,TEST513869
+BNK-000867,22/01/2024,Depozit  faizi,,"14,89",TEST372935
+BNK-000868,19/01/2024,Bank komissiyası,"26,66",,TEST553959
+BNK-000869,05/02/2024,Abunə ödənişi,"145,93",,TEST623460
+BNK-000870,19/03/2024,Kommunal...,"91,42",,TEST376002
+BNK-000871,03/03/2024,Kommunal ödəniş,"54,56",,TEST430870
+BNK-000872,22/03/2024,BIRBAŞA  debet,"22,43",,TEST789354
+BNK-000873,03/02/2024,Hesab  XIDMƏT  haqqı,"39,26",,TEST593090
+BNK-000874,12/03/2024,Bank komissiyası,"41,38",,TEST473838
+BNK-000875,16/01/2024,  Hesab xidmət haqqı ,"17,68",,TEST255245
+BNK-000876,06/03/2024,Kommunal ödəniş,"189,56",,TEST276470
+BNK-000877,01/01/2024,Faiz gəliri,,"24,37",TEST711893
+BNK-000878,01/02/2024,Birbaşa debet,"226,80",,TEST180567
+BNK-000879,06/02/2024,Faiz gəliri,,"28,87",TEST127223
+BNK-000880,14/01/2024,Birbaşa  DEBET,"55,38",,TEST719014
+BNK-000881,17/03/2024,Faiz gəliri,,"14,49",TEST382400
+BNK-000882,11/02/2024,kommunal  ödəniş,"245,62",,TEST575111
+BNK-000883,11/02/2024,Birbaşa debet,"248,72",,TEST396698
+BNK-000884,18/02/2024,  Bank komissiyası ,"21,90",,TEST731548
+BNK-000885,21/02/2024,Bank komissiyası,"18,05",,TEST908323
+BNK-000886,06/02/2024,Faiz  gəliri,,"27,79",TEST521943
+BNK-000887,09/02/2024,Birbaşa debet,"202,75",,TEST871635
+BNK-000888,17/02/2024,Depozit faizi,,"21,05",TEST200780
+BNK-000889,04/02/2024,Faiz gəliri,,"18,32",TEST599583
+BNK-000890,17/02/2024,Depozit  faizi,,"18,78",TEST950389
+BNK-000891,29/01/2024,Depozit faizi,,"7,35",TEST809298
+BNK-000892,08/03/2024,Hesab  XIDMƏT  haqqı,"39,35",,TEST778665
+BNK-000893,28/03/2024,Birbaşa debet,"280,75",,TEST233997
+BNK-000894,13/03/2024,Bank komissiyası,"7,26",,TEST409834
+BNK-000895,24/02/2024,Kartın illik haqqı,"39,06",,TEST635456
+BNK-000896,02/02/2024,Bank komissiyası,"48,96",,TEST952308
+BNK-000897,15/01/2024,Birbaşa debet,"156,67",,TEST117058
+BNK-000898,20/02/2024,Kartın illik ha...,"35,09",,TEST983855
+BNK-000899,28/02/2024,Kommunal ödəniş,"152,43",,TEST859268
+BNK-000900,24/01/2024,Kartın illik haqqı,"7,40",,TEST457915
+BNK-000901,27/03/2024,BANK  komissiyası,"44,77",,TEST371914
+BNK-000902,02/03/2024,Kartın illik haqqı,"34,18",,TEST787657
+BNK-000903,03/03/2024,Kartın illik haqqı,"30,55",,TEST731124

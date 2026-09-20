@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Project
-Source-available (PolyForm Internal Use License 1.0.0), offline bank reconciliation tool (Python). Imports a bank statement and a ledger (CSV/Excel), matches transactions in tiers, lets a human review, and outputs a reconciliation statement. An audit analytics module comes later and reuses the same importer.
+**Recwise (by Esperance).** Source-available (PolyForm Internal Use License 1.0.0), offline bank reconciliation tool (Python). Imports a bank statement and a ledger (CSV/Excel), matches transactions in tiers, lets a human review, and outputs a reconciliation statement. An audit analytics module comes later and reuses the same importer.
 
 Users are accountants. A wrong result is worse than a missing result. Optimize for **correctness and trust**, not cleverness.
 

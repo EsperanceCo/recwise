@@ -1,0 +1,38 @@
+# Spreadsheet/data files are blocked everywhere except sample_data/.
+*.csv
+*.xlsx
+*.xls
+*.pdf
+!sample_data/**/*.csv
+!sample_data/**/*.xlsx
+!sample_data/**/*.xls
+!sample_data/**/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+htmlcov/
+.coverage
+.coverage.*
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

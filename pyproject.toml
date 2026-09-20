@@ -14,6 +14,7 @@ dependencies = ["pandas==3.0.6", "openpyxl==3.1.5"]
 
 [project.scripts]
 recwise-synth = "recwise.synth.cli:main"
+recwise-reconcile = "recwise.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/recwise"]

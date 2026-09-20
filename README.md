@@ -2,7 +2,7 @@
 
 **Offline bank reconciliation for accountants.** Import a bank statement and a ledger, match them with explainable rules, review the results, and get a reconciliation statement. Audit analytics is planned for later.
 
-> **Status: pre-alpha.** Nothing here is ready to use yet. This README describes what Recwise is being built to do.
+> **Status: alpha.** Core v1 functionality is implemented and tested against synthetic data, but it hasn't been used on real-world data yet. Expect rough edges.
 
 ## Why
 

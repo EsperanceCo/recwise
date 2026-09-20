@@ -54,8 +54,12 @@
   {% endif %}
 </div>
 
-<form method="post" action="{{ url_for('export_route') }}">
-  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-  <button class="btn-primary" type="submit">Export current state to CSV</button>
-</form>
+
+<div class="actions">
+  <form method="post" action="{{ url_for('export_route') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button class="btn-primary" type="submit">Export current state to CSV</button>
+  </form>
+  <a class="btn" href="{{ url_for('setup_view') }}">Change files&hellip;</a>
+</div>
 {% endblock %}

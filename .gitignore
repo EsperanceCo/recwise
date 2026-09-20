@@ -23,6 +23,13 @@ htmlcov/
 .coverage
 .coverage.*
 
+# Briefcase (packaged desktop installers)
+logs/
+
+# Nix build output symlinks
+result
+result-*
+
 # Virtual environments
 .venv/
 venv/

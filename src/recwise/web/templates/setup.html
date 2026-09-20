@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title_suffix %} - Setup{% endblock %}
+{% block content %}
+<h1>Choose your files</h1>
+<p class="card-muted" style="margin-top:-0.75rem; margin-bottom:1.5rem;">
+  Pick your ledger and bank statement files (CSV or .xlsx) and confirm which columns hold what.
+  Files stay on this machine and are never sent anywhere.
+</p>
+
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+<form method="post" action="{{ url_for('setup_submit') }}" enctype="multipart/form-data">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+  <div class="card">
+    <h2 style="margin-top:0">Ledger</h2>
+    <label for="ledger_file">Ledger file (CSV or .xlsx)</label>
+    <input type="file" name="ledger_file" id="ledger_file" accept=".csv,.xlsx" required>
+    <label for="ledger_date_col">Date column</label>
+    <input type="text" name="ledger_date_col" id="ledger_date_col" value="date" required>
+    <label for="ledger_date_format">Date format (Python strptime, e.g. %Y-%m-%d)</label>
+    <input type="text" name="ledger_date_format" id="ledger_date_format" value="%Y-%m-%d" required>
+    <label for="ledger_description_col">Description column</label>
+    <input type="text" name="ledger_description_col" id="ledger_description_col" value="description" required>
+    <label for="ledger_amount_col">Amount column (single, signed)</label>
+    <input type="text" name="ledger_amount_col" id="ledger_amount_col" value="amount" required>
+    <label for="ledger_account_col">Account column</label>
+    <input type="text" name="ledger_account_col" id="ledger_account_col" value="account_ref" required>
+    <label for="ledger_id_col">ID column (leave blank to auto-generate one)</label>
+    <input type="text" name="ledger_id_col" id="ledger_id_col" value="id">
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Bank statement</h2>
+    <label for="bank_file">Bank statement file (CSV or .xlsx)</label>
+    <input type="file" name="bank_file" id="bank_file" accept=".csv,.xlsx" required>
+    <label for="bank_date_col">Date column</label>
+    <input type="text" name="bank_date_col" id="bank_date_col" value="date" required>
+    <label for="bank_date_format">Date format (Python strptime, e.g. %d/%m/%Y)</label>
+    <input type="text" name="bank_date_format" id="bank_date_format" value="%d/%m/%Y" required>
+    <label for="bank_description_col">Description column</label>
+    <input type="text" name="bank_description_col" id="bank_description_col" value="description" required>
+    <label for="bank_debit_col">Debit column</label>
+    <input type="text" name="bank_debit_col" id="bank_debit_col" value="debit" required>
+    <label for="bank_credit_col">Credit column</label>
+    <input type="text" name="bank_credit_col" id="bank_credit_col" value="credit" required>
+    <label for="bank_account_col">Account column</label>
+    <input type="text" name="bank_account_col" id="bank_account_col" value="account_ref" required>
+    <label for="bank_id_col">ID column (leave blank to auto-generate one)</label>
+    <input type="text" name="bank_id_col" id="bank_id_col" value="id">
+  </div>
+
+  <div class="actions">
+    <button class="btn-primary" type="submit">Start reconciling</button>
+  </div>
+</form>
+{% endblock %}

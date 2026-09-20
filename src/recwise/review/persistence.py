@@ -21,7 +21,9 @@ def save(path: Path, state: ReviewState) -> None:
             {"ledger_ids": m.ledger_ids, "bank_ids": m.bank_ids} for m in state.manual_matches
         ],
     }
-    Path(path).write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
 def load(path: Path, run: MatchRun) -> ReviewState:

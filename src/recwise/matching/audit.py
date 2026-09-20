@@ -99,6 +99,7 @@ def _entry_to_json_dict(entry: AuditLogEntry) -> dict[str, object]:
 def append_entries(path: Path, entries: list[AuditLogEntry]) -> None:
     """Append entries to the audit log, one JSON object per line."""
     path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as fh:
         for entry in entries:
             fh.write(json.dumps(_entry_to_json_dict(entry), ensure_ascii=False))

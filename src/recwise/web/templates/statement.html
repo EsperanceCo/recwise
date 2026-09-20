@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title_suffix %} - Statement{% endblock %}
+{% block content %}
+<h1>Reconciliation statement</h1>
+
+<div class="card">
+  <p>Balance per bank: <span class="amount">{{ statement.balance_per_bank }}</span></p>
+  <p>Balance per ledger: <span class="amount">{{ statement.balance_per_ledger }}</span></p>
+  <p>Reconciled balance: <span class="amount">{{ statement.reconciled_balance }}</span></p>
+</div>
+
+<h2>Ledger-only items (timing differences)</h2>
+<table>
+  <tr><th>ID</th><th>Date</th><th>Amount</th><th>Description</th></tr>
+  {% for item in statement.ledger_only_items %}
+  <tr><td>{{ item.external_id }}</td><td>{{ item.txn_date }}</td>
+      <td class="amount">{{ item.amount }}</td><td>{{ item.description }}</td></tr>
+  {% endfor %}
+</table>
+
+<h2>Bank-only items (suggested journals)</h2>
+<table>
+  <tr><th>ID</th><th>Date</th><th>Amount</th><th>Description</th></tr>
+  {% for item in statement.bank_only_items %}
+  <tr><td>{{ item.external_id }}</td><td>{{ item.txn_date }}</td>
+      <td class="amount">{{ item.amount }}</td><td>{{ item.description }}</td></tr>
+  {% endfor %}
+</table>
+
+<h2>Discrepancies</h2>
+<table>
+  <tr><th>Ledger ID</th><th>Bank ID</th><th>Ledger amount</th><th>Bank amount</th><th>Residual</th><th>Reason</th></tr>
+  {% for item in statement.discrepancy_items %}
+  <tr><td>{{ item.ledger_id }}</td><td>{{ item.bank_id }}</td>
+      <td class="amount">{{ item.ledger_amount }}</td><td class="amount">{{ item.bank_amount }}</td>
+      <td class="amount">{{ item.residual }}</td><td>{{ item.reason }}</td></tr>
+  {% endfor %}
+</table>
+
+<h2>Pending review (net-zero, needs confirmation)</h2>
+<table>
+  <tr><th>Tier</th><th>Ledger IDs</th><th>Bank IDs</th><th>Reason</th></tr>
+  {% for note in statement.pending_review_notes %}
+  <tr><td>{{ note.tier }}</td><td>{{ note.ledger_ids | join(", ") }}</td>
+      <td>{{ note.bank_ids | join(", ") }}</td><td>{{ note.reason }}</td></tr>
+  {% endfor %}
+</table>
+
+<h2>Suggested journals</h2>
+<table>
+  <tr><th>Narrative</th><th>Debit</th><th>Credit</th><th>Amount</th></tr>
+  {% for j in statement.suggested_journals %}
+  <tr><td>{{ j.narrative }}</td><td>{{ j.debit_account }}</td>
+      <td>{{ j.credit_account }}</td><td class="amount">{{ j.amount }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

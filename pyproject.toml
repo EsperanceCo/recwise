@@ -10,11 +10,12 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [{ name = "Esperance" }]
-dependencies = ["pandas==3.0.6", "openpyxl==3.1.5"]
+dependencies = ["pandas==3.0.6", "openpyxl==3.1.5", "Flask==3.1.3"]
 
 [project.scripts]
 recwise-synth = "recwise.synth.cli:main"
 recwise-reconcile = "recwise.cli:main"
+recwise-review = "recwise.web.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/recwise"]

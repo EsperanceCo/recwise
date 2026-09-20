@@ -149,3 +149,14 @@ def test_statement_persists_across_requests(client: FlaskClient, tmp_path: Path)
     assert state_file.exists()
     payload = json.loads(state_file.read_text(encoding="utf-8"))
     assert any(v == "accepted" for v in payload["decisions"].values())
+
+
+def test_analytics_page_shows_both_populations(client: FlaskClient) -> None:
+    resp = client.get("/analytics")
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert "Ledger" in body
+    assert "Bank statement" in body
+    assert "Sample size: 1000" in body
+    assert "Mean absolute deviation" in body
+    assert "nonconformity" in body

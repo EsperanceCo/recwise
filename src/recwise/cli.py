@@ -107,7 +107,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         ledger = load_ledger(args.ledger, ledger_mapping)
         bank = load_bank_statement(args.bank, bank_mapping)
-    except RecwiseImportError as exc:
+    except (RecwiseImportError, FileNotFoundError) as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
 

@@ -17,6 +17,7 @@ recwise-synth = "recwise.synth.cli:main"
 recwise-reconcile = "recwise.cli:main"
 recwise-review = "recwise.web.cli:main"
 recwise-tui = "recwise.tui.cli:main"
+recwise-audit = "recwise.analytics.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/recwise"]

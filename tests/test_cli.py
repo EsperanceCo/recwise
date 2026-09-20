@@ -90,6 +90,26 @@ def test_cli_bad_column_mapping_fails_clearly(
     assert not out_dir.exists()
 
 
+def test_cli_missing_file_fails_clearly(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    """FileNotFoundError from the importer must be caught and reported like
+    any other import error, not crash with an uncaught traceback."""
+    out_dir = tmp_path / "output"
+    exit_code = main(
+        [
+            "--ledger",
+            str(tmp_path / "does_not_exist.csv"),
+            "--bank",
+            str(SAMPLE_DIR / "bank_statement.csv"),
+            "--out-dir",
+            str(out_dir),
+        ]
+    )
+    assert exit_code == 1
+    captured = capsys.readouterr()
+    assert "Error" in captured.err
+    assert not out_dir.exists()
+
+
 def test_cli_does_not_modify_input_files(tmp_path: Path) -> None:
     ledger_path = SAMPLE_DIR / "ledger.csv"
     bank_path = SAMPLE_DIR / "bank_statement.csv"

@@ -4,56 +4,71 @@
 <h1>Review suggestions</h1>
 
 {% if not rows %}
-  <p>Nothing pending review.</p>
+  <div class="card"><p class="empty-state">Nothing pending review.</p></div>
 {% endif %}
 
 {% for row in rows %}
 <div class="card">
-  <p><span class="pill">{{ row.tier }}</span> confidence {{ "%.2f"|format(row.confidence) }}</p>
-  <p>{{ row.reason }}</p>
+  <div class="suggestion-meta">
+    <span class="pill pill-{{ row.tier }}">{{ row.tier | replace("_", " ") }}</span>
+    <span class="confidence">confidence {{ "%.2f"|format(row.confidence) }}</span>
+  </div>
+  <p class="suggestion-reason">{{ row.reason }}</p>
   <table>
-    <tr><th>Side</th><th>ID</th><th>Date</th><th>Amount</th><th>Description</th></tr>
+    <tr><th>Side</th><th>ID</th><th>Date</th><th class="amount">Amount</th><th>Description</th></tr>
     {% for t in row.ledger_txns %}
-    <tr><td>ledger</td><td>{{ t.external_id }}</td><td>{{ t.txn_date }}</td>
-        <td class="amount">{{ t.amount }}</td><td>{{ t.description }}</td></tr>
+    <tr>
+      <td><span class="badge-source">ledger</span></td>
+      <td>{{ t.external_id }}</td>
+      <td>{{ t.txn_date }}</td>
+      <td class="amount{{ ' neg' if t.amount < 0 else '' }}">{{ t.amount }}</td>
+      <td>{{ t.description }}</td>
+    </tr>
     {% endfor %}
     {% for t in row.bank_txns %}
-    <tr><td>bank</td><td>{{ t.external_id }}</td><td>{{ t.txn_date }}</td>
-        <td class="amount">{{ t.amount }}</td><td>{{ t.description }}</td></tr>
+    <tr>
+      <td><span class="badge-source">bank</span></td>
+      <td>{{ t.external_id }}</td>
+      <td>{{ t.txn_date }}</td>
+      <td class="amount{{ ' neg' if t.amount < 0 else '' }}">{{ t.amount }}</td>
+      <td>{{ t.description }}</td>
+    </tr>
     {% endfor %}
   </table>
-  <form method="post" action="{{ url_for('accept_route') }}" style="display:inline">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-    <input type="hidden" name="key" value="{{ row.key }}">
-    <button class="accept" type="submit">Accept</button>
-  </form>
-  <form method="post" action="{{ url_for('reject_route') }}" style="display:inline">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-    <input type="hidden" name="key" value="{{ row.key }}">
-    <button class="reject" type="submit">Reject</button>
-  </form>
+  <div class="actions">
+    <form method="post" action="{{ url_for('accept_route') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <input type="hidden" name="key" value="{{ row.key }}">
+      <button class="accept" type="submit">Accept</button>
+    </form>
+    <form method="post" action="{{ url_for('reject_route') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <input type="hidden" name="key" value="{{ row.key }}">
+      <button class="reject" type="submit">Reject</button>
+    </form>
+  </div>
 </div>
 {% endfor %}
 
 <div class="card">
-  <h2>Manually match two transactions</h2>
+  <h2 style="margin-top:0">Manually match two transactions</h2>
   <form method="post" action="{{ url_for('manual_match_route') }}">
     <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-    <label>Ledger transaction
-      <select name="ledger_id" required>
-        {% for t in available_ledger %}
-        <option value="{{ t.external_id }}">{{ t.external_id }} &mdash; {{ t.txn_date }} &mdash; {{ t.amount }} &mdash; {{ t.description }}</option>
-        {% endfor %}
-      </select>
-    </label>
-    <label>Bank transaction
-      <select name="bank_id" required>
-        {% for t in available_bank %}
-        <option value="{{ t.external_id }}">{{ t.external_id }} &mdash; {{ t.txn_date }} &mdash; {{ t.amount }} &mdash; {{ t.description }}</option>
-        {% endfor %}
-      </select>
-    </label>
-    <button type="submit">Match these</button>
+    <label for="ledger_id">Ledger transaction</label>
+    <select name="ledger_id" id="ledger_id" required>
+      {% for t in available_ledger %}
+      <option value="{{ t.external_id }}">{{ t.external_id }} &mdash; {{ t.txn_date }} &mdash; {{ t.amount }} &mdash; {{ t.description }}</option>
+      {% endfor %}
+    </select>
+    <label for="bank_id">Bank transaction</label>
+    <select name="bank_id" id="bank_id" required>
+      {% for t in available_bank %}
+      <option value="{{ t.external_id }}">{{ t.external_id }} &mdash; {{ t.txn_date }} &mdash; {{ t.amount }} &mdash; {{ t.description }}</option>
+      {% endfor %}
+    </select>
+    <div class="actions">
+      <button class="btn-primary" type="submit">Match these</button>
+    </div>
   </form>
 </div>
 {% endblock %}

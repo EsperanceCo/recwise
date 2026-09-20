@@ -4,54 +4,86 @@
 <h1>Reconciliation statement</h1>
 
 <div class="card">
-  <p>Balance per bank: <span class="amount">{{ statement.balance_per_bank }}</span></p>
-  <p>Balance per ledger: <span class="amount">{{ statement.balance_per_ledger }}</span></p>
-  <p>Reconciled balance: <span class="amount">{{ statement.reconciled_balance }}</span></p>
+  <div class="stat-grid">
+    <div class="stat">
+      <div class="stat-label">Balance per bank</div>
+      <div class="stat-value{{ ' neg' if statement.balance_per_bank < 0 else '' }}">{{ statement.balance_per_bank }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Balance per ledger</div>
+      <div class="stat-value{{ ' neg' if statement.balance_per_ledger < 0 else '' }}">{{ statement.balance_per_ledger }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Reconciled balance</div>
+      <div class="stat-value{{ ' neg' if statement.reconciled_balance < 0 else '' }}">{{ statement.reconciled_balance }}</div>
+    </div>
+  </div>
 </div>
 
-<h2>Ledger-only items (timing differences)</h2>
-<table>
-  <tr><th>ID</th><th>Date</th><th>Amount</th><th>Description</th></tr>
-  {% for item in statement.ledger_only_items %}
-  <tr><td>{{ item.external_id }}</td><td>{{ item.txn_date }}</td>
-      <td class="amount">{{ item.amount }}</td><td>{{ item.description }}</td></tr>
-  {% endfor %}
-</table>
+<div class="card">
+  <h2 style="margin-top:0">Ledger-only items <span class="card-muted">(timing differences)</span></h2>
+  {% if statement.ledger_only_items %}
+  <table>
+    <tr><th>ID</th><th>Date</th><th class="amount">Amount</th><th>Description</th></tr>
+    {% for item in statement.ledger_only_items %}
+    <tr><td>{{ item.external_id }}</td><td>{{ item.txn_date }}</td>
+        <td class="amount{{ ' neg' if item.amount < 0 else '' }}">{{ item.amount }}</td><td>{{ item.description }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="empty-state">None.</p>{% endif %}
+</div>
 
-<h2>Bank-only items (suggested journals)</h2>
-<table>
-  <tr><th>ID</th><th>Date</th><th>Amount</th><th>Description</th></tr>
-  {% for item in statement.bank_only_items %}
-  <tr><td>{{ item.external_id }}</td><td>{{ item.txn_date }}</td>
-      <td class="amount">{{ item.amount }}</td><td>{{ item.description }}</td></tr>
-  {% endfor %}
-</table>
+<div class="card">
+  <h2 style="margin-top:0">Bank-only items <span class="card-muted">(suggested journals)</span></h2>
+  {% if statement.bank_only_items %}
+  <table>
+    <tr><th>ID</th><th>Date</th><th class="amount">Amount</th><th>Description</th></tr>
+    {% for item in statement.bank_only_items %}
+    <tr><td>{{ item.external_id }}</td><td>{{ item.txn_date }}</td>
+        <td class="amount{{ ' neg' if item.amount < 0 else '' }}">{{ item.amount }}</td><td>{{ item.description }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="empty-state">None.</p>{% endif %}
+</div>
 
-<h2>Discrepancies</h2>
-<table>
-  <tr><th>Ledger ID</th><th>Bank ID</th><th>Ledger amount</th><th>Bank amount</th><th>Residual</th><th>Reason</th></tr>
-  {% for item in statement.discrepancy_items %}
-  <tr><td>{{ item.ledger_id }}</td><td>{{ item.bank_id }}</td>
-      <td class="amount">{{ item.ledger_amount }}</td><td class="amount">{{ item.bank_amount }}</td>
-      <td class="amount">{{ item.residual }}</td><td>{{ item.reason }}</td></tr>
-  {% endfor %}
-</table>
+<div class="card">
+  <h2 style="margin-top:0">Discrepancies</h2>
+  {% if statement.discrepancy_items %}
+  <table>
+    <tr><th>Ledger ID</th><th>Bank ID</th><th class="amount">Ledger amount</th><th class="amount">Bank amount</th><th class="amount">Residual</th><th>Reason</th></tr>
+    {% for item in statement.discrepancy_items %}
+    <tr><td>{{ item.ledger_id }}</td><td>{{ item.bank_id }}</td>
+        <td class="amount">{{ item.ledger_amount }}</td><td class="amount">{{ item.bank_amount }}</td>
+        <td class="amount neg">{{ item.residual }}</td><td>{{ item.reason }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="empty-state">None.</p>{% endif %}
+</div>
 
-<h2>Pending review (net-zero, needs confirmation)</h2>
-<table>
-  <tr><th>Tier</th><th>Ledger IDs</th><th>Bank IDs</th><th>Reason</th></tr>
-  {% for note in statement.pending_review_notes %}
-  <tr><td>{{ note.tier }}</td><td>{{ note.ledger_ids | join(", ") }}</td>
-      <td>{{ note.bank_ids | join(", ") }}</td><td>{{ note.reason }}</td></tr>
-  {% endfor %}
-</table>
+<div class="card">
+  <h2 style="margin-top:0">Pending review <span class="card-muted">(net-zero, needs confirmation)</span></h2>
+  {% if statement.pending_review_notes %}
+  <table>
+    <tr><th>Tier</th><th>Ledger IDs</th><th>Bank IDs</th><th>Reason</th></tr>
+    {% for note in statement.pending_review_notes %}
+    <tr><td><span class="pill pill-{{ note.tier }}">{{ note.tier | replace("_", " ") }}</span></td>
+        <td>{{ note.ledger_ids | join(", ") }}</td>
+        <td>{{ note.bank_ids | join(", ") }}</td><td>{{ note.reason }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="empty-state">None.</p>{% endif %}
+</div>
 
-<h2>Suggested journals</h2>
-<table>
-  <tr><th>Narrative</th><th>Debit</th><th>Credit</th><th>Amount</th></tr>
-  {% for j in statement.suggested_journals %}
-  <tr><td>{{ j.narrative }}</td><td>{{ j.debit_account }}</td>
-      <td>{{ j.credit_account }}</td><td class="amount">{{ j.amount }}</td></tr>
-  {% endfor %}
-</table>
+<div class="card">
+  <h2 style="margin-top:0">Suggested journals</h2>
+  {% if statement.suggested_journals %}
+  <table>
+    <tr><th>Narrative</th><th>Debit</th><th>Credit</th><th class="amount">Amount</th></tr>
+    {% for j in statement.suggested_journals %}
+    <tr><td>{{ j.narrative }}</td><td>{{ j.debit_account }}</td>
+        <td>{{ j.credit_account }}</td><td class="amount">{{ j.amount }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="empty-state">None.</p>{% endif %}
+</div>
 {% endblock %}

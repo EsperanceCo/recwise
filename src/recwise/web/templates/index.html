@@ -4,27 +4,58 @@
 <h1>Reconciliation dashboard</h1>
 
 <div class="card">
-  <p>Ledger rows: <strong>{{ ledger_count }}</strong> &middot; Bank rows: <strong>{{ bank_count }}</strong></p>
-  <p>Auto-matched: <strong>{{ auto_count }}</strong> &middot;
-     Needs review: <strong>{{ pending_count }}</strong>
-     {% if pending_count %}(<a href="{{ url_for('review_list') }}">go review</a>){% endif %}
-  </p>
+  <div class="stat-grid">
+    <div class="stat">
+      <div class="stat-label">Ledger rows</div>
+      <div class="stat-value">{{ ledger_count }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Bank rows</div>
+      <div class="stat-value">{{ bank_count }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Auto-matched</div>
+      <div class="stat-value">{{ auto_count }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Needs review</div>
+      <div class="stat-value">{{ pending_count }}</div>
+    </div>
+  </div>
+  {% if pending_count %}
+    <p class="card-muted" style="margin-top: 1rem;">
+      <a href="{{ url_for('review_list') }}">Go review {{ pending_count }} suggestion{{ 's' if pending_count != 1 else '' }} &rarr;</a>
+    </p>
+  {% endif %}
 </div>
 
 <div class="card">
-  <h2>Balances</h2>
-  <p>Balance per bank: <span class="amount">{{ statement.balance_per_bank }}</span></p>
-  <p>Balance per ledger: <span class="amount">{{ statement.balance_per_ledger }}</span></p>
-  <p>Reconciled balance: <span class="amount">{{ statement.reconciled_balance }}</span>
-     {% if statement.reconciled_balance != statement.balance_per_ledger %}
-       <strong style="color: #b00;">does not match balance per ledger</strong>
-     {% endif %}
-  </p>
-  <p>Suggested journals: <strong>{{ statement.suggested_journals | length }}</strong></p>
+  <h2 style="margin-top:0">Balances</h2>
+  <div class="stat-grid">
+    <div class="stat">
+      <div class="stat-label">Balance per bank</div>
+      <div class="stat-value{{ ' neg' if statement.balance_per_bank < 0 else '' }}">{{ statement.balance_per_bank }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Balance per ledger</div>
+      <div class="stat-value{{ ' neg' if statement.balance_per_ledger < 0 else '' }}">{{ statement.balance_per_ledger }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Reconciled balance</div>
+      <div class="stat-value{{ ' neg' if statement.reconciled_balance < 0 else '' }}">{{ statement.reconciled_balance }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Suggested journals</div>
+      <div class="stat-value">{{ statement.suggested_journals | length }}</div>
+    </div>
+  </div>
+  {% if statement.reconciled_balance != statement.balance_per_ledger %}
+    <div class="alert alert-danger">Reconciled balance does not match balance per ledger &mdash; something's off.</div>
+  {% endif %}
 </div>
 
 <form method="post" action="{{ url_for('export_route') }}">
   <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-  <button type="submit">Export current state to CSV</button>
+  <button class="btn-primary" type="submit">Export current state to CSV</button>
 </form>
 {% endblock %}

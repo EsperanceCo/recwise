@@ -2,7 +2,7 @@
 
 **Offline bank reconciliation for accountants.** Import a bank statement and a ledger, match them with explainable rules, review the results, and get a reconciliation statement. Audit analytics is planned for later.
 
-> **Status: pre-alpha.** Nothing here is ready to use yet. This README describes what Recwise is being built to do.
+> **Status: alpha.** Core v1 functionality is implemented and tested against synthetic data, but it hasn't been used on real-world data yet. Expect rough edges.
 
 ## Why
 
@@ -18,13 +18,13 @@ Reconciliation is tedious, easy to get wrong, and every business does it every m
 
 ## Planned scope (v1)
 
-- [ ] Import bank statement and ledger (CSV/Excel) with column mapping
-- [ ] Normalize dates, amounts, and descriptions (including non-ASCII text)
-- [ ] Tiered matching: exact, date window, fuzzy description, one-to-many
-- [ ] Review screen: accept, reject, or manually match
-- [ ] Classify leftovers: timing differences vs items needing a journal
-- [ ] Reconciliation statement and suggested journals
-- [ ] Export with spreadsheet-formula-injection protection
+- [x] Import bank statement and ledger (CSV/Excel) with column mapping
+- [x] Normalize dates, amounts, and descriptions (including non-ASCII text)
+- [x] Tiered matching: exact, date window, fuzzy description, one-to-many
+- [x] Review screen: accept, reject, or manually match
+- [x] Classify leftovers: timing differences vs items needing a journal
+- [x] Reconciliation statement and suggested journals
+- [x] Export with spreadsheet-formula-injection protection
 
 **Not in v1:** PDF statement parsing, bank APIs, multi-currency, user accounts.
 

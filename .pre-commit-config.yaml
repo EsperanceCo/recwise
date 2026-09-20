@@ -21,7 +21,13 @@ repos:
     hooks:
       - id: mypy
         args: [--strict]
-        additional_dependencies: ["pytest==9.1.1", "hypothesis==6.168.0"]
+        additional_dependencies:
+          [
+            "pytest==9.1.1",
+            "hypothesis==6.168.0",
+            "pandas==3.0.6",
+            "pandas-stubs==3.0.5.260914",
+          ]
 
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.21.2

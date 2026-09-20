@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [{ name = "Esperance" }]
-dependencies = []
+dependencies = ["pandas==3.0.6", "openpyxl==3.1.5"]
 
 [project.scripts]
 recwise-synth = "recwise.synth.cli:main"

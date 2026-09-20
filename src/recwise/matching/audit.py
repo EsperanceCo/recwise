@@ -17,7 +17,9 @@ from datetime import UTC, datetime
 from enum import StrEnum
 from pathlib import Path
 
-from recwise.matching.models import MatchRun, MatchStatus, MatchTier
+from recwise.matching.models import Match, MatchRun, MatchStatus, MatchTier
+
+AUDIT_LOG_FILENAME = "audit_log.jsonl"
 
 
 class AuditAction(StrEnum):
@@ -69,6 +71,22 @@ def entries_from_match_run(run: MatchRun, *, timestamp: str | None = None) -> li
             )
         )
     return entries
+
+
+def entry_for_manual_decision(
+    action: AuditAction, m: Match, *, actor: str = "user", timestamp: str | None = None
+) -> AuditLogEntry:
+    """Build a single audit entry for a manual accept/reject/manual-match
+    decision. Used by the review layer -- never carries m.reason."""
+    return AuditLogEntry(
+        timestamp=timestamp if timestamp is not None else _now(),
+        action=action,
+        tier=m.tier,
+        ledger_ids=m.ledger_ids,
+        bank_ids=m.bank_ids,
+        confidence=m.confidence,
+        actor=actor,
+    )
 
 
 def _entry_to_json_dict(entry: AuditLogEntry) -> dict[str, object]:

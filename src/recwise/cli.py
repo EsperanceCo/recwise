@@ -16,10 +16,8 @@ from recwise.importer.errors import RecwiseImportError
 from recwise.importer.loader import load_bank_statement, load_ledger
 from recwise.importer.models import Transaction
 from recwise.matching import MatchConfig, MatchRun, match
-from recwise.matching.audit import append_entries, entries_from_match_run
+from recwise.matching.audit import AUDIT_LOG_FILENAME, append_entries, entries_from_match_run
 from recwise.reconciliation import ReconciliationStatement, build_statement
-
-AUDIT_LOG_FILENAME = "audit_log.jsonl"
 
 
 def build_parser() -> argparse.ArgumentParser:

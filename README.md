@@ -18,13 +18,13 @@ Reconciliation is tedious, easy to get wrong, and every business does it every m
 
 ## Planned scope (v1)
 
-- [ ] Import bank statement and ledger (CSV/Excel) with column mapping
-- [ ] Normalize dates, amounts, and descriptions (including non-ASCII text)
-- [ ] Tiered matching: exact, date window, fuzzy description, one-to-many
-- [ ] Review screen: accept, reject, or manually match
-- [ ] Classify leftovers: timing differences vs items needing a journal
-- [ ] Reconciliation statement and suggested journals
-- [ ] Export with spreadsheet-formula-injection protection
+- [x] Import bank statement and ledger (CSV/Excel) with column mapping
+- [x] Normalize dates, amounts, and descriptions (including non-ASCII text)
+- [x] Tiered matching: exact, date window, fuzzy description, one-to-many
+- [x] Review screen: accept, reject, or manually match
+- [x] Classify leftovers: timing differences vs items needing a journal
+- [x] Reconciliation statement and suggested journals
+- [x] Export with spreadsheet-formula-injection protection
 
 **Not in v1:** PDF statement parsing, bank APIs, multi-currency, user accounts.
 
